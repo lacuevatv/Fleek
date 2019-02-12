@@ -24,8 +24,8 @@ define ('UPLOADSURL', MAINSURL . '/contenido');
 define ('UPLOADSFILE', MAINSURL . '/contenido');
 
 //META TAGS
-define('SITETITLE', 'Titulo del sitio');
-define('METADESCRIPTION', '');
+define('SITETITLE', 'Fleek - Viajá distinto');
+define('METADESCRIPTION', 'Viajes de egresados a los mejores destinos del globo.');
 define('METAKEYS', '');
 
 //LINKS REDES SOCIALES:
@@ -39,7 +39,7 @@ define('LINK_YOUTUBE', 'https://www.youtube.com/channel/');
 define('POSTPERPAG', '1');
 
 //EMAILS Y MENSAJES
-define ( 'EMAILDEFAULT', '' );
+define ( 'EMAILDEFAULT', 'info@lacueva.tv' );
 define ( 'ASUNTODEFAULT', 'Muchas gracias por contestarnos' );
 define('MENSAJEEXITO', 'Su email fue enviado con éxito, muchas gracias.');//este mensaje se imprime en el html
 define('MENSAJEERROR', 'Hubo un pequeño error, intente otra vez.');
