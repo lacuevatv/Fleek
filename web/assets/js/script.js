@@ -84,7 +84,7 @@ $(document).ready(function(){
             }, 500);
         } else {
             menu.animate({
-                'right': '-1500px',
+                'right': '-300%',
                 'opacity':'0',
             }, 500);
         }
