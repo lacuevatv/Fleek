@@ -37,7 +37,7 @@ html, body {
     background-color: $color-blanco;
     font-size: 16px;
     line-height: 20px;
-    overflow: hidden;
+    overflow-x: hidden;
     @media (min-width: $lg) {
         font-size: 16px;
         line-height: 24px;
@@ -52,14 +52,22 @@ html, body {
     position: relative;
 }
 
+
 /*--------------------------------------------------------------
-5.0 FOOTER
+5.0 BTNS
+--------------------------------------------------------------*/
+
+@import 'sass/btns';
+
+
+/*--------------------------------------------------------------
+6.0 FOOTER
 --------------------------------------------------------------*/
 
 @import 'sass/main-footer';
 
 /*--------------------------------------------------------------
-6.0 Main Header & nav
+7.0 Main Header & nav
 --------------------------------------------------------------*/
 
 @import 'sass/main-header';

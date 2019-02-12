@@ -221,6 +221,22 @@ button {
 /*FUENTES*/
 /*COLORES*/
 /*GRID OPTIONS*/
+/*EXTEND*/
+.btn, .btn-icon-left {
+  cursor: pointer;
+  position: relative;
+  outline: none;
+  -webkit-transition: all 500ms;
+  -moz-transition: all 500ms;
+  -ms-transition: all 500ms;
+  transition: all 500ms;
+}
+.btn:hover, .btn-icon-left:hover {
+  zoom: 1;
+  filter: alpha(opacity=50);
+  opacity: 0.5;
+}
+
 /*
 @media (min-width: $md) {}
 -webkit-
@@ -260,7 +276,7 @@ html, body {
   background-color: #fff;
   font-size: 16px;
   line-height: 20px;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 @media (min-width: 1200px) {
   html, body {
@@ -278,10 +294,176 @@ html, body {
 }
 
 /*--------------------------------------------------------------
-5.0 FOOTER
+5.0 BTNS
 --------------------------------------------------------------*/
+.btn-icon-left img {
+  padding-right: 10px;
+  vertical-align: middle;
+}
+
 /*--------------------------------------------------------------
-6.0 Main Header & nav
+6.0 FOOTER
+--------------------------------------------------------------*/
+.main-footer {
+  position: relative;
+  background-color: #2B00FF;
+  color: #fff;
+  padding: 50px 40px 60px;
+  font-size: 14px;
+  line-height: 28px;
+}
+@media (min-width: 1200px) {
+  .main-footer {
+    padding: 100px 100px 45px;
+  }
+}
+@media (min-width: 1600px) {
+  .main-footer {
+    padding: 200px 180px 65px;
+  }
+}
+
+.footer-wrapper {
+  margin-top: 60px;
+}
+@media (min-width: 1200px) {
+  .footer-wrapper {
+    display: flex;
+    display: -o-flex;
+    display: -ms-flex;
+    display: -moz-flex;
+    display: -webkit-flex;
+  }
+}
+
+.contacto {
+  margin-bottom: 60px;
+}
+@media (min-width: 1200px) {
+  .contacto {
+    width: 25%;
+  }
+}
+.contacto li {
+  margin: 6px 0;
+}
+
+@media (min-width: 1200px) {
+  .sucursales {
+    display: flex;
+    display: -o-flex;
+    display: -ms-flex;
+    display: -moz-flex;
+    display: -webkit-flex;
+    width: 75%;
+  }
+}
+.sucursales li {
+  margin-bottom: 25px;
+}
+@media (min-width: 1200px) {
+  .sucursales li {
+    width: 33%;
+  }
+}
+.sucursales li h4 {
+  font-family: "Helvetica Neue", "Helvetica Neue Roman", sans-serif;
+  font-weight: 700;
+}
+
+.title-patrocinadores {
+  margin-bottom: 25px;
+}
+@media (min-width: 1200px) {
+  .title-patrocinadores {
+    margin-right: 55px;
+  }
+}
+
+.patrocinadores {
+  display: flex;
+  display: -o-flex;
+  display: -ms-flex;
+  display: -moz-flex;
+  display: -webkit-flex;
+}
+.patrocinadores li {
+  margin-right: 20px;
+}
+@media (min-width: 1200px) {
+  .patrocinadores li {
+    margin-right: 40px;
+  }
+}
+
+.legales-wrapper {
+  margin-top: 60px;
+  display: flex;
+  display: -o-flex;
+  display: -ms-flex;
+  display: -moz-flex;
+  display: -webkit-flex;
+  font-size: 10px;
+  line-height: 17px;
+}
+@media (min-width: 1200px) {
+  .legales-wrapper {
+    -webkit-align-items: flex-end;
+    -moz-align-items: flex-end;
+    -ms-align-items: flex-end;
+    -o-align-items: flex-end;
+    align-items: flex-end;
+  }
+}
+.legales-wrapper img {
+  width: 57px;
+}
+@media (min-width: 768px) {
+  .legales-wrapper img {
+    width: 67px;
+  }
+}
+.legales-wrapper .legales {
+  padding-left: 20px;
+}
+.legales-wrapper .legales p {
+  display: block;
+  margin: 10px 0;
+}
+@media (min-width: 1200px) {
+  .legales-wrapper .legales p {
+    display: inline;
+    margin: 0;
+  }
+}
+
+@media (min-width: 1200px) {
+  .row-reverse-dk {
+    -webkit-flex-direction: row-reverse;
+    -moz-flex-direction: row-reverse;
+    -ms-flex-direction: row-reverse;
+    -o-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+    -webkit-justify-content: flex-end;
+    -moz-justify-content: flex-end;
+    -ms-justify-content: flex-end;
+    -o-justify-content: flex-end;
+    justify-content: flex-end;
+  }
+}
+
+@media (min-width: 1200px) {
+  .align-center-dk {
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    align-items: center;
+  }
+}
+
+/*--------------------------------------------------------------
+7.0 Main Header & nav
 --------------------------------------------------------------*/
 /*
  * toogle
@@ -295,10 +477,10 @@ html, body {
   height: 40px;
   width: 40px;
   background-color: transparent;
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-  -ms-transition: all 0.5s;
-  transition: all 0.5s;
+  -webkit-transition: all 500ms;
+  -moz-transition: all 500ms;
+  -ms-transition: all 500ms;
+  transition: all 500ms;
 }
 .toggle:focus {
   border: none;
@@ -312,10 +494,10 @@ html, body {
   position: absolute;
   left: 5px;
   top: 10px;
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-  -ms-transition: all 0.5s;
-  transition: all 0.5s;
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -ms-transition: all 1s;
+  transition: all 1s;
 }
 .toggle .tog2 {
   display: inline-block;
@@ -325,10 +507,10 @@ html, body {
   position: absolute;
   left: 10px;
   top: 20px;
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-  -ms-transition: all 0.5s;
-  transition: all 0.5s;
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -ms-transition: all 1s;
+  transition: all 1s;
 }
 .toggle .tog3 {
   display: inline-block;
@@ -338,10 +520,10 @@ html, body {
   position: absolute;
   left: 5px;
   top: 30px;
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-  -ms-transition: all 0.5s;
-  transition: all 0.5s;
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -ms-transition: all 1s;
+  transition: all 1s;
 }
 
 .toggle:hover .tog2 {

@@ -1,19 +1,21 @@
 	<footer class="main-footer">
-		<div class="footer-wrapper">
+		<div class="footer-logo">
 			<picture>
-                <source srcset="<?php echo IMAGES; ?> 1x, <?php echo IMAGES; ?> 2x" media="(min-width: 315px)">
-                <img class="fleek-logo" src="<?php echo IMAGES; ?>" alt="Logo Fleek">
+				<source srcset="<?php echo IMAGES; ?>logo-footer.svg" type="image/svg+xml">
+                <source srcset="<?php echo IMAGES; ?>logo-footer.png 1x, <?php echo IMAGES; ?>logo-footer@2x.png 2x" media="(min-width: 315px)">
+                <img class="fleek-logo-footer" src="<?php echo IMAGES; ?>logo-footer.png" alt="Logo Fleek">
             </picture>
 			<p>Concursos y promociones vigentes</p>
 		</div>
 
-		<div class="footer-wrapper">
+		<div class="footer-wrapper row-reverse-dk">
 			<ul class="contacto">
 				<li>
 					<a class="btn-icon-left" href="<?php echo WHATSAPPLINK; ?>" target="_blank">
 						<picture>
-							<source srcset="<?php echo IMAGES; ?> 1x, <?php echo IMAGES; ?> 2x" media="(min-width: 315px)">
-							<img class="icon-btn" src="<?php echo IMAGES; ?>" alt="Icon Whatsapp">
+							<source srcset="<?php echo IMAGES; ?>wa-icon.svg" type="image/svg+xml">
+							<source srcset="<?php echo IMAGES; ?>wa-icon.png 1x, <?php echo IMAGES; ?>wa-icon@2x.png 2x" media="(min-width: 315px)">
+							<img src="<?php echo IMAGES; ?>wa-icon.png" alt="Icon Whatsapp">
 						</picture>
 						<?php echo WHATSAPP; ?>
 					</a>
@@ -21,8 +23,9 @@
 				<li>
 					<a class="btn-icon-left" href="<?php echo LINK_INSTAGRAM; ?>" target="_blank">
 						<picture>
-							<source srcset="<?php echo IMAGES; ?> 1x, <?php echo IMAGES; ?> 2x" media="(min-width: 315px)">
-							<img class="icon-btn" src="<?php echo IMAGES; ?>" alt="Icon Instagram">
+							<source srcset="<?php echo IMAGES; ?>instagram-icon.svg" type="image/svg+xml">
+							<source srcset="<?php echo IMAGES; ?>instagram-icon.png 1x, <?php echo IMAGES; ?>instagram-icon@2x.png 2x" media="(min-width: 315px)">
+							<img src="<?php echo IMAGES; ?>instagram-icon.png" alt="Icon Instagram">
 						</picture>
 						<?php echo '@'.INSTAGRAM; ?>
 					</a>
@@ -30,8 +33,9 @@
 				<li>
 					<a class="btn-icon-left" href="mailto:<?php echo EMAIL; ?>" target="_blank">
 						<picture>
-							<source srcset="<?php echo IMAGES; ?> 1x, <?php echo IMAGES; ?> 2x" media="(min-width: 315px)">
-							<img class="icon-btn" src="<?php echo IMAGES; ?>" alt="Icon Email">
+							<source srcset="<?php echo IMAGES; ?>email-icon.svg" type="image/svg+xml">
+							<source srcset="<?php echo IMAGES; ?>email-icon.png 1x, <?php echo IMAGES; ?>email-icon@2x.png 2x" media="(min-width: 315px)">
+							<img src="<?php echo IMAGES; ?>email-icon.png" alt="Icon Email">
 						</picture>
 						<?php echo EMAIL; ?>
 					</a>
@@ -74,37 +78,40 @@
 			</ul>
 		</div>
 
-		<div class="footer-wrapper">
-			<h3>
+		<div class="footer-wrapper align-center-dk">
+			<h3 class="title-patrocinadores">
 				Patrocinadores:
 			</h3>
 
 			<ul class="patrocinadores">
 				<li>
 					<picture>
-						<source srcset="<?php echo IMAGES; ?> 1x, <?php echo IMAGES; ?> 2x" media="(min-width: 315px)">
-						<img class="icon-btn" src="<?php echo IMAGES; ?>" alt="Patrocinador Fleek">
+						<source srcset="<?php echo UPLOADSURL; ?>patrocinador1.png 1x, <?php echo UPLOADSURL; ?>patrocinador1.png 2x" media="(min-width: 315px)">
+						<img class="patrocinador" src="<?php echo UPLOADSURL; ?>patrocinador1.png" alt="Patrocinador Fleek">
 					</picture>
 				</li>
+
 				<li>
 					<picture>
-						<source srcset="<?php echo IMAGES; ?> 1x, <?php echo IMAGES; ?> 2x" media="(min-width: 315px)">
-						<img class="icon-btn" src="<?php echo IMAGES; ?>" alt="Patrocinador Fleek">
+						<source srcset="<?php echo UPLOADSURL; ?>patrocinador2.png 1x, <?php echo UPLOADSURL; ?>patrocinador2.png 2x" media="(min-width: 315px)">
+						<img class="patrocinador" src="<?php echo UPLOADSURL; ?>patrocinador2.png" alt="Patrocinador Fleek">
 					</picture>
 				</li>
+
 				<li>
 					<picture>
-						<source srcset="<?php echo IMAGES; ?> 1x, <?php echo IMAGES; ?> 2x" media="(min-width: 315px)">
-						<img class="icon-btn" src="<?php echo IMAGES; ?>" alt="Patrocinador Fleek">
+						<source srcset="<?php echo UPLOADSURL; ?>patrocinador3.png 1x, <?php echo UPLOADSURL; ?>patrocinador3.png 2x" media="(min-width: 315px)">
+						<img class="patrocinador" src="<?php echo UPLOADSURL; ?>patrocinador3.png" alt="Patrocinador Fleek">
 					</picture>
 				</li>
 			</ul>
 		</div>
 
-		<div class="footer-wrapper">
+		<div class="legales-wrapper">
 			<picture>
-				<source srcset="<?php echo IMAGES; ?> 1x, <?php echo IMAGES; ?> 2x" media="(min-width: 315px)">
-				<img class="auckland-logo" src="<?php echo IMAGES; ?>" alt="Auckland Logo">
+				<source srcset="<?php echo IMAGES; ?>auckland-logo.svg" type="image/svg+xml">
+				<source srcset="<?php echo IMAGES; ?>auckland-logo.png 1x, <?php echo IMAGES; ?>auckland-logo@2x.png 2x" media="(min-width: 315px)">
+				<img class="auckland-logo" src="<?php echo IMAGES; ?>auckland-logo.png" alt="Auckland Logo">
 			</picture>
 			<div class="legales">
 				<h4>FLEEK ES MARCA REGISTRADA DE AUCKLAND TURISMO SRL.</h4>

@@ -21,8 +21,8 @@ define ( 'TEMPLATEDIR', dirname( __FILE__ ) . '/../templates' );
 define ('CARPETASERVIDOR', '' );//esta variable se define si el sitio no está en el root del dominio y si está en una subcarpeta
 define ('MAINSURL', 'http://' . $_SERVER['HTTP_HOST'] . CARPETASERVIDOR );
 define ('IMAGES', MAINSURL . '/assets/images/');
-define ('UPLOADSURL', MAINSURL . '/contenido');
-define ('UPLOADSFILE', MAINSURL . '/contenido');
+define ('UPLOADSURL', MAINSURL . '/contenido/');
+define ('UPLOADSFILE', MAINSURL . '/contenido/');
 
 //META TAGS
 define('SITETITLE', 'Fleek - Viajá distinto');

@@ -6,9 +6,15 @@ $fuente-especial: 'Druk', $fuente-principal;
 /*COLORES*/
 $color-blanco: #fff;
 $color-negro: #585955;
+$color-azul:#2B00FF;
+$color-rosa:#FF6C6C;
 
-$transitionSpeed: .5s;
-$transitionSpeedx2: .5s;
+$transitionSpeed: 500ms;
+$transitionSpeedx2: 1s;
+
+$paddingLeftRight: 40px;
+$paddingLeftRightLG: 100px;
+$paddingLeftRightXLG: 180px;
 
 /*GRID OPTIONS*/
 $xs: 576px; //<576px
@@ -43,6 +49,19 @@ $xlg: 1600px;
      -moz-transform: $var;
       -ms-transform: $var;
           transform: $var;
+}
+
+/*EXTEND*/
+.btn {
+  cursor: pointer;
+  position: relative;
+  outline: none;
+  @include transition(all $transitionSpeed);
+  &:hover {
+      zoom: 1;
+      filter: alpha(opacity=50);
+      opacity: 0.5;
+  }
 }
 
 

@@ -1,0 +1,8 @@
+.btn-icon-left {
+    @extend .btn;
+    
+    img {
+        padding-right: 10px;
+        vertical-align: middle;
+    }
+}
