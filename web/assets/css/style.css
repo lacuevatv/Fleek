@@ -306,6 +306,7 @@ html, body {
 --------------------------------------------------------------*/
 .main-footer {
   position: relative;
+  z-index: 2;
   background-color: #2B00FF;
   color: #fff;
   padding: 50px 40px 60px;
@@ -466,98 +467,287 @@ html, body {
 7.0 Main Header & nav
 --------------------------------------------------------------*/
 /*
- * toogle
+ * main-header
 */
-.toggle {
+.main-header {
+  position: relative;
+  z-index: 3;
+  background-color: transparent;
+  height: 70px;
+  width: 100%;
+  border-bottom: 1px solid #fff;
+}
+@media (min-width: 1200px) {
+  .main-header {
+    height: 100px;
+  }
+}
+
+.navbar {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  display: -o-flex;
+  display: -ms-flex;
+  display: -moz-flex;
+  display: -webkit-flex;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  -o-justify-content: space-between;
+  justify-content: space-between;
+  z-index: 9;
+  /*
+  * toogle
+  */
+  /*
+  * MAIN MENU
+  */
+}
+.navbar .brand-name {
+  background-color: #fff;
+  width: 135px;
+  height: 100%;
+  position: relative;
+}
+@media (min-width: 1200px) {
+  .navbar .brand-name {
+    width: 200px;
+  }
+}
+.navbar .brand-name img {
+  width: 90%;
+  max-width: 90px;
+  display: block;
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+  -moz-transform: translate3d(-50%, -50%, 0);
+  -ms-transform: translate3d(-50%, -50%, 0);
+  transform: translate3d(-50%, -50%, 0);
+}
+@media (min-width: 1200px) {
+  .navbar .brand-name img {
+    max-width: 120px;
+  }
+}
+.navbar .tagline {
+  display: none;
+}
+@media (min-width: 1200px) {
+  .navbar .tagline {
+    color: #fff;
+    display: block;
+    position: absolute;
+    left: 230px;
+    font-size: 14px;
+    line-height: 17px;
+  }
+}
+.navbar .tagline .line {
+  position: absolute;
+  width: 15px;
+  height: 1.5px;
+  background-color: #fff;
+  right: 0;
+  top: 10px;
+}
+.navbar .toggle {
   position: relative;
   z-index: 11;
   cursor: pointer;
   display: block;
   border: none;
-  height: 40px;
-  width: 40px;
-  background-color: transparent;
+  height: 70px;
+  width: 70px;
+  background-color: #fff;
   -webkit-transition: all 500ms;
   -moz-transition: all 500ms;
   -ms-transition: all 500ms;
   transition: all 500ms;
 }
-.toggle:focus {
+@media (min-width: 1200px) {
+  .navbar .toggle {
+    height: 100px;
+    width: 100px;
+  }
+}
+.navbar .toggle:focus {
   border: none;
   outline: none;
 }
-.toggle .tog1 {
+.navbar .toggle .tog1 {
   display: inline-block;
   width: 30px;
-  height: 3px;
-  background-color: #585955;
+  height: 4px;
+  background-color: #2B00FF;
   position: absolute;
-  left: 5px;
-  top: 10px;
+  left: 50%;
+  top: 35%;
   -webkit-transition: all 1s;
   -moz-transition: all 1s;
   -ms-transition: all 1s;
   transition: all 1s;
+  -webkit-transform: translate3D(-50%, -50%, 0);
+  -moz-transform: translate3D(-50%, -50%, 0);
+  -ms-transform: translate3D(-50%, -50%, 0);
+  transform: translate3D(-50%, -50%, 0);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
 }
-.toggle .tog2 {
+@media (min-width: 1200px) {
+  .navbar .toggle .tog1 {
+    top: 38%;
+    width: 40px;
+  }
+}
+.navbar .toggle .tog2 {
   display: inline-block;
   width: 30px;
-  height: 3px;
-  background-color: #585955;
+  height: 4px;
+  background-color: #2B00FF;
   position: absolute;
-  left: 10px;
-  top: 20px;
+  left: 50%;
+  top: 50%;
   -webkit-transition: all 1s;
   -moz-transition: all 1s;
   -ms-transition: all 1s;
   transition: all 1s;
+  -webkit-transform: translate3D(-50%, -50%, 0);
+  -moz-transform: translate3D(-50%, -50%, 0);
+  -ms-transform: translate3D(-50%, -50%, 0);
+  transform: translate3D(-50%, -50%, 0);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
 }
-.toggle .tog3 {
+@media (min-width: 1200px) {
+  .navbar .toggle .tog2 {
+    width: 40px;
+  }
+}
+.navbar .toggle .tog3 {
   display: inline-block;
   width: 30px;
-  height: 3px;
-  background-color: #585955;
+  height: 4px;
+  background-color: #2B00FF;
   position: absolute;
-  left: 5px;
-  top: 30px;
+  left: 50%;
+  top: 65%;
+  -webkit-transform: translate3D(-50%, -50%, 0);
+  -moz-transform: translate3D(-50%, -50%, 0);
+  -ms-transform: translate3D(-50%, -50%, 0);
+  transform: translate3D(-50%, -50%, 0);
   -webkit-transition: all 1s;
   -moz-transition: all 1s;
   -ms-transition: all 1s;
   transition: all 1s;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
 }
-
-.toggle:hover .tog2 {
-  left: 5px;
+@media (min-width: 1200px) {
+  .navbar .toggle .tog3 {
+    top: 62%;
+    width: 40px;
+  }
 }
-
-.toggle-open .tog2 {
+.navbar .toggle-open {
+  background-color: transparent;
+}
+.navbar .toggle-open .tog2 {
   display: none;
 }
-
-.toggle-open .tog1 {
+.navbar .toggle-open .tog1 {
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
+  left: 30%;
   top: initial;
+  background-color: #fff;
 }
-
-.toggle-open .tog3 {
+.navbar .toggle-open .tog3 {
   -webkit-transform: rotate(-45deg);
   -moz-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
   transform: rotate(-45deg);
+  background-color: #fff;
+  left: 30%;
   top: initial;
 }
-
-/*
- * MAIN MENU
-*/
-.main-menu-wrapper {
-  right: -300%;
-  opacity: 0;
+.navbar .main-menu-wrapper {
   position: absolute;
-  background-color: blue;
+  background-color: #2B00FF;
+  color: #fff;
+  font-size: 16px;
+  line-height: 30px;
+  top: 0;
+  height: 100vh;
+  width: 70%;
+  max-width: 675px;
+  right: -300%;
+  opacity: 1;
+  display: flex;
+  display: -o-flex;
+  display: -ms-flex;
+  display: -moz-flex;
+  display: -webkit-flex;
+  -webkit-justify-content: space-around;
+  -moz-justify-content: space-around;
+  -ms-justify-content: space-around;
+  -o-justify-content: space-around;
+  justify-content: space-around;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  -o-flex-direction: column;
+  flex-direction: column;
+  padding: 120px 10px 30px 30px;
+  padding-top: 30%;
+}
+@media (min-width: 1200px) {
+  .navbar .main-menu-wrapper {
+    padding-top: 10%;
+    padding-bottom: 7%;
+    padding-left: 7%;
+    padding-right: 5%;
+    width: 35%;
+    font-size: 18px;
+    line-height: 36px;
+  }
+}
+@media (min-width: 1600px) {
+  .navbar .main-menu-wrapper {
+    padding: 250px 80px 200px 138px;
+    padding-top: 13%;
+    padding-bottom: 10%;
+    padding-left: 7%;
+    padding-right: 5%;
+    width: 35%;
+    font-size: 24px;
+    line-height: 48px;
+  }
+}
+.navbar .main-menu-wrapper .menu-contacto {
+  font-size: 12px;
+  line-height: 36px;
+}
+@media (min-width: 1600px) {
+  .navbar .main-menu-wrapper .menu-contacto {
+    font-size: 14px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

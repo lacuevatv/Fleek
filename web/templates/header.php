@@ -25,13 +25,15 @@
 <div class="main-wrapper">
 
 	<header class="main-header">
-		<nav>
+		<nav class="navbar">
 			<div class="brand-name">
 				<picture>
-					<source srcset="<?php echo IMAGES; ?> 1x, <?php echo IMAGES; ?> 2x" media="(min-width: 315px)">
-					<img class="fleek-logo" src="<?php echo IMAGES; ?>" alt="Fleek Logo">
+					<source srcset="<?php echo IMAGES; ?>logo-header.svg" type="image/svg+xml">
+					<source srcset="<?php echo IMAGES; ?>logo-header.png 1x, <?php echo IMAGES; ?>logo-header@2x.png 2x" media="(min-width: 315px)">
+					<img src="<?php echo IMAGES; ?>logo-header.png" alt="Fleek Logo">
 				</picture>
 			</div>
+			<p class="tagline">viajá<span class="line"></span><br>distinto.</p>
 			
 			<button class="toggle" role="menu">
 				<span class="sr-only">Toggle</span>
@@ -82,22 +84,33 @@
 				<ul>
 					<li>
 						<a class="btn-icon-left" href="#viajo">
+							<picture>
+								<source srcset="<?php echo IMAGES; ?>hapyface.svg" type="image/svg+xml">
+								<source srcset="<?php echo IMAGES; ?>hapyface.png 1x, <?php echo IMAGES; ?>hapyface@2x.png 2x" media="(min-width: 315px)">
+								<img src="<?php echo IMAGES; ?>hapyface.png" alt="Icon Whatsapp">
+							</picture>
 							Yo viajo 
 						</a>
 					</li>
 					<li>
 						<a class="btn-icon-left" href="#viaje">
+							<picture>
+								<source srcset="<?php echo IMAGES; ?>camera.svg" type="image/svg+xml">
+								<source srcset="<?php echo IMAGES; ?>camera.png 1x, <?php echo IMAGES; ?>camera@2x.png 2x" media="(min-width: 315px)">
+								<img src="<?php echo IMAGES; ?>camera.png" alt="Icon Whatsapp">
+							</picture>
 							Yo viajé
 						</a>
 					</li>
 				</ul>
 
-				<ul>
+				<ul class="menu-contacto">
 					<li>
 						<a class="btn-icon-left" href="<?php echo WHATSAPPLINK; ?>" target="_blank">
 							<picture>
-								<source srcset="<?php echo IMAGES; ?> 1x, <?php echo IMAGES; ?> 2x" media="(min-width: 315px)">
-								<img class="icon-btn" src="<?php echo IMAGES; ?>" alt="Icon Whatsapp">
+								<source srcset="<?php echo IMAGES; ?>wa-icon.svg" type="image/svg+xml">
+								<source srcset="<?php echo IMAGES; ?>wa-icon.png 1x, <?php echo IMAGES; ?>wa-icon@2x.png 2x" media="(min-width: 315px)">
+								<img src="<?php echo IMAGES; ?>wa-icon.png" alt="Icon Whatsapp">
 							</picture>
 							<?php echo WHATSAPP; ?>
 						</a>
@@ -105,8 +118,9 @@
 					<li>
 						<a class="btn-icon-left" href="<?php echo LINK_INSTAGRAM; ?>" target="_blank">
 							<picture>
-								<source srcset="<?php echo IMAGES; ?> 1x, <?php echo IMAGES; ?> 2x" media="(min-width: 315px)">
-								<img class="icon-btn" src="<?php echo IMAGES; ?>" alt="Icon Instagram">
+								<source srcset="<?php echo IMAGES; ?>instagram-icon.svg" type="image/svg+xml">
+								<source srcset="<?php echo IMAGES; ?>instagram-icon.png 1x, <?php echo IMAGES; ?>instagram-icon@2x.png 2x" media="(min-width: 315px)">
+								<img src="<?php echo IMAGES; ?>instagram-icon.png" alt="Icon Instagram">
 							</picture>
 							<?php echo '@'.INSTAGRAM; ?>
 						</a>
@@ -114,8 +128,9 @@
 					<li>
 						<a class="btn-icon-left" href="mailto:<?php echo EMAIL; ?>" target="_blank">
 							<picture>
-								<source srcset="<?php echo IMAGES; ?> 1x, <?php echo IMAGES; ?> 2x" media="(min-width: 315px)">
-								<img class="icon-btn" src="<?php echo IMAGES; ?>" alt="Icon Email">
+								<source srcset="<?php echo IMAGES; ?>email-icon.svg" type="image/svg+xml">
+								<source srcset="<?php echo IMAGES; ?>email-icon.png 1x, <?php echo IMAGES; ?>email-icon@2x.png 2x" media="(min-width: 315px)">
+								<img src="<?php echo IMAGES; ?>email-icon.png" alt="Icon Email">
 							</picture>
 							<?php echo EMAIL; ?>
 						</a>

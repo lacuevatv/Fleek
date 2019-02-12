@@ -1,80 +1,242 @@
 /*
- * toogle
+ * main-header
 */
-.toggle {
+.main-header {
     position: relative;
-    z-index: 11;
-    cursor: pointer;
-    display: block;
-    border: none;
-    height: 40px;
-    width: 40px;
+    z-index: 3;
     background-color: transparent;
-    @include transition(all $transitionSpeed);
+    height: 70px;
+    width: 100%;
+    border-bottom:1px solid $color-blanco;
 
-    &:focus {
-        border: none;
-        outline: none;
+    @media (min-width: $lg) {
+        height: 100px;
     }
+}//.main-header
 
-    .tog1 {
-        display: inline-block;
-        width: 30px;
-        height: 3px;
-        background-color: $color-negro;
-        position: absolute;
-        left: 5px;
-        top: 10px;
-        @include transition(all $transitionSpeedx2);
-    }
+.navbar {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    display: -o-flex;
+    display: -ms-flex;
+    display: -moz-flex;
+    display: -webkit-flex;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    align-items: center;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
+    -o-justify-content: space-between;
+    justify-content: space-between;
+    z-index: 9;
+
+    .brand-name {
+        background-color: $color-blanco;
+        width: 135px;
+        height: 100%;
+        position: relative;
+        @media (min-width: $lg) {
+            width: 200px;
+        }
+
+        img {
+            width: 90%;
+            max-width: 90px;
+            display: block;
+            margin: 0 auto;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            @include transform(translate3d(-50%,-50%,0));
+
+            @media (min-width: $lg) {
+                max-width: 120px;
+            }
+        }
+    }//.brand-name
     
-    .tog2 {
-        display: inline-block;
-        width: 30px;
-        height: 3px;
-        background-color: $color-negro;
+    .tagline {
+        display: none;
+        @media (min-width: $lg) {
+            color: $color-blanco;
+            display: block;
+            position: absolute;
+            left: 230px;
+            font-size: 14px;
+            line-height: 17px;
+        }
+
+        .line {
+            position: absolute;
+            width: 15px;
+            height: 1.5px;
+            background-color: $color-blanco;
+            right: 0;
+            top: 10px;
+        }
+    }//.tagline
+
+    /*
+    * toogle
+    */
+    .toggle {
+        position: relative;
+        z-index: 11;
+        cursor: pointer;
+        display: block;
+        border: none;
+        height: 70px;
+        width: 70px;
+        background-color: $color-blanco;
+        @include transition(all $transitionSpeed);
+
+        @media (min-width: $lg) {
+            height: 100px;
+            width: 100px;
+        }
+
+        &:focus {
+            border: none;
+            outline: none;
+        }
+
+        .tog1 {
+            display: inline-block;
+            width: 30px;
+            height: 4px;
+            background-color: $color-azul;
+            position: absolute;
+            left: 50%;
+            top: 35%;
+            @include transition(all $transitionSpeedx2);
+            @include transform(translate3D(-50%,-50%,0));
+            @include border-radius(5px);
+            @media (min-width: $lg) {
+                top: 38%;
+                width: 40px;
+            }
+        }
+        
+        .tog2 {
+            display: inline-block;
+            width: 30px;
+            height: 4px;
+            background-color: $color-azul;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            @include transition(all $transitionSpeedx2);
+            @include transform(translate3D(-50%,-50%,0));
+            @include border-radius(5px);
+            @media (min-width: $lg) {
+                width: 40px;
+            }
+        }
+        
+        .tog3 {
+            display: inline-block;
+            width: 30px;
+            height: 4px;
+            background-color: $color-azul;
+            position: absolute;
+            left: 50%;
+            top: 65%;
+            @include transform(translate3D(-50%,-50%,0));
+            @include transition(all $transitionSpeedx2);
+            @include border-radius(5px);
+            @media (min-width: $lg) {
+                top: 62%;
+                width: 40px;
+            }
+        }
+
+    }//.toggle
+
+    .toggle-open {
+        background-color: transparent;
+        .tog2 {
+            display: none;
+        }
+        .tog1 {
+            @include transform(rotate(45deg));
+            left: 30%;
+            top: initial;
+            background-color: $color-blanco;
+        }
+        .tog3 {
+            @include transform(rotate(-45deg));
+            background-color: $color-blanco;
+            left: 30%;
+            top: initial;
+        }
+    }//.toggle-open
+
+
+    /*
+    * MAIN MENU
+    */
+    .main-menu-wrapper {
         position: absolute;
-        left: 10px;
-        top: 20px;
-        @include transition(all $transitionSpeedx2);
-    }
-      
-    .tog3 {
-        display: inline-block;
-        width: 30px;
-        height: 3px;
-        background-color: $color-negro;
-        position: absolute;
-        left: 5px;
-        top: 30px;
-        @include transition(all $transitionSpeedx2);
-    }
+        background-color:$color-azul;
+        color: $color-blanco;
+        font-size: 16px;
+        line-height: 30px;
+        top: 0;
+        height: 100vh;
+        width: 70%;
+        max-width: 675px;
+        right: -300%;
+        opacity: 1;
+        display: flex;
+        display: -o-flex;
+        display: -ms-flex;
+        display: -moz-flex;
+        display: -webkit-flex;
+        -webkit-justify-content: space-around;
+        -moz-justify-content: space-around;
+        -ms-justify-content: space-around;
+        -o-justify-content: space-around;
+        justify-content: space-around;
+        -webkit-flex-direction: column;
+        -moz-flex-direction: column;
+        -ms-flex-direction: column;
+        -o-flex-direction: column;
+        flex-direction: column;
+        padding: 120px 10px 30px 30px;
+        padding-top: 30%;
+        @media (min-width: $lg) {
+            padding-top: 10%;
+            padding-bottom: 7%;
+            padding-left: 7%;
+            padding-right: 5%;
+            width: 35%;
+            font-size: 18px;
+            line-height: 36px;
+        }
 
-}//.toggle
+        @media (min-width: $xlg) {
+            padding: 250px 80px 200px 138px;
+            padding-top: 13%;
+            padding-bottom: 10%;
+            padding-left: 7%;
+            padding-right: 5%;
+            width: 35%;
+            font-size: 24px;
+            line-height: 48px;
+        }
 
-.toggle:hover .tog2 {
-    left: 5px;
-  }
-  
-.toggle-open .tog2 {
-display: none;
-}
-.toggle-open .tog1 {
-    @include transform(rotate(45deg));
-    top: initial;
-}
-.toggle-open .tog3 {
-    @include transform(rotate(-45deg));
-    top: initial;
-}
+        .menu-contacto {
+            font-size: 12px;
+            line-height: 36px;
+            @media (min-width: $xlg) {
+                font-size: 14px;
+            }
+        }
 
+    }//.main-menu-wrapper
 
-/*
- * MAIN MENU
-*/
-.main-menu-wrapper {
-    right: -300%;
-    opacity: 0;
-    position: absolute;
-    background-color: blue;
-}
+}//.navbar
