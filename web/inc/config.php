@@ -20,6 +20,7 @@ define ( 'TEMPLATEDIR', dirname( __FILE__ ) . '/../templates' );
 //urls
 define ('CARPETASERVIDOR', '' );//esta variable se define si el sitio no está en el root del dominio y si está en una subcarpeta
 define ('MAINSURL', 'http://' . $_SERVER['HTTP_HOST'] . CARPETASERVIDOR );
+define ('IMAGES', MAINSURL . '/assets/images/');
 define ('UPLOADSURL', MAINSURL . '/contenido');
 define ('UPLOADSFILE', MAINSURL . '/contenido');
 
@@ -30,10 +31,14 @@ define('METAKEYS', '');
 
 //LINKS REDES SOCIALES:
 define('LINK_FACEBOOK', 'https://www.facebook.com/');
-define('LINK_INSTAGRAM', 'https://www.instagram.com/');
+define('INSTAGRAM', 'wearefleek');
+define('LINK_INSTAGRAM', 'https://www.instagram.com/'.INSTAGRAM);
 define('LINK_TWITTER', 'https://twitter.com/');
 define('LINK_FLICKR', '#');
 define('LINK_YOUTUBE', 'https://www.youtube.com/channel/');
+define('WHATSAPP', '341.528.9819');
+define('WHATSAPPLINK', 'https://wa.me/543415289819');
+define ( 'EMAIL', 'fleek@aucklandturismo.com' );
 
 //indica al paginador cuantos se muestran por pagina para calcular el offset además de que el loop muestra solo esos
 define('POSTPERPAG', '1');

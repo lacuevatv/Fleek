@@ -69,22 +69,25 @@ $(document).ready(function(){
     /*
      * TOGGLE
     */
-   $('.toggle').click(MovilMenuToggle);
+    $('.toggle').click(MovilMenuToggle);
+
     function MovilMenuToggle (){
         $('.toggle').toggleClass('toggle-open');
-          $('.brand-name').toggleClass('brand-name-open');
+        $('.brand-name').toggleClass('brand-name-open');
         
-         var menu = $('.menus-wrapper')
-         var h = menu.prop('scrollHeight');
-         if ( $(menu).height() == 0 ) {
-             menu.animate({
-                 'height': h+'px',
-             }, 500);
-         } else {
-             menu.animate({
-                 'height': '0px',
-             }, 500);
-         }
+        var menu = $('.main-menu-wrapper')
+        
+        if ( $(menu).css('right') != '0px' ) {
+            menu.animate({
+                 'right': '0px',
+                 'opacity':'1',
+            }, 500);
+        } else {
+            menu.animate({
+                'right': '-1500px',
+                'opacity':'0',
+            }, 500);
+        }
      }
 
      /*
