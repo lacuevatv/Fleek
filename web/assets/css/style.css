@@ -274,6 +274,7 @@ html, body {
   font-family: "Helvetica Neue Roman", sans-serif;
   color: #585955;
   background-color: #fff;
+  background-color: #bdb4ec;
   font-size: 16px;
   line-height: 20px;
   overflow-x: hidden;
@@ -697,8 +698,8 @@ html, body {
   height: 100vh;
   width: 70%;
   max-width: 675px;
-  right: -300%;
-  opacity: 1;
+  right: -300px;
+  opacity: 0;
   display: flex;
   display: -o-flex;
   display: -ms-flex;

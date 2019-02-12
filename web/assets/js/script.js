@@ -75,18 +75,18 @@ $(document).ready(function(){
         $('.toggle').toggleClass('toggle-open');
         $('.brand-name').toggleClass('brand-name-open');
         
-        var menu = $('.main-menu-wrapper')
+        var menu = $('.main-menu-wrapper');
         
         if ( $(menu).css('right') != '0px' ) {
             menu.animate({
                  'right': '0px',
                  'opacity':'1',
-            }, 500);
+            }, 300);
         } else {
             menu.animate({
                 'right': '-300%',
                 'opacity':'0',
-            }, 500);
+            }, 300);
         }
      }
 
