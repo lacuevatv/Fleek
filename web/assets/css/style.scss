@@ -35,7 +35,6 @@ html, body {
     font-family: $fuente-principal;
     color: $color-negro;
     background-color: $color-blanco;
-    background-color: #bdb4ec;
     font-size: 16px;
     line-height: 20px;
     overflow-x: hidden;
@@ -53,6 +52,11 @@ html, body {
     position: relative;
 }
 
+.section-wrapper {
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
 
 /*--------------------------------------------------------------
 5.0 BTNS
@@ -72,3 +76,9 @@ html, body {
 --------------------------------------------------------------*/
 
 @import 'sass/main-header';
+
+/*
+ * inicio
+*/
+
+@import 'sass/inicio';

@@ -2,7 +2,9 @@
  * main-header
 */
 .main-header {
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
     z-index: 3;
     background-color: transparent;
     height: 70px;

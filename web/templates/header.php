@@ -83,7 +83,7 @@
 
 				<ul>
 					<li>
-						<a class="btn-icon-left" href="<?php echo MAINSURL;?>/#viajo">
+						<a class="btn-icon-left scroll-to" href="<?php echo MAINSURL;?>/#viajo">
 							<picture>
 								<source srcset="<?php echo IMAGES; ?>hapyface.svg" type="image/svg+xml">
 								<source srcset="<?php echo IMAGES; ?>hapyface.png 1x, <?php echo IMAGES; ?>hapyface@2x.png 2x" media="(min-width: 315px)">
@@ -93,7 +93,7 @@
 						</a>
 					</li>
 					<li>
-						<a class="btn-icon-left" href="<?php echo MAINSURL;?>/#viaje">
+						<a class="btn-icon-left scroll-to" href="<?php echo MAINSURL;?>/#viaje">
 							<picture>
 								<source srcset="<?php echo IMAGES; ?>camera.svg" type="image/svg+xml">
 								<source srcset="<?php echo IMAGES; ?>camera.png 1x, <?php echo IMAGES; ?>camera@2x.png 2x" media="(min-width: 315px)">
