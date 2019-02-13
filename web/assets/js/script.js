@@ -24,7 +24,8 @@ function scrollToID ( id ) {
 }
 
 /*--------------------------------------------------------------
-1.0 NAVIGATION
+1.0 BASE 
+* navigation, scroll to
 --------------------------------------------------------------*/
 
 $(document).ready(function(){
@@ -362,7 +363,7 @@ $(document).ready(function(){
 3.0 POPUP PROMO
 --------------------------------------------------------------*/
 
-$(window).on('load', function(){
+/*$(window).on('load', function(){
 
     var popup = $( '.popup' );
     var popupIMG = $( '.popup img' );
@@ -386,13 +387,16 @@ $(window).on('load', function(){
         closeX.click(closePopup);
         closeBTN.click(closePopup);
     }
-});
+});*/
 
 /*--------------------------------------------------------------
 4.0 IMAGENES, ANIMACIONES SLIDERS
 --------------------------------------------------------------*/
 
 $(window).on('load', function(){
+
+    //cargaimaenes por ajax LAZY LOAD
+    loadImages();
 
     //slider superior home
     /*$('#slider-inicio').owlCarousel({
@@ -456,3 +460,49 @@ $(window).on('load', function(){
 
 
 });
+
+function loadImages() {
+    
+    var images = $('.lqva-lazy-load-images');
+
+    images.each(function() {
+        loadImage (this);
+        console.log(this);
+    });
+
+
+}//loadImages()
+
+function loadImage (image) {
+    $(image).hide();
+    var imagenDefault = $(image).attr('srcset');
+    var imagenRetina = $(image).attr('srcset2x');
+    var movil = $(image).attr('data-movil');
+    var html = '<picture>';
+
+    if ( movil ) {
+        var imagenMovil = $(image).attr('srcsetmov');
+        var imagenMovilRetina = $(image).attr('srcsetmov2x');
+
+        if (imagenMovil == '') {
+            imagenMovil = imagenDefault;
+        }
+
+        if (imagenMovilRetina == '') {
+            imagenMovilRetina = imagenRetina;
+        }
+
+        html += '<source srcset="'+ imagenDefault + ' 1x, '+ imagenRetina +' 2x" media="(min-width: 992px)"></source>';
+        html += '<source srcset="'+imagenMovil+' 1x, '+imagenMovilRetina+' 2x" media="(min-width: 315px)"></source>';
+        
+        
+    } else {
+        html += '<source srcset="' + imagenDefault + ' 1x, ' + imagenRetina + ' 2x" media="(min-width: 315px)">';
+    }
+
+    html += '<img class="icon-btn" src="'+imagenDefault+'">';
+    html += '</picture>';
+
+    $(image).append($(html)).fadeIn(1000);
+
+}
