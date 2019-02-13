@@ -65,10 +65,17 @@ html, body {
     }
     
 }
+
 .only-pc {
     display: none;
     @media (min-width: $lg) {
         display: block;
+    }
+}
+
+.texto-azul-pc {
+    @media (min-width: $lg) {
+        color: $color-azul;
     }
 }
 

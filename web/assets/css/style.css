@@ -301,6 +301,12 @@ html, body {
   }
 }
 
+@media (min-width: 1200px) {
+  .texto-azul-pc {
+    color: #2B00FF;
+  }
+}
+
 /*--------------------------------------------------------------
 5.0 BTNS
 --------------------------------------------------------------*/
@@ -345,9 +351,12 @@ html, body {
   border-radius: 25px;
   padding-left: 15px;
   padding-right: 12px;
+  font-size: 14px;
+  padding-top: 2px;
 }
 @media (min-width: 1600px) {
   .icon-btn-right {
+    font-size: 16px;
     padding-left: 35px;
     padding-right: 25px;
     height: 60px;
@@ -358,7 +367,12 @@ html, body {
 }
 .icon-btn-right img {
   vertical-align: middle;
-  width: 19px;
+  width: 15px;
+}
+@media (min-width: 1600px) {
+  .icon-btn-right img {
+    width: 19px;
+  }
 }
 
 /*--------------------------------------------------------------
@@ -839,7 +853,7 @@ html, body {
 .slider-header-wrapper .legales-header {
   z-index: 2;
   margin-top: 10px;
-  margin-bottom: 5px;
+  padding-bottom: 5px;
 }
 @media (min-width: 1200px) {
   .slider-header-wrapper .legales-header {
@@ -1039,6 +1053,188 @@ html, body {
 }
 
 /*
+ * DESTINOS
+*/
+.destinos-wrapper {
+  position: relative;
+}
+@media (min-width: 1200px) {
+  .destinos-wrapper {
+    display: flex;
+    display: -o-flex;
+    display: -ms-flex;
+    display: -moz-flex;
+    display: -webkit-flex;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    align-items: center;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
+    -o-justify-content: space-between;
+    justify-content: space-between;
+  }
+}
+.destinos-wrapper li {
+  width: 100%;
+  height: 365px;
+}
+@media (min-width: 768px) {
+  .destinos-wrapper li {
+    height: 640px;
+  }
+}
+@media (min-width: 1200px) {
+  .destinos-wrapper li {
+    width: 33%, 33;
+    height: 365px;
+  }
+}
+@media (min-width: 1600px) {
+  .destinos-wrapper li {
+    height: 540px;
+  }
+}
+.destinos-wrapper .destino {
+  position: relative;
+  overflow: hidden;
+  padding: 35px 35px 50px;
+  display: flex;
+  display: -o-flex;
+  display: -ms-flex;
+  display: -moz-flex;
+  display: -webkit-flex;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  -o-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  -o-justify-content: space-between;
+  justify-content: space-between;
+}
+@media (min-width: 1600px) {
+  .destinos-wrapper .destino {
+    padding: 45px 45px 60px;
+  }
+}
+.destinos-wrapper .destino .icon-top-right {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  top: 0;
+  right: 0;
+}
+@media (min-width: 1600px) {
+  .destinos-wrapper .destino .icon-top-right {
+    width: 125px;
+    height: 125px;
+  }
+}
+.destinos-wrapper .destino .icon-top-right img {
+  width: 100%;
+}
+.destinos-wrapper .destino .super-title {
+  font-family: "Druk", "Helvetica Neue Roman", sans-serif;
+  font-weight: 500;
+  font-size: 178px;
+  line-height: 147px;
+  -webkit-text-stroke: 2px #585955;
+  color: transparent;
+}
+@media (min-width: 1600px) {
+  .destinos-wrapper .destino .super-title {
+    font-size: 240px;
+    line-height: 198px;
+  }
+}
+.destinos-wrapper .destino .title-destino {
+  position: relative;
+  font-size: 18px;
+  margin-top: 15px;
+  margin-bottom: 60px;
+}
+@media (min-width: 1600px) {
+  .destinos-wrapper .destino .title-destino {
+    font-size: 24px;
+    line-height: 28px;
+  }
+}
+.destinos-wrapper .destino .title-destino:after {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 14px;
+  background-image: url("../images/estrellas.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 0;
+  bottom: -20px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi) {
+  .destinos-wrapper .destino .title-destino:after {
+    background-image: url("../images/estrellas@2x.png");
+    background-size: contain;
+  }
+}
+@media (min-width: 1200px) {
+  .destinos-wrapper .destino .title-destino:after {
+    background-image: url("../images/estrellas.png");
+    background-size: contain;
+    width: 96px;
+    height: 16px;
+    bottom: -30px;
+  }
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi) {
+  .destinos-wrapper .destino .title-destino:after {
+    background-image: url("../images/estrellas@2x.png");
+    background-size: contain;
+  }
+}
+.destinos-wrapper .bariloche {
+  background-color: #FF6C6C;
+}
+.destinos-wrapper .bariloche .icon-top-right {
+  background-color: #72DDD3;
+}
+.destinos-wrapper .bariloche .super-title {
+  -webkit-text-stroke: 2px #72DDD3;
+}
+.destinos-wrapper .bariloche a {
+  background-color: #72DDD3;
+}
+.destinos-wrapper .cancun {
+  background-color: #72DDD3;
+}
+.destinos-wrapper .cancun .icon-top-right {
+  background-color: #F4E41E;
+}
+.destinos-wrapper .cancun .super-title {
+  -webkit-text-stroke: 2px #F4E41E;
+}
+.destinos-wrapper .cancun a {
+  background-color: #F4E41E;
+}
+.destinos-wrapper .londres {
+  background-color: #F4E41E;
+}
+.destinos-wrapper .londres .icon-top-right {
+  background-color: #FF6C6C;
+}
+.destinos-wrapper .londres .super-title {
+  -webkit-text-stroke: 2px #FF6C6C;
+}
+.destinos-wrapper .londres a {
+  background-color: #FF6C6C;
+}
+
+/*
  * EXPERIENCIAS
 */
 .wrapper-slider-testimonios {
@@ -1176,11 +1372,6 @@ html, body {
   .section-compra .compra-wrapper h2 {
     font-size: 36px;
     line-height: 48px;
-  }
-}
-@media (min-width: 1200px) {
-  .section-compra .compra-wrapper p {
-    color: #2B00FF;
   }
 }
 .section-compra .compra-wrapper .wrapper-button {

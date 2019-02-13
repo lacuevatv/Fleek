@@ -10,7 +10,7 @@
     .legales-header {
         z-index: 2;
         margin-top: 10px;
-        margin-bottom: 5px;
+        padding-bottom: 5px;
         @media (min-width: $lg) {
             display: flex;
             display: -o-flex;
@@ -189,6 +189,194 @@
     }//.imagen-nosotros
 }//.nosotros-wrapper
 
+
+/*
+ * DESTINOS
+*/
+.destinos-wrapper {
+    position: relative;
+    @media (min-width: $lg) {
+        display: flex;
+        display: -o-flex;
+        display: -ms-flex;
+        display: -moz-flex;
+        display: -webkit-flex;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        -o-align-items: center;
+        align-items: center;
+        -webkit-justify-content: space-between;
+        -moz-justify-content: space-between;
+        -ms-justify-content: space-between;
+        -o-justify-content: space-between;
+        justify-content: space-between;
+    }
+
+    li {
+        width: 100%;
+        height: 365px;
+        @media (min-width: $sm) {
+            height: 640px;
+        }
+        @media (min-width: $lg) {
+            width: 33%,33;
+            height: 365px;
+        }
+        @media (min-width: $xlg) {
+            height: 540px;
+        }
+    }
+
+    .destino {
+        position: relative;
+        overflow: hidden;
+        padding: 35px 35px 50px;
+        display: flex;
+        display: -o-flex;
+        display: -ms-flex;
+        display: -moz-flex;
+        display: -webkit-flex;
+        -webkit-flex-direction: column;
+        -moz-flex-direction: column;
+        -ms-flex-direction: column;
+        -o-flex-direction: column;
+        flex-direction: column;
+        -webkit-justify-content: space-between;
+        -moz-justify-content: space-between;
+        -ms-justify-content: space-between;
+        -o-justify-content: space-between;
+        justify-content: space-between;
+
+        @media (min-width: $xlg) {
+            padding: 45px 45px 60px;
+        }
+
+        .icon-top-right {
+            position: absolute;
+            width: 70px;
+            height: 70px;
+            top: 0;
+            right: 0;
+            
+            @media (min-width: $xlg) {
+                width: 125px;
+                height: 125px;
+            }
+
+            img {
+                width: 100%;
+            }
+        }
+        
+        .super-title {
+            font-family: $fuente-especial;
+            font-weight: 500;
+            font-size: 178px;
+            line-height: 147px;
+            -webkit-text-stroke: 2px $color-negro;
+            color: transparent;
+            @media (min-width: $xlg) {
+                font-size: 240px;
+                line-height: 198px;
+            }
+        }//.super-title
+
+        .title-destino {
+            position: relative;
+            font-size: 18px;
+            margin-top: 15px;
+            margin-bottom: 60px;
+
+            @media (min-width: $xlg) {
+                font-size: 24px;
+                line-height: 28px;
+            }
+
+            &:after {
+                content: '';
+                display: block;
+                width: 70px;
+                height: 14px;
+                background-image: url('../images/estrellas.png');
+                background-size: contain;
+                background-repeat: no-repeat;
+                position: absolute;
+                left: 0;
+                bottom: -20px;
+
+                @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi) {
+                    background-image: url('../images/estrellas@2x.png');
+                    background-size: contain;
+                }
+
+                @media (min-width: $lg) {
+                    background-image: url('../images/estrellas.png');
+                    background-size: contain;
+                    width: 96px;
+                    height: 16px;
+                    bottom: -30px;
+                }
+
+                @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi) {
+                    background-image: url('../images/estrellas@2x.png');
+                    background-size: contain;
+                }
+            }
+        }
+
+    }//destino
+
+
+    .bariloche {
+        background-color: $color-rosa;
+
+        .icon-top-right {
+            background-color: $color-verde;
+        }
+
+        .super-title{
+            -webkit-text-stroke: 2px $color-verde;
+        }
+        
+        a{ 
+            background-color: $color-verde;  
+        }
+    }//.bariloche
+
+    .cancun {
+        background-color: $color-verde;
+
+        .icon-top-right {
+            background-color: $color-amarillo;
+        }
+
+        .super-title{
+            -webkit-text-stroke: 2px $color-amarillo;
+        }
+
+        a{ 
+            background-color: $color-amarillo;  
+        }
+    }//.cancun
+
+    .londres {
+        background-color: $color-amarillo;
+
+        .icon-top-right {
+            background-color:$color-rosa;
+        }
+
+        .super-title{
+            -webkit-text-stroke: 2px $color-rosa;
+        }
+
+        a{ 
+            background-color: $color-rosa;  
+        }
+    }//.londres
+}//.destinos-wrapper
+
 /*
  * EXPERIENCIAS
 */
@@ -322,12 +510,6 @@
             @media (min-width: $xlg) {
                 font-size: 36px;
                 line-height: 48px;
-            }
-        }
-
-        p {
-            @media (min-width: $lg) {
-                color: $color-azul;
             }
         }
 
