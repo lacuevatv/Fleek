@@ -77,38 +77,58 @@ getTemplate( 'header' ); ?>
 
 <!-- SECTION EXPERIENCIAS -->
     <section class="section-wrapper" id="experiencias">
-        <h2 class="sr-only">
-            Slider de Testimonios
-        </h2>
+        <div class="wrapper-slider-testimonios">
+            <div class="experiencia cargador">
+                <div class="experiencia-data">
+                    <picture>
+                        <source srcset="<?php echo IMAGES; ?>hapyface.svg" type="image/svg+xml">
+                        <source srcset="<?php echo IMAGES; ?>hapyface.png 1x, <?php echo IMAGES; ?>hapyface@2x.png 2x" media="(min-width: 315px)">
+                        <img class="icon-experiencias" src="<?php echo IMAGES; ?>hapyface.png" alt="Icon Whatsapp">
+                    </picture>
+                    <h2 class="title-experiencia">Experiencias</h2>
+                    <p class="nombre-experiencia">Cargando...</p>
+                </div>
+                <div class="experiencia-contenido">
+                </div>
+            </div>
         <?php //getTemplate( 'slider-testimonios' ); ?>
+        </div>
     </section>
 
 <!-- SECTION COMPRA ONLINE -->
-    <section class="section-wrapper" id="compraonline">
-        <h2 class="sr-only">
-            Compra tu viaje
-        </h2>
-        <div>
-            <h3>Compra tu viaje</h3>
-            <h3>Reservá tu lugar ahora</h3>
+    <section class="section-wrapper section-compra" id="compraonline">
+        <div class="texto-destacado">
+            <span class="only-mobile">
+                Reservá tu lugar ahora
+            </span>
+            <span class="only-pc">
+                Comprá<br>tu viaje
+            </span>
         </div>
-        <div>
-            <h3>Comprá tu viaje ahora.</h3>
-            <h3>Comprá tu viaje con un solo click.</h3>
-
+        <div class="compra-wrapper">
+            <h2>
+                <span class="only-mobile">
+                    Comprá tu viaje ahora.
+                </span>
+                <span class="only-pc">
+                    Comprá tu viaje con un solo click.
+                </span>
+            </h2>
+            
             <p>Hacé la reserva para tu grupo en forma online.</p>
 
             <div class="wrapper-button">
-                <a href="">
+                <a class="icon-btn-right" href="#">
                     <span>Comprá online</span>
                     <picture>
-                        <source srcset="<?php echo IMAGES; ?> 1x, <?php echo IMAGES; ?> 2x" media="(min-width: 315px)">
-                        <img class="icon-btn" src="<?php echo IMAGES; ?>">
+                        <source srcset="<?php echo IMAGES; ?>icon-plane.svg" type="image/svg+xml">
+                        <source srcset="<?php echo IMAGES; ?>icon-plane.png 1x, <?php echo IMAGES; ?>icon-plane.png 2x" media="(min-width: 315px)">
+                        <img src="<?php echo IMAGES; ?>icon-plane.png">
                     </picture>
                 </a>
             </div>
 
-            <p>Si preferís la asistencia de un asesor <a href="#">envianos tus datos acá.</a>
+            <p class="only-pc">Si preferís la asistencia de un asesor <a href="#">envianos tus datos acá.</a>
         </div>
     </section>
 

@@ -221,22 +221,6 @@ button {
 /*FUENTES*/
 /*COLORES*/
 /*GRID OPTIONS*/
-/*EXTEND*/
-.btn, .btn-icon-left {
-  cursor: pointer;
-  position: relative;
-  outline: none;
-  -webkit-transition: all 500ms;
-  -moz-transition: all 500ms;
-  -ms-transition: all 500ms;
-  transition: all 500ms;
-}
-.btn:hover, .btn-icon-left:hover {
-  zoom: 1;
-  filter: alpha(opacity=50);
-  opacity: 0.5;
-}
-
 /*
 @media (min-width: $md) {}
 -webkit-
@@ -299,12 +283,82 @@ html, body {
   padding: 0;
 }
 
+.only-mobile {
+  display: block;
+}
+@media (min-width: 1200px) {
+  .only-mobile {
+    display: none;
+  }
+}
+
+.only-pc {
+  display: none;
+}
+@media (min-width: 1200px) {
+  .only-pc {
+    display: block;
+  }
+}
+
 /*--------------------------------------------------------------
 5.0 BTNS
 --------------------------------------------------------------*/
+.btn, .icon-btn-right, .btn-icon-left {
+  cursor: pointer;
+  position: relative;
+  outline: none;
+  -webkit-transition: all 500ms;
+  -moz-transition: all 500ms;
+  -ms-transition: all 500ms;
+  transition: all 500ms;
+}
+
+.btn-hover-opacity:hover, .icon-btn-right:hover, .btn-icon-left:hover {
+  zoom: 1;
+  filter: alpha(opacity=50);
+  opacity: 0.5;
+}
+
 .btn-icon-left img {
   padding-right: 10px;
   vertical-align: middle;
+}
+
+.icon-btn-right {
+  display: flex;
+  display: -o-flex;
+  display: -ms-flex;
+  display: -moz-flex;
+  display: -webkit-flex;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  justify-content: space-around;
+  height: 45px;
+  width: 165px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  border-radius: 25px;
+  padding-left: 15px;
+  padding-right: 12px;
+}
+@media (min-width: 1600px) {
+  .icon-btn-right {
+    padding-left: 35px;
+    padding-right: 25px;
+    height: 60px;
+    width: 220px;
+    height: 55px;
+    width: 210px;
+  }
+}
+.icon-btn-right img {
+  vertical-align: middle;
+  width: 19px;
 }
 
 /*--------------------------------------------------------------
@@ -905,7 +959,7 @@ html, body {
 @media (min-width: 1200px) {
   .nosotros-wrapper .contenido {
     font-size: 16px;
-    width: 47%;
+    width: 45%;
     padding: 220px 5% 140px 8%;
   }
 }
@@ -961,7 +1015,7 @@ html, body {
 }
 @media (min-width: 1200px) {
   .nosotros-wrapper .imagen-nosotros {
-    width: 53%;
+    width: 55%;
     height: 100%;
   }
 }
@@ -982,6 +1036,172 @@ html, body {
     -ms-transform: translate3d(-50%, -50%, 0);
     transform: translate3d(-50%, -50%, 0);
   }
+}
+
+/*
+ * EXPERIENCIAS
+*/
+.wrapper-slider-testimonios {
+  background-color: #2B00FF;
+  color: #fff;
+}
+@media (min-width: 1200px) {
+  .wrapper-slider-testimonios .experiencia {
+    display: flex;
+    display: -o-flex;
+    display: -ms-flex;
+    display: -moz-flex;
+    display: -webkit-flex;
+    flex-direction: row-reverse;
+  }
+}
+.wrapper-slider-testimonios .experiencia-data {
+  padding: 50px 40px 100px;
+}
+@media (min-width: 1200px) {
+  .wrapper-slider-testimonios .experiencia-data {
+    padding: 50px 100px 100px;
+    width: 50%;
+  }
+}
+@media (min-width: 1600px) {
+  .wrapper-slider-testimonios .experiencia-data {
+    padding: 80px 180px 70px;
+  }
+}
+.wrapper-slider-testimonios .experiencia-data .title-experiencia {
+  font-family: "Druk", "Helvetica Neue Roman", sans-serif;
+  font-weight: 500;
+  font-size: 55px;
+  text-transform: uppercase;
+  line-height: 55px;
+  margin-top: 40px;
+}
+.wrapper-slider-testimonios .experiencia-data .nombre-experiencia {
+  margin-top: 30px;
+}
+@media (min-width: 1200px) {
+  .wrapper-slider-testimonios .experiencia-contenido {
+    width: 50%;
+  }
+}
+
+/*
+ * COMPRA AHORA
+*/
+@media (min-width: 1200px) {
+  .section-compra {
+    display: flex;
+    display: -o-flex;
+    display: -ms-flex;
+    display: -moz-flex;
+    display: -webkit-flex;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
+    -o-justify-content: space-between;
+    justify-content: space-between;
+    -webkit-flex-direction: row-reverse;
+    -moz-flex-direction: row-reverse;
+    -ms-flex-direction: row-reverse;
+    -o-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+  }
+}
+.section-compra .texto-destacado {
+  color: #2B00FF;
+  text-transform: uppercase;
+  font-size: 73px;
+  line-height: 75px;
+  font-family: "Druk", "Helvetica Neue Roman", sans-serif;
+  font-weight: 500;
+  padding: 110px 20px 60px 40px;
+}
+@media (min-width: 1200px) {
+  .section-compra .texto-destacado {
+    width: 50%;
+    padding: 60px 0 50px;
+    font-size: 160px;
+    line-height: 140px;
+  }
+}
+@media (min-width: 1600px) {
+  .section-compra .texto-destacado {
+    padding: 80px 0 40px;
+    font-size: 240px;
+    line-height: 200px;
+  }
+}
+.section-compra .compra-wrapper {
+  padding: 0 60px 60px 40px;
+}
+@media (min-width: 1200px) {
+  .section-compra .compra-wrapper {
+    width: 50%;
+    padding: 60px 20px 55px 100px;
+    display: flex;
+    display: -o-flex;
+    display: -ms-flex;
+    display: -moz-flex;
+    display: -webkit-flex;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    -o-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: flex-end;
+    -moz-justify-content: flex-end;
+    -ms-justify-content: flex-end;
+    -o-justify-content: flex-end;
+    justify-content: flex-end;
+  }
+}
+@media (min-width: 1600px) {
+  .section-compra .compra-wrapper {
+    padding: 80px 40px 50px 180px;
+  }
+}
+.section-compra .compra-wrapper h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #2B00FF;
+}
+@media (min-width: 1200px) {
+  .section-compra .compra-wrapper h2 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+}
+@media (min-width: 1600px) {
+  .section-compra .compra-wrapper h2 {
+    font-size: 36px;
+    line-height: 48px;
+  }
+}
+@media (min-width: 1200px) {
+  .section-compra .compra-wrapper p {
+    color: #2B00FF;
+  }
+}
+.section-compra .compra-wrapper .wrapper-button {
+  margin-top: 130px;
+  margin-bottom: 50px;
+}
+@media (min-width: 1200px) {
+  .section-compra .compra-wrapper .wrapper-button {
+    margin-top: 20px;
+    margin-bottom: 76px;
+  }
+}
+@media (min-width: 1600px) {
+  .section-compra .compra-wrapper .wrapper-button {
+    margin-top: 30px;
+    margin-bottom: 115px;
+  }
+}
+.section-compra .compra-wrapper .wrapper-button a {
+  background-color: #2B00FF;
+  color: #fff;
 }
 
 /*

@@ -58,6 +58,20 @@ html, body {
     padding: 0;
 }
 
+.only-mobile {
+    display: block;
+    @media (min-width: $lg) {
+        display: none;
+    }
+    
+}
+.only-pc {
+    display: none;
+    @media (min-width: $lg) {
+        display: block;
+    }
+}
+
 /*--------------------------------------------------------------
 5.0 BTNS
 --------------------------------------------------------------*/

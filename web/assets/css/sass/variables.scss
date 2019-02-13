@@ -51,19 +51,6 @@ $xlg: 1600px;
           transform: $var;
 }
 
-/*EXTEND*/
-.btn {
-  cursor: pointer;
-  position: relative;
-  outline: none;
-  @include transition(all $transitionSpeed);
-  &:hover {
-      zoom: 1;
-      filter: alpha(opacity=50);
-      opacity: 0.5;
-  }
-}
-
 
 /*
 @media (min-width: $md) {}
