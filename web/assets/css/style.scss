@@ -60,7 +60,7 @@ html, body {
 
 .only-mobile {
     display: block;
-    @media (min-width: $lg) {
+    @media (min-width: $md) {
         display: none;
     }
     
@@ -68,7 +68,7 @@ html, body {
 
 .only-pc {
     display: none;
-    @media (min-width: $lg) {
+    @media (min-width: $md) {
         display: block;
     }
 }

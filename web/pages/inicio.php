@@ -44,11 +44,11 @@ getTemplate( 'header' ); ?>
                 </a>
             </div>
 
-            <div class="imagen-nosotros">
+            <div class="imagen-nosotros" data-cargar="" data-movil="true" srcsetmov="<?php echo UPLOADSURL; ?>nosotros-mobile.jpg" srcsetmov2x="<?php echo UPLOADSURL; ?>nosotros-mobile@2x.jpg" srcset="<?php echo UPLOADSURL; ?>nosotros.jpg" srcset2x="<?php echo UPLOADSURL; ?>nosotros@2x.jpg">
                 <picture>
-                    <source srcset="<?php echo UPLOADSURL; ?>nosotros.jpg 1x, <?php echo UPLOADSURL; ?>nosotros@2x.jpg 2x" media="(min-width: 1200px)">
+                    <source srcset="<?php echo UPLOADSURL; ?>nosotros.jpg 1x, <?php echo UPLOADSURL; ?>nosotros@2x.jpg 2x" media="(min-width: 992px)">
                     <source srcset="<?php echo UPLOADSURL; ?>nosotros-mobile.jpg 1x, <?php echo UPLOADSURL; ?>nosotros-mobile@2x.jpg 2x" media="(min-width: 315px)">
-                    <img class="icon-btn" src="<?php echo UPLOADSURL; ?>nosotros-mobile.jpg">
+                    <img class="icon-btn" src="<?php echo UPLOADSURL; ?>nosotros.jpg">
                 </picture>
             </div>
         </div>

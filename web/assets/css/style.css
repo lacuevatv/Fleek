@@ -286,7 +286,7 @@ html, body {
 .only-mobile {
   display: block;
 }
-@media (min-width: 1200px) {
+@media (min-width: 992px) {
   .only-mobile {
     display: none;
   }
@@ -295,7 +295,7 @@ html, body {
 .only-pc {
   display: none;
 }
-@media (min-width: 1200px) {
+@media (min-width: 992px) {
   .only-pc {
     display: block;
   }
@@ -394,14 +394,14 @@ html, body {
 }
 @media (min-width: 1600px) {
   .main-footer {
-    padding: 200px 180px 65px;
+    padding: 200px 140px 65px;
   }
 }
 
 .footer-wrapper {
   margin-top: 60px;
 }
-@media (min-width: 1200px) {
+@media (min-width: 992px) {
   .footer-wrapper {
     display: flex;
     display: -o-flex;
@@ -414,7 +414,7 @@ html, body {
 .contacto {
   margin-bottom: 60px;
 }
-@media (min-width: 1200px) {
+@media (min-width: 992px) {
   .contacto {
     width: 25%;
   }
@@ -423,7 +423,7 @@ html, body {
   margin: 6px 0;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 992px) {
   .sucursales {
     display: flex;
     display: -o-flex;
@@ -436,7 +436,7 @@ html, body {
 .sucursales li {
   margin-bottom: 25px;
 }
-@media (min-width: 1200px) {
+@media (min-width: 992px) {
   .sucursales li {
     width: 33%;
   }
@@ -449,7 +449,7 @@ html, body {
 .title-patrocinadores {
   margin-bottom: 25px;
 }
-@media (min-width: 1200px) {
+@media (min-width: 992px) {
   .title-patrocinadores {
     margin-right: 55px;
   }
@@ -465,7 +465,7 @@ html, body {
 .patrocinadores li {
   margin-right: 20px;
 }
-@media (min-width: 1200px) {
+@media (min-width: 992px) {
   .patrocinadores li {
     margin-right: 40px;
   }
@@ -481,7 +481,7 @@ html, body {
   font-size: 10px;
   line-height: 17px;
 }
-@media (min-width: 1200px) {
+@media (min-width: 992px) {
   .legales-wrapper {
     -webkit-align-items: flex-end;
     -moz-align-items: flex-end;
@@ -511,14 +511,14 @@ html, body {
   display: block;
   margin: 10px 0;
 }
-@media (min-width: 1200px) {
+@media (min-width: 992px) {
   .legales-wrapper .legales p {
     display: inline;
     margin: 0;
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 992px) {
   .row-reverse-dk {
     -webkit-flex-direction: row-reverse;
     -moz-flex-direction: row-reverse;
@@ -533,7 +533,7 @@ html, body {
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 992px) {
   .align-center-dk {
     -webkit-align-items: center;
     -moz-align-items: center;
@@ -803,7 +803,7 @@ html, body {
   padding-top: 20%;
   padding-bottom: 12%;
 }
-@media (min-width: 1200px) {
+@media (min-width: 768px) {
   .navbar .main-menu-wrapper {
     padding-top: 9%;
     padding-bottom: 5%;
@@ -928,7 +928,7 @@ html, body {
 }
 @media (min-width: 1600px) {
   .nosotros-wrapper .icon-vertical {
-    max-width: 180px;
+    max-width: 140px;
   }
 }
 .nosotros-wrapper .icon-vertical img {
@@ -957,7 +957,7 @@ html, body {
   flex-grow: 1;
   color: #2B00FF;
 }
-@media (min-width: 1200px) {
+@media (min-width: 992px) {
   .nosotros-wrapper .contenido-nosotros {
     display: flex;
     display: -o-flex;
@@ -970,7 +970,7 @@ html, body {
   font-size: 15px;
   padding: 70px 15% 20px 10%;
 }
-@media (min-width: 1200px) {
+@media (min-width: 992px) {
   .nosotros-wrapper .contenido {
     font-size: 16px;
     width: 45%;
@@ -1027,7 +1027,7 @@ html, body {
   height: 160px;
   width: 100%;
 }
-@media (min-width: 1200px) {
+@media (min-width: 992px) {
   .nosotros-wrapper .imagen-nosotros {
     width: 55%;
     height: 100%;
@@ -1036,13 +1036,17 @@ html, body {
 .nosotros-wrapper .imagen-nosotros img {
   position: absolute;
   top: 50%;
+  right: 0;
+  width: 414px;
   -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
-@media (min-width: 1200px) {
+@media (min-width: 992px) {
   .nosotros-wrapper .imagen-nosotros img {
+    width: 952px;
+    right: initial;
     top: 50%;
     left: 50%;
     -webkit-transform: translate3d(-50%, -50%, 0);
@@ -1058,7 +1062,7 @@ html, body {
 .destinos-wrapper {
   position: relative;
 }
-@media (min-width: 1200px) {
+@media (min-width: 992px) {
   .destinos-wrapper {
     display: flex;
     display: -o-flex;
@@ -1083,10 +1087,10 @@ html, body {
 }
 @media (min-width: 768px) {
   .destinos-wrapper li {
-    height: 640px;
+    height: 540px;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 992px) {
   .destinos-wrapper li {
     width: 33%, 33;
     height: 365px;
@@ -1241,7 +1245,7 @@ html, body {
   background-color: #2B00FF;
   color: #fff;
 }
-@media (min-width: 1200px) {
+@media (min-width: 992px) {
   .wrapper-slider-testimonios .experiencia {
     display: flex;
     display: -o-flex;
@@ -1254,7 +1258,7 @@ html, body {
 .wrapper-slider-testimonios .experiencia-data {
   padding: 50px 40px 100px;
 }
-@media (min-width: 1200px) {
+@media (min-width: 992px) {
   .wrapper-slider-testimonios .experiencia-data {
     padding: 50px 100px 100px;
     width: 50%;
@@ -1262,7 +1266,7 @@ html, body {
 }
 @media (min-width: 1600px) {
   .wrapper-slider-testimonios .experiencia-data {
-    padding: 80px 180px 70px;
+    padding: 80px 140px 70px;
   }
 }
 .wrapper-slider-testimonios .experiencia-data .title-experiencia {
@@ -1276,7 +1280,7 @@ html, body {
 .wrapper-slider-testimonios .experiencia-data .nombre-experiencia {
   margin-top: 30px;
 }
-@media (min-width: 1200px) {
+@media (min-width: 992px) {
   .wrapper-slider-testimonios .experiencia-contenido {
     width: 50%;
   }
@@ -1285,7 +1289,7 @@ html, body {
 /*
  * COMPRA AHORA
 */
-@media (min-width: 1200px) {
+@media (min-width: 992px) {
   .section-compra {
     display: flex;
     display: -o-flex;
@@ -1313,7 +1317,7 @@ html, body {
   font-weight: 500;
   padding: 110px 20px 60px 40px;
 }
-@media (min-width: 1200px) {
+@media (min-width: 992px) {
   .section-compra .texto-destacado {
     width: 50%;
     padding: 60px 0 50px;
@@ -1331,10 +1335,10 @@ html, body {
 .section-compra .compra-wrapper {
   padding: 0 60px 60px 40px;
 }
-@media (min-width: 1200px) {
+@media (min-width: 992px) {
   .section-compra .compra-wrapper {
+    padding: 60px 60px 60px 40px;
     width: 50%;
-    padding: 60px 20px 55px 100px;
     display: flex;
     display: -o-flex;
     display: -ms-flex;
@@ -1352,9 +1356,14 @@ html, body {
     justify-content: flex-end;
   }
 }
+@media (min-width: 1200px) {
+  .section-compra .compra-wrapper {
+    padding: 60px 20px 55px 100px;
+  }
+}
 @media (min-width: 1600px) {
   .section-compra .compra-wrapper {
-    padding: 80px 40px 50px 180px;
+    padding: 80px 40px 50px 140px;
   }
 }
 .section-compra .compra-wrapper h2 {
@@ -1378,7 +1387,7 @@ html, body {
   margin-top: 130px;
   margin-bottom: 50px;
 }
-@media (min-width: 1200px) {
+@media (min-width: 992px) {
   .section-compra .compra-wrapper .wrapper-button {
     margin-top: 20px;
     margin-bottom: 76px;
@@ -1398,7 +1407,7 @@ html, body {
 /*
  * VIAJO / VIAJE
 */
-@media (min-width: 1200px) {
+@media (min-width: 992px) {
   .viajo-viaje-wrapper {
     display: flex;
     display: -o-flex;
@@ -1418,16 +1427,20 @@ html, body {
   padding: 40px 40px;
   font-size: 12px;
 }
-@media (min-width: 1200px) {
+@media (min-width: 992px) {
   .viajo, .viaje-wrapper, .viajo-wrapper {
     width: 50%;
+  }
+}
+@media (min-width: 1200px) {
+  .viajo, .viaje-wrapper, .viajo-wrapper {
     font-size: 16px;
     padding: 80px 50px 65px 100px;
   }
 }
 @media (min-width: 1600px) {
   .viajo, .viaje-wrapper, .viajo-wrapper {
-    padding: 90px 50px 70px 180px;
+    padding: 90px 50px 70px 140px;
   }
 }
 .viajo img, .viaje-wrapper img, .viajo-wrapper img {
@@ -1475,7 +1488,7 @@ html, body {
 /*
  * INSTAGRAM
 */
-@media (min-width: 1200px) {
+@media (min-width: 992px) {
   .instagram-wrapper {
     display: flex;
     display: -o-flex;
@@ -1523,11 +1536,11 @@ html, body {
 @media (min-width: 992px) {
   .instagram-wrapper .instagram {
     height: 360px;
+    width: 30%;
   }
 }
 @media (min-width: 1200px) {
   .instagram-wrapper .instagram {
-    width: 30%;
     height: 420px;
   }
 }
@@ -1560,7 +1573,7 @@ html, body {
 .instagram-wrapper .wrapper-feed {
   display: none;
 }
-@media (min-width: 1200px) {
+@media (min-width: 992px) {
   .instagram-wrapper .wrapper-feed {
     color: #fff;
     width: 70%;
