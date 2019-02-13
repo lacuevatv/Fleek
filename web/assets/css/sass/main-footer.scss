@@ -112,6 +112,12 @@
 
     .legales {
         padding-left: 20px;
+        width: 80%;
+        -webkit-flex-grow: 1;
+        -moz-flex-grow: 1;
+        -ms-flex-grow: 1;
+        -o-flex-grow: 1;
+        flex-grow: 1;
         p {
             display: block;
             margin: 10px 0;

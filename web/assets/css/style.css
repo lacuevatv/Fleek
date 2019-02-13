@@ -427,6 +427,12 @@ html, body {
 }
 .legales-wrapper .legales {
   padding-left: 20px;
+  width: 80%;
+  -webkit-flex-grow: 1;
+  -moz-flex-grow: 1;
+  -ms-flex-grow: 1;
+  -o-flex-grow: 1;
+  flex-grow: 1;
 }
 .legales-wrapper .legales p {
   display: block;
@@ -562,6 +568,8 @@ html, body {
 }
 .navbar .toggle {
   position: relative;
+  top: 0;
+  right: 0;
   z-index: 11;
   cursor: pointer;
   display: block;
@@ -666,6 +674,7 @@ html, body {
 }
 .navbar .toggle-open {
   background-color: transparent;
+  position: fixed;
 }
 .navbar .toggle-open .tog2 {
   display: none;
@@ -689,14 +698,14 @@ html, body {
   top: initial;
 }
 .navbar .main-menu-wrapper {
-  position: absolute;
+  position: fixed;
   background-color: #2B00FF;
   color: #fff;
   font-size: 16px;
   line-height: 30px;
   top: 0;
   height: 100vh;
-  width: 70%;
+  width: 75%;
   max-width: 675px;
   right: -300px;
   opacity: 0;
@@ -716,13 +725,14 @@ html, body {
   -o-flex-direction: column;
   flex-direction: column;
   padding: 120px 10px 30px 30px;
-  padding-top: 30%;
+  padding-top: 20%;
+  padding-bottom: 12%;
 }
 @media (min-width: 1200px) {
   .navbar .main-menu-wrapper {
-    padding-top: 10%;
-    padding-bottom: 7%;
-    padding-left: 7%;
+    padding-top: 9%;
+    padding-bottom: 5%;
+    padding-left: 5%;
     padding-right: 5%;
     width: 35%;
     font-size: 18px;
@@ -732,9 +742,9 @@ html, body {
 @media (min-width: 1600px) {
   .navbar .main-menu-wrapper {
     padding: 250px 80px 200px 138px;
-    padding-top: 13%;
-    padding-bottom: 10%;
-    padding-left: 7%;
+    padding-top: 10%;
+    padding-bottom: 7%;
+    padding-left: 5%;
     padding-right: 5%;
     width: 35%;
     font-size: 24px;

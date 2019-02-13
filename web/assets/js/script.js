@@ -13,7 +13,9 @@
 
 var baseUrl = 'http://' + window.location.host;
 var ajaxFileUrl = baseUrl + '/inc/ajax.php';
-var paginaActual = 1;
+var paginaIndex = 1;
+var pageActual = $('body').attr('data-page');
+
 //se pasa con numeral #page
 function scrollToID ( id ) {
     $('html, body').stop().animate({
@@ -26,23 +28,6 @@ function scrollToID ( id ) {
 --------------------------------------------------------------*/
 
 $(document).ready(function(){
-    $(document).on('click', '.toggle_menu', function(){
-        var menu = $('.main-menu');
-
-        if ( menu.css('height') == '0px' ) {
-            
-            var h = $(menu).prop('scrollHeight')+40;
-            
-            menu.animate({
-                'height': h,
-            }, 2000);
-        } else {
-            menu.animate({
-                'height': '0px',
-            }, 500);
-        }
-    });//.click toggle
-
     
     /*
      * SCROLL TOP
@@ -57,13 +42,20 @@ $(document).ready(function(){
     * SCROLL TO (links)
     */
     $('.scroll-to').click(function( e ){
-        e.preventDefault();
-        var href = '#'+$(this).attr('href');
-        scrollToID(href);
-        if ( window.innerWidth < 992 ) {
-            //cierra el menu movil
+        var scroll = $(this).attr('data-scroll');
+        if ( pageActual == 'inicio' || scroll ) {
+            e.preventDefault();
+        
+            //var href = '#'+$(this).attr('href');
+            var href = $(this).attr('href').split('#');
+            href = '#'+href[1];
+
+            scrollToID(href);
+
             MovilMenuToggle();
+            
         }
+
     });
 
     /*
@@ -100,7 +92,7 @@ $(document).ready(function(){
           url: ajaxFileUrl,
           data: {
             function: 'load-more',
-            page: paginaActual,
+            page: paginaIndex,
           },
           //funcion antes de enviar
           beforeSend: function() {
@@ -116,7 +108,7 @@ $(document).ready(function(){
               } else {
                 $('.wrapper-mas-button').remove();
               }
-              paginaActual++
+              paginaIndex++
           },
           error: function ( ) {
               console.log('error');

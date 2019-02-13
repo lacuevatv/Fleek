@@ -8,7 +8,7 @@
 			<p>Concursos y promociones vigentes</p>
 		</div>
 
-		<div class="footer-wrapper row-reverse-dk">
+		<div id="contacto" class="footer-wrapper row-reverse-dk">
 			<ul class="contacto">
 				<li>
 					<a class="btn-icon-left" href="<?php echo WHATSAPPLINK; ?>" target="_blank">
@@ -42,7 +42,7 @@
 				</li>
 			</ul>
 
-			<ul class="sucursales">
+			<ul id="puntosdeventa" class="sucursales">
 				<li>
 					<h4>Rosario</h4>
 					<address>

@@ -15,7 +15,7 @@ getTemplate( 'header' ); ?>
         </p>
     </header>
 
-    <section>
+    <section id="nosotros">
         <div>
             <picture>
                 <source srcset="<?php echo IMAGES; ?> 1x, <?php echo IMAGES; ?> 2x" media="(min-width: 315px)">
@@ -47,7 +47,7 @@ getTemplate( 'header' ); ?>
         </div>
     </section>
 
-    <section>
+    <section id="destinos">
         <h2 class="sr-only">
             Destinos
         </h2>
@@ -67,14 +67,14 @@ getTemplate( 'header' ); ?>
         </ul>
     </section>
 
-    <section>
+    <section id="experiencias">
         <h2 class="sr-only">
             Slider de Testimonios
         </h2>
         <?php //getTemplate( 'slider-testimonios' ); ?>
     </section>
 
-    <section>
+    <section id="compraonline">
         <h2 class="sr-only">
             Compra tu viaje
         </h2>
@@ -140,7 +140,7 @@ getTemplate( 'header' ); ?>
         </div>
     </section>
 
-    <section>
+    <section id="social">
         <div>
             <picture>
                 <source srcset="<?php echo IMAGES; ?> 1x, <?php echo IMAGES; ?> 2x" media="(min-width: 315px)">
