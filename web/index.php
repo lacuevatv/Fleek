@@ -11,6 +11,12 @@ require_once 'inc/functions.php';
 define('PAGEACTUAL', pageActual( cleanUri() ) );
 
 switch ( PAGEACTUAL ) {    
+    case 'bariloche' :
+    case 'cancun' :
+    case 'londres' :
+        getPage( 'destino' );
+    break;
+
     default:
         getPage( PAGEACTUAL );
     break;

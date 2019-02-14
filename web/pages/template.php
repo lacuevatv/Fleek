@@ -1,7 +1,7 @@
 <?php
 /*
- * PAGE TEMPLATE: PAGINA INICIO
- * es el html de la pagina de inicio
+ * PAGE TEMPLATE: 
+ * es el html de la pagina
 */
 getTemplate( 'header' ); ?>
 <div class="inner-wrapper">

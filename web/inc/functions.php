@@ -9,7 +9,7 @@ require_once 'config.php';
 require_once 'lib/mobile-detect/Mobile_Detect.php';
 
 //busca la página $name = nombre del archivo sin extensión
-function getPage( $name ) {
+function getPage( $name, $data = array() ) {
 	$error = '404';
 	$namePage = PAGESDIR . '/'. $name. '.php';
 

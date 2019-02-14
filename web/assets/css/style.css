@@ -6,8 +6,11 @@
 2.0 Fuentes
 3.0 VARIABLES
 4.0 GENERAL
-5.0 FOOTER
-6.0 Main Header & nav
+5.0 BTNS
+6.0 FOOTER
+7.0 Main Header & nav
+8.0 INICIO
+9.0 DESTINOS
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
 1.0 Reset
@@ -836,9 +839,9 @@ html, body {
   }
 }
 
-/*
- * inicio
-*/
+/*--------------------------------------------------------------
+8.0 INICIOS
+--------------------------------------------------------------*/
 .slider-header-wrapper {
   background-color: #2B00FF;
   color: #fff;
@@ -1595,6 +1598,292 @@ html, body {
     -o-justify-content: center;
     justify-content: center;
   }
+}
+
+/*--------------------------------------------------------------
+9.0 DESTINOS
+--------------------------------------------------------------*/
+.destinos-header {
+  background-color: #EBEAEA;
+  color: #585955;
+  padding: 130px 25px 300px;
+}
+@media (min-width: 1200px) {
+  .destinos-header {
+    padding: 205px 100px 100px;
+  }
+}
+@media (min-width: 1600px) {
+  .destinos-header {
+    padding: 205px 140px 110px;
+  }
+}
+.destinos-header .super-title {
+  font-family: "Druk", "Helvetica Neue Roman", sans-serif;
+  font-weight: 500;
+  font-size: 178px;
+  line-height: 147px;
+}
+@media (min-width: 1600px) {
+  .destinos-header .super-title {
+    font-size: 240px;
+    line-height: 198px;
+  }
+}
+.destinos-header .super-title.verde {
+  color: #72DDD3;
+}
+.destinos-header .super-title.amarillo {
+  color: #F4E41E;
+}
+.destinos-header .super-title.rosa {
+  color: #FF6C6C;
+}
+.destinos-header .title-destino {
+  position: relative;
+  font-size: 27px;
+  margin-top: 10px;
+  margin-bottom: 60px;
+}
+@media (min-width: 1600px) {
+  .destinos-header .title-destino {
+    font-size: 36px;
+    line-height: 36px;
+  }
+}
+.destinos-header .title-destino:after {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 14px;
+  background-image: url("../images/estrellas.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 0;
+  bottom: -20px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi) {
+  .destinos-header .title-destino:after {
+    background-image: url("../images/estrellas@2x.png");
+    background-size: contain;
+  }
+}
+@media (min-width: 1200px) {
+  .destinos-header .title-destino:after {
+    background-image: url("../images/estrellas.png");
+    background-size: contain;
+    width: 96px;
+    height: 16px;
+    bottom: -30px;
+  }
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi) {
+  .destinos-header .title-destino:after {
+    background-image: url("../images/estrellas@2x.png");
+    background-size: contain;
+  }
+}
+.destinos-header .icon-header-destino {
+  background-color: #585955;
+  color: #fff;
+}
+
+.destinos-page-section .icon-vertical {
+  padding-top: 75px;
+  -webkit-align-items: flex-start;
+  -moz-align-items: flex-start;
+  -ms-align-items: flex-start;
+  -o-align-items: flex-start;
+  align-items: flex-start;
+}
+@media (min-width: 992px) {
+  .destinos-page-section .icon-vertical {
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    align-items: center;
+    padding-top: 0;
+  }
+}
+.destinos-page-section .icon-vertical.verde {
+  background-color: #72DDD3;
+}
+.destinos-page-section .icon-vertical.amarillo {
+  background-color: #F4E41E;
+}
+.destinos-page-section .icon-vertical.rosa {
+  background-color: #FF6C6C;
+}
+
+.destino {
+  color: #585955;
+  font-size: 15px;
+  padding: 75px 30px 30px;
+}
+@media (min-width: 992px) {
+  .destino {
+    font-size: 16px;
+    width: 45%;
+  }
+}
+@media (min-width: 1600px) {
+  .destino {
+    padding: 120px 143px 120px 140px;
+  }
+}
+.destino .destino-titulo {
+  font-family: "Druk", "Helvetica Neue Roman", sans-serif;
+  font-size: 55px;
+  line-height: 70px;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+@media (min-width: 1600px) {
+  .destino .destino-titulo {
+    font-size: 100px;
+    line-height: 100px;
+    margin-bottom: 45px;
+  }
+}
+.destino .destino-titulo img {
+  width: 46px;
+  margin-left: 10px;
+}
+@media (min-width: 1600px) {
+  .destino .destino-titulo img {
+    width: 87px;
+    margin-left: 25px;
+  }
+}
+.destino .resumen {
+  margin-bottom: 25px;
+  font-size: 15px;
+}
+@media (min-width: 1600px) {
+  .destino .resumen {
+    font-size: 18px;
+  }
+}
+.destino .data-destino {
+  font-size: 15px;
+}
+@media (min-width: 1600px) {
+  .destino .data-destino {
+    font-size: 18px;
+  }
+}
+.destino .data-destino h4 {
+  font-weight: 600;
+}
+.destino .data-destino ul {
+  margin-bottom: 25px;
+}
+
+.data-extra {
+  padding: 20px 60px 30px 30px;
+  color: #585955;
+  background-color: #EBEAEA;
+  position: relative;
+  width: 100%;
+}
+@media (min-width: 992px) {
+  .data-extra {
+    width: 55%;
+    padding: 75px 30px 30px;
+  }
+}
+@media (min-width: 1600px) {
+  .data-extra {
+    padding: 120px 143px 120px 110px;
+  }
+}
+.data-extra a {
+  border: 1px solid #585955;
+  margin-top: 40px;
+}
+@media (min-width: 992px) {
+  .data-extra a {
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+}
+@media (min-width: 1600px) {
+  .data-extra a {
+    margin-bottom: 50px;
+  }
+}
+.data-extra a.only-mobile {
+  display: flex;
+  display: -o-flex;
+  display: -ms-flex;
+  display: -moz-flex;
+  display: -webkit-flex;
+}
+@media (min-width: 992px) {
+  .data-extra a.only-mobile {
+    display: none;
+  }
+}
+.data-extra a.only-pc {
+  display: none;
+}
+@media (min-width: 992px) {
+  .data-extra a.only-pc {
+    display: flex;
+    display: -o-flex;
+    display: -ms-flex;
+    display: -moz-flex;
+    display: -webkit-flex;
+  }
+}
+.data-extra .extras {
+  margin: 20px 0;
+}
+@media (min-width: 992px) {
+  .data-extra .extras {
+    margin: 0;
+    display: flex;
+    display: -o-flex;
+    display: -ms-flex;
+    display: -moz-flex;
+    display: -webkit-flex;
+    flex-wrap: wrap;
+  }
+}
+@media (min-width: 1600px) {
+  .data-extra .extras {
+    margin: 20px 0;
+  }
+}
+.data-extra .extras li {
+  position: relative;
+  padding-left: 40px;
+  margin-top: 40px;
+  font-size: 15px;
+  line-height: 20px;
+}
+@media (min-width: 992px) {
+  .data-extra .extras li {
+    width: 45%;
+  }
+}
+@media (min-width: 1600px) {
+  .data-extra .extras li {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+.data-extra .extras li img {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.data-extra .extras li h4 {
+  font-weight: 600;
 }
 
 /*# sourceMappingURL=style.css.map */

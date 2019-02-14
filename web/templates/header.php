@@ -26,13 +26,13 @@
 
 	<header class="main-header">
 		<nav class="navbar">
-			<div class="brand-name">
+			<a href="<?php echo MAINSURL; ?>" class="brand-name">
 				<picture>
 					<source srcset="<?php echo IMAGES; ?>logo-header.svg" type="image/svg+xml">
 					<source srcset="<?php echo IMAGES; ?>logo-header.png 1x, <?php echo IMAGES; ?>logo-header@2x.png 2x" media="(min-width: 315px)">
 					<img src="<?php echo IMAGES; ?>logo-header.png" alt="Fleek Logo">
 				</picture>
-			</div>
+			</a>
 			<p class="tagline">viajá<span class="line"></span><br>distinto.</p>
 			
 			<button class="toggle" role="menu">
