@@ -152,7 +152,7 @@ getTemplate( 'header' ); ?>
                 <?php echo $pageData['titulo']; ?>
             </h1>
 
-            <a class="icon-btn-right icon-header-destino" href="<?php echo $pageData['header']['link']; ?>">
+            <a class="icon-btn-right icon-header-destino" href="<?php echo MAINSURL . '/' . $pageData['header']['link']; ?>">
                 <span>Comprá ahora</span>
                 <picture>
                     <source srcset="<?php echo IMAGES; ?>icon-plane.svg" type="image/svg+xml">
@@ -206,7 +206,7 @@ getTemplate( 'header' ); ?>
 
                 <div class="data-extra">
 
-                    <a class="icon-btn-right only-pc" href="<?php echo UPLOADS . '/' . $pageData['pdf']; ?>">
+                    <a class="icon-btn-right only-pc" href="<?php echo UPLOADSURL . '/' . $pageData['pdf']; ?>">
                         <span>Descargar PDF</span>
                         <picture>
                             <source srcset="<?php echo IMAGES; ?>descargar-icon.svg" type="image/svg+xml">
@@ -237,7 +237,7 @@ getTemplate( 'header' ); ?>
                     <?php } ?>
                     </ul>
                  
-                    <a class="icon-btn-right only-mobile" href="<?php echo MAINSURL . '/' . $pageData['pdf']; ?>">
+                    <a class="icon-btn-right only-mobile" href="<?php echo UPLOADSURL . '/' . $pageData['pdf']; ?>">
                         <span>Descargar PDF</span>
                         <picture>
                             <source srcset="<?php echo IMAGES; ?>descargar-icon.svg" type="image/svg+xml">
