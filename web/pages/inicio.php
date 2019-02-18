@@ -6,14 +6,27 @@
 getTemplate( 'header' ); ?>
 <div class="inner-wrapper">
     
-    <header class="slider-header-wrapper">
-        <div class="slider-header">
-            <?php //getTemplate('slider-header'); ?>
-        </div>
+    <header class="home-header">
+
+        <?php getTemplate('slider-header'); ?>
+
         <div class="legales-header">
             <p>
                 Fleek es un marca de productos para jóvenes de la empresa Auckland Turismo S.R.L.
             </p>
+        </div>
+
+        <div class="left-icons-header">
+            <picture>
+                <source srcset="<?php echo IMAGES; ?>icon-raton.svg" type="image/svg+xml">
+                <source srcset="<?php echo IMAGES; ?>icon-raton.png 1x, <?php echo IMAGES; ?>icon-raton@2x.png 2x" media="(min-width: 315px)">
+                <img class="raton" src="<?php echo IMAGES; ?>icon-raton.png">
+            </picture>
+            <p>Scroll down</p>
+            <span class="line"></span>
+        </div>
+        <div class="right-icons-header">
+
         </div>
     </header>
 

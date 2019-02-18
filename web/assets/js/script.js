@@ -15,7 +15,7 @@ var baseUrl = 'http://' + window.location.host;
 var ajaxFileUrl = baseUrl + '/inc/ajax.php';
 var paginaIndex = 1;
 var pageActual = $('body').attr('data-page');
-
+var windowWidth;
 //se pasa con numeral #page
 function scrollToID ( id ) {
     $('html, body').stop().animate({
@@ -23,13 +23,18 @@ function scrollToID ( id ) {
     }, 'slow');
 }
 
+window.onresize = function(){
+    windowWidth = window.innerWidth;
+    console.log(windowWidth);
+};
+
 /*--------------------------------------------------------------
 1.0 BASE 
 * navigation, scroll to
 --------------------------------------------------------------*/
 
 $(document).ready(function(){
-    
+    windowWidth = window.innerWidth;
     /*
      * SCROLL TOP
     */
@@ -398,33 +403,8 @@ $(window).on('load', function(){
     //cargaimaenes por ajax LAZY LOAD
     loadImages();
 
-    //slider superior home
-    /*$('#slider-inicio').owlCarousel({
-        loop:true,
-        margin:50,
-        nav:true,
-        navText : ['<span class="icon-arrow icon-arrow-left"></span>','<span class="icon-arrow icon-arrow-right"></span>'],
-        dots:true,
-        responsive:{
-            0:{
-                items:1
-            },
-        },
-    });*/
 
-    
-    /*
-     * CARGA ASINCRONA DE IMAGENES
-     * carga las imágenes con img src
-    */
-    /*$('.load-images').each(function(){
-        var img = $(this).find('img');
-
-        $(img).attr('src', $(img).attr('data-src') );
-        if ( $(img).attr('src') != '') {
-            $(this).fadeIn();
-        }
-    });*/
+    initSlider();
 
     /*
      * IN VIEW ANIMATION
@@ -461,18 +441,25 @@ $(window).on('load', function(){
 
 });
 
+/*
+ * esta funcion hace el lazy load de las imagenes
+ * para que una imagen sea lazy load hay que crear un div con la clase .lqva-lazy-load-images
+*/
 function loadImages() {
-    
+    var counter = 0;
     var images = $('.lqva-lazy-load-images');
 
     images.each(function() {
         loadImage (this);
-        console.log(this);
+        counter++;
     });
 
+    console.log(counter);
 
 }//loadImages()
 
+
+//esta funcion arma el html de la imagen que se va a cargar mediante "picture" y busca sus distintos srcset,y al finalizar realiza un pequeño fundido
 function loadImage (image) {
     $(image).hide();
     var imagenDefault = $(image).attr('srcset');
@@ -506,3 +493,51 @@ function loadImage (image) {
     $(image).append($(html)).fadeIn(1000);
 
 }
+
+/*
+ * esta funcion arranca los sliders
+*/
+
+function initSlider() {
+
+    var flechaIzqHtml = '<picture><source srcset="'+baseUrl+'/assets/images/flecha-azul.svg" type="image/svg+xml"><source srcset="'+baseUrl+'/assets/images/flecha-azul.png 1x, '+baseUrl+'/assets/images/flecha-azul@2x.png "media="(min-width: 315px)"><img class="flecha-izquierda" src="'+baseUrl+'/assets/images/flecha-azul.png" alt="icon-flecha"></picture>';
+    var flechaDerHtml = '<picture><source srcset="'+baseUrl+'/assets/images/flecha-azul.svg" type="image/svg+xml"><source srcset="'+baseUrl+'/assets/images/flecha-azul.png 1x, '+baseUrl+'/assets/images/flecha-azul@2x.png "media="(min-width: 315px)"><img class="flecha-derecha" src="'+baseUrl+'/assets/images/flecha-azul.png" alt="icon-flecha"></picture>';
+
+    $(".owl-carousel").owlCarousel({
+        items: 1,
+        animateOut: 'fadeOut',
+        loop: true,
+        autoplay: true,
+        autoplayTimeout:6000,
+        onInitialized: startProgressBar,
+        onTranslate: resetProgressBar,
+        onTranslated: startProgressBar,
+        nav:true,
+        navText : [flechaIzqHtml, flechaDerHtml],
+        dots:true,
+    });
+
+
+    //inicia la progress bar de los sliders  
+    function startProgressBar() {
+        // apply keyframe animation
+        var persentajeWidth = '90%';
+        if ( windowWidth < 960 ) {
+            persentajeWidth = '100%'
+        }
+
+        $(".slide-progress").css({
+        width: persentajeWidth,
+        transition: "width 6000ms"
+        });
+    }
+    
+    //vuelve a 0 la progras bar
+    function resetProgressBar() {
+        $(".slide-progress").css({
+        width: 0,
+        transition: "width 0s"
+        });
+    }
+}//init slider
+
