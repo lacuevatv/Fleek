@@ -107,48 +107,12 @@ $(document).ready(function(){
         }
      }
 
-     /*
-      * LOAD MORE AJAX
-     */
-     $(document).on('click', '#load-more', function(){
-                
-        $.ajax( {
-          type: 'POST',
-          url: ajaxFileUrl,
-          data: {
-            function: 'load-more',
-            page: paginaIndex,
-          },
-          //funcion antes de enviar
-          beforeSend: function() {
-              //imagen cargador
-              loader.fadeIn();
-          },
-          success: function ( response ) {
-              loader.fadeOut();
-              //console.log(response);
-              
-              if (response) {
-                $('#contenedor').append( response );
-              } else {
-                $('.wrapper-mas-button').remove();
-              }
-              paginaIndex++
-          },
-          error: function ( ) {
-              console.log('error');
-          },
-        });//cierre ajax
-
-    });
-
-
 });//.ready()
 
 /*--------------------------------------------------------------
 2.0 FORMULARIOS
 --------------------------------------------------------------*/
-$(document).ready(function(){
+function initFormularios(){
 
     var specialcharacters = '@#$^&%*()+=[]\'\"\/{}|:;¡!¿?<>,.';
     var numeros = '0123456789';
@@ -381,7 +345,7 @@ $(document).ready(function(){
 
     });//submit formulario default
 
-})//ready
+}//initformulario
 
 /*--------------------------------------------------------------
 3.0 POPUP PROMO
@@ -422,6 +386,13 @@ $(window).on('load', function(){
     if ( pageActual  == 'inicio') {
         //carga el header
         loadAjaxTemplate('.slider-header-wrapper', initSliderHeader);
+        //destinos boxes
+        //loadAjaxTemplate('.slider-header-wrapper', initSliderHeader);
+        //experiencias
+        loadAjaxTemplate( '.wrapper-slider-testimonios', initSliderTestimonios );
+        //instagram
+        getInstagram();
+
     } else {
         loadAjaxTemplate('.slider-destinos-wrapper', initSliderDestinos);
     }
@@ -603,6 +574,56 @@ function initSliderDestinos() {
 
     //var elemento = $('.slider-header-wrapper')
     //getSetHeightSize(wrapper, elemento);
+    loadAjaxTemplate('.icon-header');
+}
+
+function initSliderTestimonios() {
+    var wrapper = $('.destinos-header');
+
+    var flechaIzqHtml = '<picture><source srcset="'+baseUrl+'/assets/images/flecha-azul.svg" type="image/svg+xml"><source srcset="'+baseUrl+'/assets/images/flecha-azul.png 1x, '+baseUrl+'/assets/images/flecha-azul@2x.png "media="(min-width: 315px)"><img class="flecha-izquierda" src="'+baseUrl+'/assets/images/flecha-azul.png" alt="icon-flecha"></picture>';
+    var flechaDerHtml = '<picture><source srcset="'+baseUrl+'/assets/images/flecha-azul.svg" type="image/svg+xml"><source srcset="'+baseUrl+'/assets/images/flecha-azul.png 1x, '+baseUrl+'/assets/images/flecha-azul@2x.png "media="(min-width: 315px)"><img class="flecha-derecha" src="'+baseUrl+'/assets/images/flecha-azul.png" alt="icon-flecha"></picture>';
+
+    $("#experiencias-slider").owlCarousel({
+        items: 1,
+        animateOut: 'fadeOut',
+        loop: true,
+        autoplay: true,
+        autoplayTimeout:6000,
+        video:true,
+        videoWidth: '100%',
+        onInitialized: startProgressBar,
+        onTranslate: resetProgressBar,
+        onTranslated: startProgressBar,
+        nav:true,
+        navText : [flechaIzqHtml, flechaDerHtml],
+        dots:true,
+    });
+
+
+    //inicia la progress bar de los sliders  
+    function startProgressBar() {
+        // apply keyframe animation
+        var persentajeWidth = '45%';
+        if ( windowWidth < 960 ) {
+            persentajeWidth = '100%'
+        }
+
+        $(".slide-progress").css({
+        width: persentajeWidth,
+        transition: "width 6000ms"
+        });
+    }
+    
+    //vuelve a 0 la progras bar
+    function resetProgressBar() {
+        $(".slide-progress").css({
+        width: 0,
+        transition: "width 0s"
+        });
+    }
+
+    //var elemento = $('.slider-header-wrapper')
+    //getSetHeightSize(wrapper, elemento);
     //loadAjaxTemplate('.icon-header');
 }
 
@@ -719,7 +740,13 @@ function initParallax (pagina) {
             break;*/
         }
 
-        
-
     });
+}
+
+/*
+ * esta funcion carga el template del instagram
+*/
+function getInstagram() {
+    var scripttoLoad = '<script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script><iframe src="http://lightwidget.com/widgets/7876670a4e8a53d5a1085a14ca268bea.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe>'
+
 }

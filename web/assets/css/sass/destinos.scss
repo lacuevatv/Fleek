@@ -90,6 +90,12 @@
 }//destinos.header
 
 .destinos-page-section {
+
+    .icon-header {
+        .right-icons-header {
+            color: $color-azul;
+        }
+    }
     .icon-vertical {
         padding-top: 75px;
         -webkit-align-items: flex-start;

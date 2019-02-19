@@ -135,21 +135,10 @@ getTemplate( 'header' ); ?>
 
 <!-- SECTION EXPERIENCIAS -->
     <section class="section-wrapper" id="experiencias">
-        <div class="wrapper-slider-testimonios">
-            <div class="experiencia cargador">
-                <div class="experiencia-data">
-                    <picture>
-                        <source srcset="<?php echo IMAGES; ?>hapyface.svg" type="image/svg+xml">
-                        <source srcset="<?php echo IMAGES; ?>hapyface.png 1x, <?php echo IMAGES; ?>hapyface@2x.png 2x" media="(min-width: 315px)">
-                        <img class="icon-experiencias" src="<?php echo IMAGES; ?>hapyface.png" alt="Icon Whatsapp">
-                    </picture>
-                    <h2 class="title-experiencia">Experiencias</h2>
-                    <p class="nombre-experiencia">Cargando...</p>
-                </div>
-                <div class="experiencia-contenido">
-                </div>
-            </div>
-        <?php //getTemplate( 'slider-testimonios' ); ?>
+        <div class="wrapper-slider-testimonios" data-template="slider-testimonios">
+            
+            <?php //getTemplate( 'slider-testimonios' ); ?>
+            
         </div>
     </section>
 

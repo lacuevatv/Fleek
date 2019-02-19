@@ -164,6 +164,10 @@ getTemplate( 'header' ); ?>
         </header>
 
         <section class="section-wrapper nosotros-wrapper destinos-page-section">
+
+            <div class="icon-header" data-template="icon-header">
+                <?php //getTemplate('icon-header'); ?>
+            </div>
             <div class="icon-vertical<?php echo ' '.$pageData['color']; ?>">
                 <picture>
                     <source srcset="<?php echo IMAGES; ?>logo-vertical.svg" type="image/svg+xml">

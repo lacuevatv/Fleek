@@ -24,10 +24,11 @@ $bariloche = array(
 
 if ($data == 'bariloche') {
     $sliders = $bariloche;
+    $color = 'verde';
 }
 ?>
 <?php if ( $sliders != null ) : ?>
-<div class="slide-progress"></div>
+<div class="slide-progress <?php echo $color;?>"></div>
 
 <ul id="destino-slider" class="slider-header owl-carousel">
 

@@ -969,15 +969,28 @@ html, body {
     width: 140px;
   }
 }
+.icon-header .left-icons-header img {
+  width: 9px;
+}
+@media (min-width: 1600px) {
+  .icon-header .left-icons-header img {
+    width: 12px;
+  }
+}
 .icon-header .left-icons-header p {
   margin-top: 35px;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 12px;
   -webkit-transform: rotate(-90deg);
   -moz-transform: rotate(-90deg);
   -ms-transform: rotate(-90deg);
   transform: rotate(-90deg);
   position: relative;
+}
+@media (min-width: 1600px) {
+  .icon-header .left-icons-header p {
+    font-size: 14px;
+  }
 }
 .icon-header .left-icons-header p:before {
   content: "";
@@ -1036,17 +1049,45 @@ html, body {
   -ms-justify-content: flex-start;
   -o-justify-content: flex-start;
   justify-content: flex-start;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 600;
 }
-.icon-header .right-icons-header ul li {
-  margin-right: 30px;
+@media (min-width: 1600px) {
+  .icon-header .right-icons-header ul {
+    font-size: 14px;
+  }
 }
-.icon-header .right-icons-header ul li:last-child img {
-  -webkit-transform: rotate(90deg) translateX(5px);
-  -moz-transform: rotate(90deg) translateX(5px);
-  -ms-transform: rotate(90deg) translateX(5px);
-  transform: rotate(90deg) translateX(5px);
+.icon-header .right-icons-header ul li {
+  margin-right: 15px;
+}
+@media (min-width: 1600px) {
+  .icon-header .right-icons-header ul li {
+    margin-right: 30px;
+  }
+}
+.icon-header .right-icons-header ul li img {
+  width: 20px;
+  padding-right: 5px;
+}
+@media (min-width: 1600px) {
+  .icon-header .right-icons-header ul li img {
+    padding-right: 10px;
+    width: 26px;
+  }
+}
+.icon-header .rotate-img {
+  -webkit-transform: rotate(90deg) translateX(2px);
+  -moz-transform: rotate(90deg) translateX(2px);
+  -ms-transform: rotate(90deg) translateX(2px);
+  transform: rotate(90deg) translateX(2px);
+}
+@media (min-width: 1600px) {
+  .icon-header .rotate-img {
+    -webkit-transform: rotate(90deg) translateX(5px);
+    -moz-transform: rotate(90deg) translateX(5px);
+    -ms-transform: rotate(90deg) translateX(5px);
+    transform: rotate(90deg) translateX(5px);
+  }
 }
 
 /*
@@ -1405,7 +1446,7 @@ html, body {
   color: #fff;
 }
 @media (min-width: 992px) {
-  .wrapper-slider-testimonios .experiencia {
+  .wrapper-slider-testimonios ul .experiencia {
     display: flex;
     display: -o-flex;
     display: -ms-flex;
@@ -1416,16 +1457,30 @@ html, body {
 }
 .wrapper-slider-testimonios .experiencia-data {
   padding: 50px 40px 100px;
+  height: 380px;
+}
+@media (min-width: 768px) {
+  .wrapper-slider-testimonios .experiencia-data {
+    height: 410px;
+  }
 }
 @media (min-width: 992px) {
   .wrapper-slider-testimonios .experiencia-data {
-    padding: 50px 100px 100px;
+    padding: 50px 40px 50px;
     width: 50%;
+    height: 350px;
+  }
+}
+@media (min-width: 1200px) {
+  .wrapper-slider-testimonios .experiencia-data {
+    padding: 50px 100px 100px;
+    height: 350px;
   }
 }
 @media (min-width: 1600px) {
   .wrapper-slider-testimonios .experiencia-data {
     padding: 80px 140px 70px;
+    height: 500px;
   }
 }
 .wrapper-slider-testimonios .experiencia-data .title-experiencia {
@@ -1436,12 +1491,31 @@ html, body {
   line-height: 55px;
   margin-top: 40px;
 }
+@media (min-width: 1600px) {
+  .wrapper-slider-testimonios .experiencia-data .title-experiencia {
+    margin-bottom: 80px;
+    font-size: 100px;
+    line-height: 100px;
+  }
+}
 .wrapper-slider-testimonios .experiencia-data .nombre-experiencia {
   margin-top: 30px;
+}
+.wrapper-slider-testimonios .experiencia-data img {
+  width: auto;
+}
+.wrapper-slider-testimonios .experiencia-contenido {
+  height: 365px;
+}
+@media (min-width: 768px) {
+  .wrapper-slider-testimonios .experiencia-contenido {
+    height: 540px;
+  }
 }
 @media (min-width: 992px) {
   .wrapper-slider-testimonios .experiencia-contenido {
     width: 50%;
+    height: auto;
   }
 }
 
@@ -1705,7 +1779,7 @@ html, body {
 }
 @media (min-width: 1600px) {
   .instagram-wrapper .instagram {
-    height: 635px;
+    height: 550px;
   }
 }
 .instagram-wrapper .instagram h2 {
@@ -1851,6 +1925,9 @@ html, body {
   color: #fff;
 }
 
+.destinos-page-section .icon-header .right-icons-header {
+  color: #2B00FF;
+}
 .destinos-page-section .icon-vertical {
   padding-top: 75px;
   -webkit-align-items: flex-start;
@@ -2376,6 +2453,15 @@ html, body {
   left: 0;
   top: 0;
 }
+.slider-destinos-wrapper .slide-progress.verde {
+  background-color: #72DDD3;
+}
+.slider-destinos-wrapper .slide-progress.rosa {
+  background-color: #FF6C6C;
+}
+.slider-destinos-wrapper .slide-progress.amarillo {
+  background-color: #F4E41E;
+}
 .slider-destinos-wrapper ul {
   height: 100%;
 }
@@ -2411,6 +2497,71 @@ html, body {
 }
 @media (min-width: 1600px) {
   .slider-destinos-wrapper .owl-nav {
+    left: 140px;
+  }
+}
+
+/*
+ * slider de experiencias
+*/
+.wrapper-slider-testimonios .slide-progress {
+  position: absolute;
+  z-index: 111;
+  width: 0;
+  max-width: 50%;
+  height: 5px;
+  background: #2B00FF;
+  bottom: 0;
+}
+@media (min-width: 992px) {
+  .wrapper-slider-testimonios .slide-progress {
+    left: 80px;
+  }
+}
+@media (min-width: 1600px) {
+  .wrapper-slider-testimonios .slide-progress {
+    left: 120px;
+  }
+}
+.wrapper-slider-testimonios #experiencias-slider .owl-nav {
+  left: 0;
+  display: flex;
+  display: -o-flex;
+  display: -ms-flex;
+  display: -moz-flex;
+  display: -webkit-flex;
+  width: 100%;
+  left: 0;
+  -webkit-justify-content: flex-end;
+  -moz-justify-content: flex-end;
+  -ms-justify-content: flex-end;
+  -o-justify-content: flex-end;
+  justify-content: flex-end;
+  top: calc( 380px - 40px);
+}
+@media (min-width: 768px) {
+  .wrapper-slider-testimonios #experiencias-slider .owl-nav {
+    top: calc( 410px - 40px);
+  }
+}
+@media (min-width: 992px) {
+  .wrapper-slider-testimonios #experiencias-slider .owl-nav {
+    top: initial;
+    bottom: 0;
+    -webkit-justify-content: flex-start;
+    -moz-justify-content: flex-start;
+    -ms-justify-content: flex-start;
+    -o-justify-content: flex-start;
+    justify-content: flex-start;
+  }
+}
+@media (min-width: 992px) {
+  .wrapper-slider-testimonios #experiencias-slider .owl-dots {
+    left: 100px;
+  }
+}
+@media (min-width: 1600px) {
+  .wrapper-slider-testimonios #experiencias-slider .owl-dots {
     left: 140px;
   }
 }
