@@ -38,22 +38,22 @@ function scrollToID ( id ) {
 1.0 BASE 
 * navigation, scroll to
 --------------------------------------------------------------*/
-$(window).resize(function(){
-    windowWidth = window.innerWidth;
-    //console.log(windowWidth);
-
-    //vuelve a dimensionar slider superior
-    var wrapper = $('.home-header');
-    var contenido = $('.slider-header-wrapper')
-    setTimeout(function(){
-        getSetHeightSize(wrapper, contenido);
-    },500)
-    
-});
-
 $(document).ready(function(){
     windowWidth = window.innerWidth;  
     
+    $(window).resize(function(){
+        windowWidth = window.innerWidth;
+        //console.log(windowWidth);
+    
+        //vuelve a dimensionar slider superior
+        var wrapper = $('.home-header');
+        var contenido = $('.slider-header-wrapper')
+        setTimeout(function(){
+            getSetHeightSize(wrapper, contenido);
+        },500)
+        
+    });
+
     /*
      * SCROLL TOP
     */
@@ -710,6 +710,10 @@ function initParallax (pagina) {
     if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
         return true;
     }
+
+    if ( window.innerWidth < 767 ) {
+        return true;
+    }
     
     $(window).scroll(function(){
       
@@ -747,6 +751,12 @@ function initParallax (pagina) {
  * esta funcion carga el template del instagram
 */
 function getInstagram() {
-    var scripttoLoad = '<script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script><iframe src="http://lightwidget.com/widgets/7876670a4e8a53d5a1085a14ca268bea.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe>'
 
+    if (window.innerWidth > 960 ) {
+        var scripttoLoad = '<script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script><iframe src="http://lightwidget.com/widgets/df651fe55e745e528cbe5b117997d50c.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe>';
+        
+        var wrapper = $('.wrapper-feed');
+
+        $(wrapper).empty().append(scripttoLoad);
+    }
 }

@@ -805,6 +805,11 @@
                 border-right: none;
                 padding-right: 0;
             }
+
+            a {
+                @extend .btn;
+                @extend .btn-hover-opacity;
+            }
         }
     }
 }
@@ -868,15 +873,15 @@
             height: 500px;
         }
         @media (min-width: $md) {
-            height: 360px;
+            height: auto;
             width: 30%;
         }
-        @media (min-width: $lg) {
+        /*@media (min-width: $lg) {
             height: 420px;
         }
         @media (min-width: $xlg) {
             height: 550px;
-        }
+        }*/
 
         h2 {
             font-family: $fuente-secundaria;

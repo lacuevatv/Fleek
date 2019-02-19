@@ -315,7 +315,7 @@ html, body {
 /*--------------------------------------------------------------
 5.0 BTNS
 --------------------------------------------------------------*/
-.btn, .icon-btn-right, .btn-icon-left {
+.btn, .viajo ul li a, .viaje-wrapper ul li a, .viajo-wrapper ul li a, .icon-btn-right, .btn-icon-left {
   cursor: pointer;
   position: relative;
   outline: none;
@@ -325,7 +325,7 @@ html, body {
   transition: all 500ms;
 }
 
-.btn-hover-opacity:hover, .icon-btn-right:hover, .btn-icon-left-notransition:hover, .btn-icon-left:hover {
+.btn-hover-opacity:hover, .owl-nav .owl-prev:hover, .owl-nav .owl-next:hover, .viajo ul li a:hover, .viaje-wrapper ul li a:hover, .viajo-wrapper ul li a:hover, .icon-btn-right:hover, .btn-icon-left-notransition:hover, .btn-icon-left:hover {
   zoom: 1;
   filter: alpha(opacity=50);
   opacity: 0.5;
@@ -1709,7 +1709,6 @@ html, body {
   border-right: none;
   padding-right: 0;
 }
-
 .viajo-wrapper {
   background: #2B00FF;
 }
@@ -1760,6 +1759,12 @@ html, body {
   -o-flex-direction: column;
   flex-direction: column;
   height: 340px;
+  /*@media (min-width: $lg) {
+      height: 420px;
+  }
+  @media (min-width: $xlg) {
+      height: 550px;
+  }*/
 }
 @media (min-width: 768px) {
   .instagram-wrapper .instagram {
@@ -1768,18 +1773,8 @@ html, body {
 }
 @media (min-width: 992px) {
   .instagram-wrapper .instagram {
-    height: 360px;
+    height: auto;
     width: 30%;
-  }
-}
-@media (min-width: 1200px) {
-  .instagram-wrapper .instagram {
-    height: 420px;
-  }
-}
-@media (min-width: 1600px) {
-  .instagram-wrapper .instagram {
-    height: 550px;
   }
 }
 .instagram-wrapper .instagram h2 {
@@ -2355,6 +2350,10 @@ html, body {
   -ms-justify-content: center;
   -o-justify-content: center;
   justify-content: center;
+  -webkit-transition: all 500ms;
+  -moz-transition: all 500ms;
+  -ms-transition: all 500ms;
+  transition: all 500ms;
 }
 @media (min-width: 1600px) {
   .owl-nav .owl-prev, .owl-nav .owl-next {
