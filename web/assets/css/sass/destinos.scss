@@ -1,7 +1,7 @@
 .destinos-header {
     background-color: #EBEAEA;
     color: $color-negro;
-    padding: 130px 25px 300px;
+    padding: 130px 25px 50%;
 
     @media (min-width: $lg) {
         padding: 205px $paddingLeftRightLG 100px;
@@ -15,6 +15,8 @@
         font-weight: 500;
         font-size: 178px;
         line-height: 147px;
+        position: relative;
+        z-index: 1;
         @media (min-width: $xlg) {
             font-size: 240px;
             line-height: 198px;
@@ -78,6 +80,11 @@
 
     .icon-header-destino {
         background-color: $color-negro;
+        color: $color-blanco;
+    }
+
+    .icon-header-destino.verde {
+        background-color: $color-verde;
         color: $color-blanco;
     }
 }//destinos.header

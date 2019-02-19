@@ -419,9 +419,13 @@ $(document).ready(function(){
 
 $(window).on('load', function(){
 
-    //carga el header
-    loadAjaxTemplate('.slider-header-wrapper', initSliderHeader);
-
+    if ( pageActual  == 'inicio') {
+        //carga el header
+        loadAjaxTemplate('.slider-header-wrapper', initSliderHeader);
+    } else {
+        loadAjaxTemplate('.slider-destinos-wrapper', initSliderDestinos);
+    }
+    
     /*var templatesAjax = $('.load-ajax-template');
     templatesAjax.each(function(){
         var template = $(this).attr('data-template');
@@ -430,7 +434,8 @@ $(window).on('load', function(){
     //cargaimaenes por ajax LAZY LOAD
     loadImages();
 
-    
+    //inicia paralax
+    initParallax(pageActual);
 
     
 });
@@ -507,7 +512,7 @@ function initSliderHeader() {
     var flechaIzqHtml = '<picture><source srcset="'+baseUrl+'/assets/images/flecha-azul.svg" type="image/svg+xml"><source srcset="'+baseUrl+'/assets/images/flecha-azul.png 1x, '+baseUrl+'/assets/images/flecha-azul@2x.png "media="(min-width: 315px)"><img class="flecha-izquierda" src="'+baseUrl+'/assets/images/flecha-azul.png" alt="icon-flecha"></picture>';
     var flechaDerHtml = '<picture><source srcset="'+baseUrl+'/assets/images/flecha-azul.svg" type="image/svg+xml"><source srcset="'+baseUrl+'/assets/images/flecha-azul.png 1x, '+baseUrl+'/assets/images/flecha-azul@2x.png "media="(min-width: 315px)"><img class="flecha-derecha" src="'+baseUrl+'/assets/images/flecha-azul.png" alt="icon-flecha"></picture>';
 
-    $(".owl-carousel").owlCarousel({
+    $("#header-slider").owlCarousel({
         items: 1,
         animateOut: 'fadeOut',
         loop: true,
@@ -547,7 +552,59 @@ function initSliderHeader() {
     var elemento = $('.slider-header-wrapper')
     getSetHeightSize(wrapper, elemento);
     loadAjaxTemplate('.icon-header');
-}//init slider
+}//init slider header
+
+
+/*
+ * inicia los slider de destinos
+*/
+function initSliderDestinos() {
+    var wrapper = $('.destinos-header');
+
+    var flechaIzqHtml = '<picture><source srcset="'+baseUrl+'/assets/images/flecha-azul.svg" type="image/svg+xml"><source srcset="'+baseUrl+'/assets/images/flecha-azul.png 1x, '+baseUrl+'/assets/images/flecha-azul@2x.png "media="(min-width: 315px)"><img class="flecha-izquierda" src="'+baseUrl+'/assets/images/flecha-azul.png" alt="icon-flecha"></picture>';
+    var flechaDerHtml = '<picture><source srcset="'+baseUrl+'/assets/images/flecha-azul.svg" type="image/svg+xml"><source srcset="'+baseUrl+'/assets/images/flecha-azul.png 1x, '+baseUrl+'/assets/images/flecha-azul@2x.png "media="(min-width: 315px)"><img class="flecha-derecha" src="'+baseUrl+'/assets/images/flecha-azul.png" alt="icon-flecha"></picture>';
+
+    $("#destino-slider").owlCarousel({
+        items: 1,
+        animateOut: 'fadeOut',
+        loop: true,
+        autoplay: true,
+        autoplayTimeout:6000,
+        onInitialized: startProgressBar,
+        onTranslate: resetProgressBar,
+        onTranslated: startProgressBar,
+        nav:true,
+        navText : [flechaIzqHtml, flechaDerHtml],
+        dots:true,
+    });
+
+
+    //inicia la progress bar de los sliders  
+    function startProgressBar() {
+        // apply keyframe animation
+        var persentajeWidth = '90%';
+        if ( windowWidth < 960 ) {
+            persentajeWidth = '100%'
+        }
+
+        $(".slide-progress").css({
+        width: persentajeWidth,
+        transition: "width 6000ms"
+        });
+    }
+    
+    //vuelve a 0 la progras bar
+    function resetProgressBar() {
+        $(".slide-progress").css({
+        width: 0,
+        transition: "width 0s"
+        });
+    }
+
+    //var elemento = $('.slider-header-wrapper')
+    //getSetHeightSize(wrapper, elemento);
+    //loadAjaxTemplate('.icon-header');
+}
 
 
 /*
@@ -563,6 +620,7 @@ function loadAjaxTemplate(contenedor, callback) {
         data: {
           function: 'load-template',
           template: template,
+          pagina:pageActual,
         },
         //funcion antes de enviar
         beforeSend: function() {
@@ -625,8 +683,8 @@ function startAnimations() {
 /*
  * INICIA LOS PARALLAXS
 */
-initParallax()
-function initParallax () {
+
+function initParallax (pagina) {
     var userAgent = navigator.userAgent || navigator.vendor || window.opera;
     if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
         return true;
@@ -636,18 +694,32 @@ function initParallax () {
       
         //valor de barra que necesitan todos
         var barra = ($(window).scrollTop());
-        console.log(barra);
+        //console.log(barra);
 
-        //imagen nosotros
-        var imagenNos = $('.nosotros-wrapper .imagen-nosotros img')
-        var moverImagenNos = ( (barra / 10) * 1.1 ) / 1.99;
-        $(imagenNos).css('top', moverImagenNos + '%');
+        switch (pagina) {
+            case 'inicio':
+                //imagen nosotros
+                var imagenNos = $('.nosotros-wrapper .imagen-nosotros img')
+                var moverImagenNos = ( (barra / 10) * 1.1 ) / 1.99;
+                $(imagenNos).css('top', moverImagenNos + '%');
 
+                //imagenes header
+                var imagenesSlider = $('.item-slider .imagen-fondo img')
+                var moverImagenesSlider = ( (barra / 1.1) / 10 ) + 50;
+                $(imagenesSlider).css('top', moverImagenesSlider + '%');
+            break;
 
-        //imagenes header
-        var imagenesSlider = $('.item-slider .imagen-fondo img')
-        var moverImagenesSlider = ( (barra / 1.1) / 10 ) + 50;
-        $(imagenesSlider).css('top', moverImagenesSlider + '%');
+            /*case 'bariloche':
+            case 'cancun':
+            case 'londres':
+                //imagenes header
+                var imagenesSlider = $('.item-slider .imagen-fondo img')
+                var moverImagenesSlider = ( (barra / 1.1) / 10 ) + 50;
+                $(imagenesSlider).css('top', moverImagenesSlider + '%');
+            break;*/
+        }
+
+        
 
     });
 }

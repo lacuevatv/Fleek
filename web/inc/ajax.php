@@ -25,9 +25,10 @@ if( isAjax() ) :
 
 		case 'load-template':
 			$template = isset($_POST['template']) ? $_POST['template'] : null;
+			$page = isset($_POST['pagina']) ? $_POST['pagina'] : 'inicio';
 
 			if ( $template != null ) {
-				getTemplate($template);
+				getTemplate($template, $page);
 			}
 
 		break;

@@ -144,6 +144,7 @@ getTemplate( 'header' ); ?>
 
     <article>
         <header class="slider-header-wrapper destinos-header">
+            <div class="slider-destinos-wrapper" data-template="slider-destinos"></div>
             <div class="super-title<?php echo ' '.$pageData['color']; ?>">
                 <?php echo $pageData['header']['letras']; ?>
             </div>
@@ -152,7 +153,7 @@ getTemplate( 'header' ); ?>
                 <?php echo $pageData['titulo']; ?>
             </h1>
 
-            <a class="icon-btn-right icon-header-destino" href="<?php echo MAINSURL . '/' . $pageData['header']['link']; ?>">
+            <a class="icon-btn-right icon-header-destino<?php echo ' '.$pageData['color']; ?>" href="<?php echo MAINSURL . '/' . $pageData['header']['link']; ?>">
                 <span>Comprá ahora</span>
                 <picture>
                     <source srcset="<?php echo IMAGES; ?>icon-plane.svg" type="image/svg+xml">
