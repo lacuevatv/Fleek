@@ -13,14 +13,12 @@
         bottom: 0;
 
         @media (min-width: $md) {
-            left: 160px;
+            left: 120px;
         }
-
         @media (min-width: $lg) {
-            left: 220px;
+            left: 180px;
             max-width: 90%;
         }
-    
         @media (min-width: $xlg) {
             left: 260px;
         }
@@ -32,8 +30,12 @@
                 position: absolute;
                 z-index: 1;
                 width: 100%;
+                height: 100%;
 
                 img {
+                    position: absolute;
+                    top: 50%;
+                    @include transform(translateY(-50%));
                     width: 100%;
                     height: auto;
                 }
@@ -240,6 +242,78 @@
 
 /*OWL DOTS*/
 .owl-dots {
-    position: absolute;
-    bottom: 0;
+    display: none;
+    @media (min-width: $md) {
+        display: block;
+        left: 160px;
+        position: absolute;
+        bottom: 0;
+        height: 30px;
+        width: 55px;
+        color: $color-blanco;
+        font-size: 14px;
+        font-weight: 600;
+        counter-reset: div-counter;
+    }
+    @media (min-width: $lg) {
+        left: 220px;
+    }
+    @media (min-width: $xlg) {
+        left: 300px;
+        height: 40px;
+    }
+
+    &:before {
+        content: '';
+        background-color: $color-blanco;
+        display: block;
+        background-color: #fff;
+        height: 1px;
+        width: 30px;
+        top: 9px;
+        right: 11px;
+        position: absolute;
+    }
+
+    &:after {
+        content: counter(div-counter);
+        right: 0;
+        left: initial;
+        position: absolute;
+    }
+
+    .owl-dot {
+        visibility: hidden;
+        position: absolute;
+        left: 0;
+        width: 20px;
+        height: 20px;
+        /*&:last-child {
+            visibility: visible;
+            right: 0;
+            left: initial;
+
+            &:before {
+                content: '';
+                background-color: $color-blanco;
+                display: block;
+                background-color: #fff;
+                height: 1px;
+                width: 30px;
+                top: 9px;
+                left: -35px;
+                position: absolute;
+            }
+        }*/
+
+        &:after {
+            content: counter(div-counter);
+            counter-increment: div-counter;
+        }
+    }
+
+    .owl-dot.active {
+        visibility: visible;
+    }
+
 }//.owl-dots

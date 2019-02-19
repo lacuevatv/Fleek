@@ -23,18 +23,37 @@ function scrollToID ( id ) {
     }, 'slow');
 }
 
-window.onresize = function(){
+//on resize
+/*window.onresize = function(){
     windowWidth = window.innerWidth;
     console.log(windowWidth);
-};
+
+    //vuelve a dimensionar slider superior
+    var wrapper = $('.home-header');
+    var contenido = $(wrapper).find('.contenido')[0];
+    getSetHeightSize(wrapper, contenido);
+};*/
 
 /*--------------------------------------------------------------
 1.0 BASE 
 * navigation, scroll to
 --------------------------------------------------------------*/
+$(window).resize(function(){
+    windowWidth = window.innerWidth;
+    //console.log(windowWidth);
+
+    //vuelve a dimensionar slider superior
+    var wrapper = $('.home-header');
+    var contenido = $('.slider-header-wrapper')
+    setTimeout(function(){
+        getSetHeightSize(wrapper, contenido);
+    },500)
+    
+});
 
 $(document).ready(function(){
-    windowWidth = window.innerWidth;
+    windowWidth = window.innerWidth;  
+    
     /*
      * SCROLL TOP
     */
@@ -400,46 +419,22 @@ $(document).ready(function(){
 
 $(window).on('load', function(){
 
+    //carga el header
+    loadAjaxTemplate('.slider-header-wrapper', initSliderHeader);
+
+    /*var templatesAjax = $('.load-ajax-template');
+    templatesAjax.each(function(){
+        var template = $(this).attr('data-template');
+    });*/
+
     //cargaimaenes por ajax LAZY LOAD
     loadImages();
 
+    
 
-    initSlider();
-
-    /*
-     * IN VIEW ANIMATION
-    */
-    /*var $animation_elements = $('.animate-element');
-    var $window = $(window);
-
-    function check_if_in_view() {
-        var window_height = $window.height();
-        var window_top_position = $window.scrollTop();
-        var window_bottom_position = (window_top_position + window_height);
-
-        $.each($animation_elements, function() {
-            var $element = $(this);
-            var element_height = $element.outerHeight();
-            var element_top_position = $element.offset().top;
-            var element_bottom_position = (element_top_position + element_height);
-
-            //check to see if this current container is within viewport
-            if ((element_bottom_position >= window_top_position) &&
-                (element_top_position <= window_bottom_position)) {
-                $element.addClass('in-view');
-            } else {
-                $element.removeClass('in-view');
-            }
-        });
-    }
-
-    $window.on('scroll resize', check_if_in_view);
-    $window.trigger('scroll');
-
-    */
-
-
+    
 });
+
 
 /*
  * esta funcion hace el lazy load de las imagenes
@@ -453,8 +448,6 @@ function loadImages() {
         loadImage (this);
         counter++;
     });
-
-    console.log(counter);
 
 }//loadImages()
 
@@ -487,7 +480,7 @@ function loadImage (image) {
         html += '<source srcset="' + imagenDefault + ' 1x, ' + imagenRetina + ' 2x" media="(min-width: 315px)">';
     }
 
-    html += '<img class="icon-btn" src="'+imagenDefault+'">';
+    html += '<img src="'+imagenDefault+'">';
     html += '</picture>';
 
     $(image).append($(html)).fadeIn(1000);
@@ -495,10 +488,21 @@ function loadImage (image) {
 }
 
 /*
- * esta funcion arranca los sliders
+ * funcion que busca y setea la altura de un elemento
 */
+function getSetHeightSize(target, elemento) {
+    
+    var h = $(elemento).css('height')
+    $(target).css('height', h);
+    //console.log('size '+ h);
+}
 
-function initSlider() {
+/*
+ * esta funcion arranca slider header
+*/
+function initSliderHeader() {
+
+    var wrapper = $('.home-header');
 
     var flechaIzqHtml = '<picture><source srcset="'+baseUrl+'/assets/images/flecha-azul.svg" type="image/svg+xml"><source srcset="'+baseUrl+'/assets/images/flecha-azul.png 1x, '+baseUrl+'/assets/images/flecha-azul@2x.png "media="(min-width: 315px)"><img class="flecha-izquierda" src="'+baseUrl+'/assets/images/flecha-azul.png" alt="icon-flecha"></picture>';
     var flechaDerHtml = '<picture><source srcset="'+baseUrl+'/assets/images/flecha-azul.svg" type="image/svg+xml"><source srcset="'+baseUrl+'/assets/images/flecha-azul.png 1x, '+baseUrl+'/assets/images/flecha-azul@2x.png "media="(min-width: 315px)"><img class="flecha-derecha" src="'+baseUrl+'/assets/images/flecha-azul.png" alt="icon-flecha"></picture>';
@@ -539,5 +543,111 @@ function initSlider() {
         transition: "width 0s"
         });
     }
+
+    var elemento = $('.slider-header-wrapper')
+    getSetHeightSize(wrapper, elemento);
+    loadAjaxTemplate('.icon-header');
 }//init slider
 
+
+/*
+ * esta funcion carga el template
+*/
+function loadAjaxTemplate(contenedor, callback) {
+
+    var template = $(contenedor).attr('data-template');
+
+    $.ajax( {
+        type: 'POST',
+        url: ajaxFileUrl,
+        data: {
+          function: 'load-template',
+          template: template,
+        },
+        //funcion antes de enviar
+        beforeSend: function() {
+            console.log('Buscando template');
+        },
+        success: function ( response ) {
+            //console.log(response);
+            if ( response ) {
+                $(contenedor).append( response );
+
+                if ( typeof callback  == 'function' ) {
+                    callback();
+                }
+            }
+        },
+        error: function ( ) {
+            console.log('error');
+        },
+      });//cierre ajax
+  
+}
+
+
+/*
+ * activa las animaciones al scrolear
+*/
+function startAnimations() {
+    /*
+     * IN VIEW ANIMATION
+    */
+    /* var $animation_elements = $('.animate-element');
+    var $window = $(window);
+
+    function check_if_in_view() {
+        var window_height = $window.height();
+        var window_top_position = $window.scrollTop();
+        var window_bottom_position = (window_top_position + window_height);
+
+        $.each($animation_elements, function() {
+            var $element = $(this);
+            var element_height = $element.outerHeight();
+            var element_top_position = $element.offset().top;
+            var element_bottom_position = (element_top_position + element_height);
+
+            //check to see if this current container is within viewport
+            if ((element_bottom_position >= window_top_position) &&
+                (element_top_position <= window_bottom_position)) {
+                $element.addClass('in-view');
+            } else {
+                $element.removeClass('in-view');
+            }
+        });
+    }
+
+    $window.on('scroll resize', check_if_in_view);
+    $window.trigger('scroll');
+    */
+}
+
+/*
+ * INICIA LOS PARALLAXS
+*/
+initParallax()
+function initParallax () {
+    var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+    if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+        return true;
+    }
+    
+    $(window).scroll(function(){
+      
+        //valor de barra que necesitan todos
+        var barra = ($(window).scrollTop());
+        console.log(barra);
+
+        //imagen nosotros
+        var imagenNos = $('.nosotros-wrapper .imagen-nosotros img')
+        var moverImagenNos = ( (barra / 10) * 1.1 ) / 1.99;
+        $(imagenNos).css('top', moverImagenNos + '%');
+
+
+        //imagenes header
+        var imagenesSlider = $('.item-slider .imagen-fondo img')
+        var moverImagenesSlider = ( (barra / 1.1) / 10 ) + 50;
+        $(imagenesSlider).css('top', moverImagenesSlider + '%');
+
+    });
+}

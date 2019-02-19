@@ -23,30 +23,12 @@ if( isAjax() ) :
 			//saveNewContact ( $nombre, $telefono, $email, $mensaje, $fecha_viaje, 'contacto' );
 		break;
 
-		case 'load-more':
+		case 'load-template':
+			$template = isset($_POST['template']) ? $_POST['template'] : null;
 
-			$page  = isset($_POST['page']) ? $_POST['page'] : 1;
-			$postPerPage  = POSTPERPAG;
-			$categoria  = isset($_POST['categoria']) ? $_POST['categoria'] : '';
-			
-			$postPerPage = ($page) * POSTPERPAG .',' .POSTPERPAG;
-
-			$posts = getPosts( $categoria, $postPerPage );
-
-			if ( $posts != null ) : 
-				ob_start();
-				foreach ($posts as $post ) {
-					
-					getTemplate('posts-loops', $post);
-				
-				}
-
-				$loop = ob_get_contents();
-				ob_end_clean();
-				
-			echo $posts;
-			
-			endif;
+			if ( $template != null ) {
+				getTemplate($template);
+			}
 
 		break;
 

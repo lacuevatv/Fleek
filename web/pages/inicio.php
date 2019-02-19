@@ -8,7 +8,9 @@ getTemplate( 'header' ); ?>
     
     <header class="home-header">
 
-        <?php getTemplate('slider-header'); ?>
+        <div class="slider-header-wrapper" data-template="slider-header">
+            <?php //getTemplate('slider-header'); ?>
+        </div>
 
         <div class="legales-header">
             <p>
@@ -16,22 +18,15 @@ getTemplate( 'header' ); ?>
             </p>
         </div>
 
-        <div class="left-icons-header">
-            <picture>
-                <source srcset="<?php echo IMAGES; ?>icon-raton.svg" type="image/svg+xml">
-                <source srcset="<?php echo IMAGES; ?>icon-raton.png 1x, <?php echo IMAGES; ?>icon-raton@2x.png 2x" media="(min-width: 315px)">
-                <img class="raton" src="<?php echo IMAGES; ?>icon-raton.png">
-            </picture>
-            <p>Scroll down</p>
-            <span class="line"></span>
-        </div>
-        <div class="right-icons-header">
-
-        </div>
     </header>
 
 <!-- SECTION NOSOTROS -->
     <section class="section-wrapper nosotros-wrapper" id="nosotros">
+
+        <div class="icon-header" data-template="icon-header">
+            <?php //getTemplate('icon-header'); ?>
+        </div>
+        
         <div class="icon-vertical">
             <picture>
                 <source srcset="<?php echo IMAGES; ?>logo-vertical.svg" type="image/svg+xml">

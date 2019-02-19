@@ -55,7 +55,7 @@ $sliders = array(
         ),
     ),
 //slider 3
-    /*array(
+    array(
         'titulo' => 'Nieve',
         'imagen' => '',
         'imagenRetina' => '',
@@ -107,82 +107,81 @@ $sliders = array(
                 
             ),
         ),
-    ),*/
+    ),
 );
 ?>
 
-<div class="slider-header-wrapper">
-    <div class="slide-progress"></div>
 
-    <div id="header-slider" class="slider-header owl-carousel">
+<div class="slide-progress"></div>
 
-    <?php
-    foreach ( $sliders as $slider ) { ?>
+<div id="header-slider" class="slider-header owl-carousel">
+
+<?php
+foreach ( $sliders as $slider ) { ?>
+    
+    <article class="item-slider">
         
-        <article class="item-slider">
-            
-            <?php if ( $slider['imagen'] != '') : ?>
-            <div class="imagen-fondo">
+        <?php if ( $slider['imagen'] != '') : ?>
+        <div class="imagen-fondo">
 
-            <picture>
+        <picture>
 
-                <?php if ( $slider['imagenMobil'] != '') : ?>
-                    <source srcset="<?php echo UPLOADSURL . $slider['imagen']; ?> 1x, <?php echo UPLOADSURL . $slider['imagenRetina']; ?> 2x" media="(min-width: 992px)">
+            <?php if ( $slider['imagenMobil'] != '') : ?>
+                <source srcset="<?php echo UPLOADSURL . $slider['imagen']; ?> 1x, <?php echo UPLOADSURL . $slider['imagenRetina']; ?> 2x" media="(min-width: 992px)">
 
-                    <source srcset="<?php echo UPLOADSURL . $slider['imagenMobil']; ?> 1x, <?php echo UPLOADSURL . $slider['imagenMobilRetina']; ?> 2x" media="(min-width: 315px)">
+                <source srcset="<?php echo UPLOADSURL . $slider['imagenMobil']; ?> 1x, <?php echo UPLOADSURL . $slider['imagenMobilRetina']; ?> 2x" media="(min-width: 315px)">
 
-                <?php else : ?>
+            <?php else : ?>
 
-                    <source srcset="<?php echo UPLOADSURL . $slider['imagen']; ?> 1x, <?php echo UPLOADSURL . $slider['imagenRetina']; ?> 2x" media="(min-width: 315px)">
+                <source srcset="<?php echo UPLOADSURL . $slider['imagen']; ?> 1x, <?php echo UPLOADSURL . $slider['imagenRetina']; ?> 2x" media="(min-width: 315px)">
 
-                <?php endif; ?>
-
-                <img src="<?php echo UPLOADSURL . $slider['imagen']; ?>">
-            </picture>
-
-            </div>
             <?php endif; ?>
 
-            <div class="contenido <?php echo $slider['color']; ?>">
-                <h1>
-                    <?php echo $slider['titulo']; ?>
-                </h1>
+            <img src="<?php echo UPLOADSURL . $slider['imagen']; ?>">
+        </picture>
 
-                <div class="texto">
-                    <?php echo $slider['texto']; ?>
-                </div>
+        </div>
+        <?php endif; ?>
 
-                <div class="wrapper-buttons">
-                    
-                    <?php foreach (  $slider['botones'] as $boton ) { ?>
+        <div class="contenido <?php echo $slider['color']; ?>">
+            <h1>
+                <?php echo $slider['titulo']; ?>
+            </h1>
 
-                        <a class="icon-btn-right" href="<?php echo $boton['link']; ?>">
-                            <span><?php echo $boton['texto']; ?></span>
+            <div class="texto">
+                <?php echo $slider['texto']; ?>
+            </div>
 
-                            <?php if ( $boton['icon'] != '' ) : ?>
+            <div class="wrapper-buttons">
+                
+                <?php foreach (  $slider['botones'] as $boton ) { ?>
 
-                            <picture>
+                    <a class="icon-btn-right" href="<?php echo $boton['link']; ?>">
+                        <span><?php echo $boton['texto']; ?></span>
 
-                                <?php if ( $boton['iconSVG'] != '' ) : ?>
+                        <?php if ( $boton['icon'] != '' ) : ?>
 
-                                <source srcset="<?php echo IMAGES . $boton['iconSVG']; ?>" type="image/svg+xml">
+                        <picture>
 
-                                <?php endif; ?>
+                            <?php if ( $boton['iconSVG'] != '' ) : ?>
 
-                                <source srcset="<?php echo IMAGES . $boton['icon']; ?> 1x, <?php if (  $boton['icon2x'] != '' ) { echo IMAGES . $boton['icon2x'] . ' 2x'; } ?>" media="(min-width: 315px)">
-
-                                <img class="icon-btn" src="<?php echo IMAGES . $boton['icon']; ?>">
-                            </picture>
+                            <source srcset="<?php echo IMAGES . $boton['iconSVG']; ?>" type="image/svg+xml">
 
                             <?php endif; ?>
-                        </a>
 
-                    <?php } ?>
-                </div>
+                            <source srcset="<?php echo IMAGES . $boton['icon']; ?> 1x, <?php if (  $boton['icon2x'] != '' ) { echo IMAGES . $boton['icon2x'] . ' 2x'; } ?>" media="(min-width: 315px)">
+
+                            <img class="icon-btn" src="<?php echo IMAGES . $boton['icon']; ?>">
+                        </picture>
+
+                        <?php endif; ?>
+                    </a>
+
+                <?php } ?>
             </div>
-        </article>
+        </div>
+    </article>
 
-    <?php } ?>
+<?php } ?>
 
-    </div>
 </div>

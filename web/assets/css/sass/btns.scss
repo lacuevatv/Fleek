@@ -3,17 +3,29 @@
     position: relative;
     outline: none;
     @include transition(all $transitionSpeed);
-  }
-  .btn-hover-opacity {
+}
+.btn-hover-opacity {
     &:hover {
-      zoom: 1;
-      filter: alpha(opacity=50);
-      opacity: 0.5;
+        zoom: 1;
+        filter: alpha(opacity=50);
+        opacity: 0.5;
     }
-  }
+}
 
 .btn-icon-left {
     @extend .btn;
+    @extend .btn-hover-opacity;
+    
+    img {
+        padding-right: 10px;
+        vertical-align: middle;
+    }
+}
+
+.btn-icon-left-notransition {
+    cursor: pointer;
+    position: relative;
+    outline: none;
     @extend .btn-hover-opacity;
     
     img {
