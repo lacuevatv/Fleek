@@ -14,7 +14,7 @@
     .legales-header {
         z-index: 2;
         margin-top: 10px;
-        padding-bottom: 5px;
+        padding-bottom: 10px;
         position: absolute;
         bottom: 0;
         padding-left: 5px;
@@ -48,6 +48,7 @@
             font-family: $fuente-secundaria;
             font-weight: 500;
             text-align: center;
+            line-height: 10px;
 
             @media (min-width: 370px) {
                 font-size: 9px;
@@ -55,6 +56,7 @@
 
             @media (min-width: 400px) {
                 font-size: 10px;
+                line-height: 12px;
             }
             @media (min-width: $lg) {
                 text-align: right;
