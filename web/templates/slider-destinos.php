@@ -28,7 +28,7 @@ if ($data == 'bariloche') {
 }
 ?>
 <?php if ( $sliders != null ) : ?>
-<div class="slide-progress <?php echo $color;?>"></div>
+<!--<div class="slide-progress <?php //echo $color;?>"></div>-->
 
 <ul id="destino-slider" class="slider-header owl-carousel">
 

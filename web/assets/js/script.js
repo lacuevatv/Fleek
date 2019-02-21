@@ -536,7 +536,7 @@ function initSliderHeader() {
 */
 function initSliderDestinos() {
     var wrapper = $('.destinos-header');
-    var sliderBar = $(wrapper).find('.slide-progress');
+    //var sliderBar = $(wrapper).find('.slide-progress');
 
     var flechaIzqHtml = '<picture><source srcset="'+baseUrl+'/assets/images/flecha-azul.svg" type="image/svg+xml"><source srcset="'+baseUrl+'/assets/images/flecha-azul.png 1x, '+baseUrl+'/assets/images/flecha-azul@2x.png "media="(min-width: 315px)"><img class="flecha-izquierda" src="'+baseUrl+'/assets/images/flecha-azul.png" alt="icon-flecha"></picture>';
     var flechaDerHtml = '<picture><source srcset="'+baseUrl+'/assets/images/flecha-azul.svg" type="image/svg+xml"><source srcset="'+baseUrl+'/assets/images/flecha-azul.png 1x, '+baseUrl+'/assets/images/flecha-azul@2x.png "media="(min-width: 315px)"><img class="flecha-derecha" src="'+baseUrl+'/assets/images/flecha-azul.png" alt="icon-flecha"></picture>';
@@ -545,11 +545,11 @@ function initSliderDestinos() {
         items: 1,
         animateOut: 'fadeOut',
         loop: true,
-        autoplay: true,
+        /*autoplay: true,
         autoplayTimeout:6000,
         onInitialized: startProgressBar,
         onTranslate: resetProgressBar,
-        onTranslated: startProgressBar,
+        onTranslated: startProgressBar,*/
         nav:true,
         navText : [flechaIzqHtml, flechaDerHtml],
         dots:true,

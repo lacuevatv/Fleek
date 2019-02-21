@@ -360,10 +360,10 @@ html, body {
   justify-content: space-around;
   height: 45px;
   width: 165px;
-  -webkit-border-radius: 25px;
-  -moz-border-radius: 25px;
-  -ms-border-radius: 25px;
-  border-radius: 25px;
+  -webkit-border-radius: 150px;
+  -moz-border-radius: 150px;
+  -ms-border-radius: 150px;
+  border-radius: 150px;
   padding-left: 15px;
   padding-right: 12px;
   font-size: 14px;
@@ -689,11 +689,11 @@ html, body {
   background-color: #2B00FF;
   position: absolute;
   left: 50%;
-  top: 35%;
-  -webkit-transition: all 2000ms;
-  -moz-transition: all 2000ms;
-  -ms-transition: all 2000ms;
-  transition: all 2000ms;
+  top: 40%;
+  -webkit-transition: all 500ms;
+  -moz-transition: all 500ms;
+  -ms-transition: all 500ms;
+  transition: all 500ms;
   -webkit-transform: translate3D(-50%, -50%, 0);
   -moz-transform: translate3D(-50%, -50%, 0);
   -ms-transform: translate3D(-50%, -50%, 0);
@@ -705,7 +705,7 @@ html, body {
 }
 @media (min-width: 1200px) {
   .navbar .toggle .tog1 {
-    top: 38%;
+    top: 41%;
     width: 40px;
   }
 }
@@ -717,10 +717,10 @@ html, body {
   position: absolute;
   left: 50%;
   top: 50%;
-  -webkit-transition: all 2000ms;
-  -moz-transition: all 2000ms;
-  -ms-transition: all 2000ms;
-  transition: all 2000ms;
+  -webkit-transition: all 500ms;
+  -moz-transition: all 500ms;
+  -ms-transition: all 500ms;
+  transition: all 500ms;
   -webkit-transform: translate3D(-50%, -50%, 0);
   -moz-transform: translate3D(-50%, -50%, 0);
   -ms-transform: translate3D(-50%, -50%, 0);
@@ -742,15 +742,15 @@ html, body {
   background-color: #2B00FF;
   position: absolute;
   left: 50%;
-  top: 65%;
+  top: 60%;
   -webkit-transform: translate3D(-50%, -50%, 0);
   -moz-transform: translate3D(-50%, -50%, 0);
   -ms-transform: translate3D(-50%, -50%, 0);
   transform: translate3D(-50%, -50%, 0);
-  -webkit-transition: all 2000ms;
-  -moz-transition: all 2000ms;
-  -ms-transition: all 2000ms;
-  transition: all 2000ms;
+  -webkit-transition: all 500ms;
+  -moz-transition: all 500ms;
+  -ms-transition: all 500ms;
+  transition: all 500ms;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
@@ -758,7 +758,7 @@ html, body {
 }
 @media (min-width: 1200px) {
   .navbar .toggle .tog3 {
-    top: 62%;
+    top: 59%;
     width: 40px;
   }
 }

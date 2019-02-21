@@ -115,12 +115,12 @@
             background-color: $color-azul;
             position: absolute;
             left: 50%;
-            top: 35%;
-            @include transition(all $transitionSpeedx2);
+            top: 40%;
+            @include transition(all $transitionSpeed);
             @include transform(translate3D(-50%,-50%,0));
             @include border-radius(5px);
             @media (min-width: $lg) {
-                top: 38%;
+                top: 41%;
                 width: 40px;
             }
         }
@@ -133,7 +133,7 @@
             position: absolute;
             left: 50%;
             top: 50%;
-            @include transition(all $transitionSpeedx2);
+            @include transition(all $transitionSpeed);
             @include transform(translate3D(-50%,-50%,0));
             @include border-radius(5px);
             @media (min-width: $lg) {
@@ -148,12 +148,12 @@
             background-color: $color-azul;
             position: absolute;
             left: 50%;
-            top: 65%;
+            top: 60%;
             @include transform(translate3D(-50%,-50%,0));
-            @include transition(all $transitionSpeedx2);
+            @include transition(all $transitionSpeed);
             @include border-radius(5px);
             @media (min-width: $lg) {
-                top: 62%;
+                top: 59%;
                 width: 40px;
             }
         }
