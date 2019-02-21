@@ -1835,6 +1835,13 @@ html, body {
     padding: 205px 140px 110px;
   }
 }
+.destinos-header .notice-menu {
+  position: relative;
+  color: #2B00FF;
+  margin-bottom: 20px;
+  font-weight: 600;
+  font-size: 14px;
+}
 .destinos-header .super-title {
   font-family: "Druk", "Helvetica Neue Roman", sans-serif;
   font-weight: 500;

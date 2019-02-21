@@ -10,6 +10,14 @@
         padding: 205px $paddingLeftRightXLG 110px;
     }
 
+    .notice-menu {
+        position: relative;
+        color: $color-azul;
+        margin-bottom: 20px;
+        font-weight: 600;
+        font-size: 14px;
+    }
+
     .super-title {
         font-family: $fuente-especial;
         font-weight: 500;

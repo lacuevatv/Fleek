@@ -145,6 +145,9 @@ getTemplate( 'header' ); ?>
     <article>
         <header class="slider-header-wrapper destinos-header">
             <div class="slider-destinos-wrapper" data-template="slider-destinos"></div>
+            <div class="notice-menu">
+                Fleek&reg; | Nieve | Bariloche
+            </div>
             <div class="super-title<?php echo ' '.$pageData['color']; ?>">
                 <?php echo $pageData['header']['letras']; ?>
             </div>
