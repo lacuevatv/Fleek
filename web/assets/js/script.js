@@ -479,6 +479,7 @@ function getSetHeightSize(target, elemento) {
 function initSliderHeader() {
 
     var wrapper = $('.home-header');
+    var sliderBar = $(wrapper).find('.slide-progress');
 
     var flechaIzqHtml = '<picture><source srcset="'+baseUrl+'/assets/images/flecha-azul.svg" type="image/svg+xml"><source srcset="'+baseUrl+'/assets/images/flecha-azul.png 1x, '+baseUrl+'/assets/images/flecha-azul@2x.png "media="(min-width: 315px)"><img class="flecha-izquierda" src="'+baseUrl+'/assets/images/flecha-azul.png" alt="icon-flecha"></picture>';
     var flechaDerHtml = '<picture><source srcset="'+baseUrl+'/assets/images/flecha-azul.svg" type="image/svg+xml"><source srcset="'+baseUrl+'/assets/images/flecha-azul.png 1x, '+baseUrl+'/assets/images/flecha-azul@2x.png "media="(min-width: 315px)"><img class="flecha-derecha" src="'+baseUrl+'/assets/images/flecha-azul.png" alt="icon-flecha"></picture>';
@@ -501,12 +502,16 @@ function initSliderHeader() {
     //inicia la progress bar de los sliders  
     function startProgressBar() {
         // apply keyframe animation
-        var persentajeWidth = '90%';
+        //var persentajeWidth = '90%';
+        var persentajeWidth = innerWidth - $(sliderBar).offset().left +20;
+        $(window).resize(function(){
+            persentajeWidth = innerWidth - $(sliderBar).offset().left +20;
+        });
         if ( windowWidth < 960 ) {
             persentajeWidth = '100%'
         }
 
-        $(".slide-progress").css({
+        $(sliderBar).css({
         width: persentajeWidth,
         transition: "width 6000ms"
         });
@@ -514,7 +519,7 @@ function initSliderHeader() {
     
     //vuelve a 0 la progras bar
     function resetProgressBar() {
-        $(".slide-progress").css({
+        $(sliderBar).css({
         width: 0,
         transition: "width 0s"
         });
@@ -531,6 +536,7 @@ function initSliderHeader() {
 */
 function initSliderDestinos() {
     var wrapper = $('.destinos-header');
+    var sliderBar = $(wrapper).find('.slide-progress');
 
     var flechaIzqHtml = '<picture><source srcset="'+baseUrl+'/assets/images/flecha-azul.svg" type="image/svg+xml"><source srcset="'+baseUrl+'/assets/images/flecha-azul.png 1x, '+baseUrl+'/assets/images/flecha-azul@2x.png "media="(min-width: 315px)"><img class="flecha-izquierda" src="'+baseUrl+'/assets/images/flecha-azul.png" alt="icon-flecha"></picture>';
     var flechaDerHtml = '<picture><source srcset="'+baseUrl+'/assets/images/flecha-azul.svg" type="image/svg+xml"><source srcset="'+baseUrl+'/assets/images/flecha-azul.png 1x, '+baseUrl+'/assets/images/flecha-azul@2x.png "media="(min-width: 315px)"><img class="flecha-derecha" src="'+baseUrl+'/assets/images/flecha-azul.png" alt="icon-flecha"></picture>';
@@ -553,12 +559,16 @@ function initSliderDestinos() {
     //inicia la progress bar de los sliders  
     function startProgressBar() {
         // apply keyframe animation
-        var persentajeWidth = '90%';
+        //var persentajeWidth = '90%';
+        var persentajeWidth = innerWidth - $(sliderBar).offset().left +20;
+        $(window).resize(function(){
+            persentajeWidth = innerWidth - $(sliderBar).offset().left +20;
+        });
         if ( windowWidth < 960 ) {
             persentajeWidth = '100%'
         }
 
-        $(".slide-progress").css({
+        $(sliderBar).css({
         width: persentajeWidth,
         transition: "width 6000ms"
         });
@@ -566,7 +576,7 @@ function initSliderDestinos() {
     
     //vuelve a 0 la progras bar
     function resetProgressBar() {
-        $(".slide-progress").css({
+        $(sliderBar).css({
         width: 0,
         transition: "width 0s"
         });
@@ -578,7 +588,10 @@ function initSliderDestinos() {
 }
 
 function initSliderTestimonios() {
-    var wrapper = $('.destinos-header');
+    var wrapper = $('.wrapper-slider-testimonios');
+    var sliderBar = $(wrapper).find('.slide-progress');
+
+
 
     var flechaIzqHtml = '<picture><source srcset="'+baseUrl+'/assets/images/flecha-azul.svg" type="image/svg+xml"><source srcset="'+baseUrl+'/assets/images/flecha-azul.png 1x, '+baseUrl+'/assets/images/flecha-azul@2x.png "media="(min-width: 315px)"><img class="flecha-izquierda" src="'+baseUrl+'/assets/images/flecha-azul.png" alt="icon-flecha"></picture>';
     var flechaDerHtml = '<picture><source srcset="'+baseUrl+'/assets/images/flecha-azul.svg" type="image/svg+xml"><source srcset="'+baseUrl+'/assets/images/flecha-azul.png 1x, '+baseUrl+'/assets/images/flecha-azul@2x.png "media="(min-width: 315px)"><img class="flecha-derecha" src="'+baseUrl+'/assets/images/flecha-azul.png" alt="icon-flecha"></picture>';
@@ -608,7 +621,7 @@ function initSliderTestimonios() {
             persentajeWidth = '100%'
         }
 
-        $(".slide-progress").css({
+        $(sliderBar).css({
         width: persentajeWidth,
         transition: "width 6000ms"
         });
@@ -616,7 +629,7 @@ function initSliderTestimonios() {
     
     //vuelve a 0 la progras bar
     function resetProgressBar() {
-        $(".slide-progress").css({
+        $(sliderBar).css({
         width: 0,
         transition: "width 0s"
         });

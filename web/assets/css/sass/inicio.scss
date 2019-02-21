@@ -6,7 +6,7 @@
     z-index: 1;
     overflow: hidden;
     height: 0;
-    @include transition(all $transitionSpeed);
+    @include transition(all $transitionSpeedx2);
     @media (min-width: $lg) {
         //padding-top: 100px;
     }
