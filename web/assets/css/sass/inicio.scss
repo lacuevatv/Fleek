@@ -388,22 +388,24 @@
 
     li {
         width: 100%;
-        height: 365px;
+        //height: 365px;
         @media (min-width: $sm) {
-            height: 540px;
+            //height: 540px;
         }
         @media (min-width: $md) {
-            width: 33%,33;
-            height: 365px;
+            width: 33.33%;
+            //height: 365px;
         }
         @media (min-width: $xlg) {
-            height: 540px;
+            //height: 540px;
         }
     }
 
     .destino {
         position: relative;
         overflow: hidden;
+        width: 100%;
+        height: 100%;
         padding: 35px 35px 50px;
         display: flex;
         display: -o-flex;
@@ -422,7 +424,7 @@
         justify-content: space-between;
 
         @media (min-width: $xlg) {
-            padding: 45px 45px 60px;
+            padding: 45px 45px 70px;
         }
 
         .icon-top-right {
@@ -548,6 +550,7 @@
             background-color: $color-rosa;  
         }
     }//.londres
+
 }//.destinos-wrapper
 
 /*

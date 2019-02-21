@@ -42,7 +42,7 @@
 				<span class="tog3"></span>
 			</button>
 
-			<div class="main-menu-wrapper">
+			<div class="main-menu-wrapper" style="right: -300%;">
 				<ul>
 					<li>
 						<a class="scroll-to" href="<?php echo MAINSURL;?>/#nosotros">

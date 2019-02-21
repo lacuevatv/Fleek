@@ -1285,27 +1285,17 @@ html, body {
 }
 .destinos-wrapper li {
   width: 100%;
-  height: 365px;
-}
-@media (min-width: 768px) {
-  .destinos-wrapper li {
-    height: 540px;
-  }
 }
 @media (min-width: 992px) {
   .destinos-wrapper li {
-    width: 33%, 33;
-    height: 365px;
-  }
-}
-@media (min-width: 1600px) {
-  .destinos-wrapper li {
-    height: 540px;
+    width: 33.33%;
   }
 }
 .destinos-wrapper .destino {
   position: relative;
   overflow: hidden;
+  width: 100%;
+  height: 100%;
   padding: 35px 35px 50px;
   display: flex;
   display: -o-flex;
@@ -1325,7 +1315,7 @@ html, body {
 }
 @media (min-width: 1600px) {
   .destinos-wrapper .destino {
-    padding: 45px 45px 60px;
+    padding: 45px 45px 70px;
   }
 }
 .destinos-wrapper .destino .icon-top-right {
@@ -2565,6 +2555,61 @@ html, body {
   .wrapper-slider-testimonios #experiencias-slider .owl-dots {
     left: 140px;
   }
+}
+
+/*
+ * slider boxes
+*/
+#slide-nieve, #slide-playa, #slide-city {
+  position: relative;
+}
+#slide-nieve .slide-progress, #slide-playa .slide-progress, #slide-city .slide-progress {
+  position: absolute;
+  z-index: 111;
+  width: 0;
+  max-width: 100%;
+  height: 5px;
+  background: #72DDD3;
+  bottom: 0;
+  left: 0;
+}
+#slide-nieve .owl-nav, #slide-playa .owl-nav, #slide-city .owl-nav {
+  display: flex;
+  display: -o-flex;
+  display: -ms-flex;
+  display: -moz-flex;
+  display: -webkit-flex;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  -webkit-justify-content: flex-end;
+  -moz-justify-content: flex-end;
+  -ms-justify-content: flex-end;
+  -o-justify-content: flex-end;
+  justify-content: flex-end;
+}
+@media (max-width: 992px) {
+  #slide-nieve .owl-nav, #slide-playa .owl-nav, #slide-city .owl-nav {
+    bottom: initial;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+}
+@media (max-width: 992px) {
+  #slide-nieve .owl-nav .owl-prev, #slide-playa .owl-nav .owl-prev, #slide-city .owl-nav .owl-prev {
+    display: none;
+  }
+}
+
+#slide-playa .slide-progress {
+  background: #F4E41E;
+}
+
+#slide-city .slide-progress {
+  background: #FF6C6C;
 }
 
 /*--------------------------------------------------------------

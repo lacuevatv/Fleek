@@ -62,75 +62,8 @@ getTemplate( 'header' ); ?>
         <h2 class="sr-only">
             Destinos
         </h2>
-        <ul class="destinos-wrapper">
-            <li class="destino bariloche">
-
-                <div class="icon-top-right">
-                    <picture>
-                        <source srcset="<?php echo IMAGES; ?>icon-bariloche.svg" type="image/svg+xml">
-                        <source srcset="<?php echo IMAGES; ?>icon-bariloche.png 1x, <?php echo IMAGES; ?>icon-bariloche.png 2x" media="(min-width: 315px)">
-                        <img src="<?php echo IMAGES; ?>icon-bariloche.png">
-                    </picture>
-                </div>
-
-                <h5 class="super-title">BRC</h5>
-                <h3 class="title-destino">Bariloche</h3>
-                <div class="stars"></div>
-                <a class="icon-btn-right" href="<?php echo MAINSURL; ?>/bariloche">
-                    <span>Conocé más</span>
-                    <picture>
-                        <source srcset="<?php echo IMAGES; ?>nieve-icon.svg" type="image/svg+xml">
-                        <source srcset="<?php echo IMAGES; ?>nieve-icon.png 1x, <?php echo IMAGES; ?>nieve-icon.png 2x" media="(min-width: 315px)">
-                        <img src="<?php echo IMAGES; ?>nieve-icon.png">
-                    </picture>
-                </a>
-                
-            </li>
-            <li class="destino cancun">
-                
-                <div class="icon-top-right">
-                    <picture>
-                        <source srcset="<?php echo IMAGES; ?>icon-cancun.svg" type="image/svg+xml">
-                        <source srcset="<?php echo IMAGES; ?>icon-cancun.png 1x, <?php echo IMAGES; ?>icon-cancun.png 2x" media="(min-width: 315px)">
-                        <img src="<?php echo IMAGES; ?>icon-cancun.png">
-                    </picture>
-                </div>
-                <h5 class="super-title">CUN</h5>
-                <h3 class="title-destino">Cancún</h3>
-                <div class="stars"></div>
-                <a class="icon-btn-right" href="<?php echo MAINSURL; ?>/cancun">
-                    <span>Conocé más</span>
-                    <picture>
-                        <source srcset="<?php echo IMAGES; ?>palmera-icon.svg" type="image/svg+xml">
-                        <source srcset="<?php echo IMAGES; ?>palmera-icon.png 1x, <?php echo IMAGES; ?>palmera-icon.png 2x" media="(min-width: 315px)">
-                        <img src="<?php echo IMAGES; ?>palmera-icon.png">
-                    </picture>
-                </a>
-                
-            </li>
-            <li class="destino londres">
-
-                <div class="icon-top-right">
-                    <picture>
-                        <source srcset="<?php echo IMAGES; ?>icon-londres.svg" type="image/svg+xml">
-                        <source srcset="<?php echo IMAGES; ?>icon-londres.png 1x, <?php echo IMAGES; ?>icon-londres.png 2x" media="(min-width: 315px)">
-                        <img src="<?php echo IMAGES; ?>icon-londres.png">
-                    </picture>
-                </div>
-                <h5 class="super-title">LON</h5>
-                <h3 class="title-destino">Londres</h3>
-                <div class="stars"></div>
-                <a class="icon-btn-right" href="<?php echo MAINSURL; ?>/londres">
-                    <span>Conocé más</span>
-                    <picture>
-                        <source srcset="<?php echo IMAGES; ?>location-icon.svg" type="image/svg+xml">
-                        <source srcset="<?php echo IMAGES; ?>location-icon.png 1x, <?php echo IMAGES; ?>location-icon.png 2x" media="(min-width: 315px)">
-                        <img src="<?php echo IMAGES; ?>location-icon.png">
-                    </picture>
-                </a>
-                
-            </li>
-        </ul>
+        
+        <ul class="destinos-wrapper" data-template="boxes-destinos"></ul>
     </section>
 
 <!-- SECTION EXPERIENCIAS -->
