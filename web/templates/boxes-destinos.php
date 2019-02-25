@@ -3,11 +3,16 @@
     <div style="width:100%;height:100%" class="owl-carousel">
 
         <article class="destino bariloche">
-            <div class="imagen-fondo"></div>
+            <div class="imagen-fondo">
+                <picture>
+                    <source srcset="<?php echo UPLOADSURL; ?>box-nieve.jpg 1x, <?php echo UPLOADSURL; ?>box-nieve@2x.jpg 2x" media="(min-width: 315px)">
+                    <img src="<?php echo UPLOADSURL; ?>box-nieve.jpg">
+                </picture>
+            </div>
             <div class="icon-top-right">
                 <picture>
                     <source srcset="<?php echo IMAGES; ?>icon-bariloche.svg" type="image/svg+xml">
-                    <source srcset="<?php echo IMAGES; ?>icon-bariloche.png 1x, <?php echo IMAGES; ?>icon-bariloche.png 2x" media="(min-width: 315px)">
+                    <source srcset="<?php echo IMAGES; ?>icon-bariloche.png 1x, <?php echo IMAGES; ?>icon-bariloche@2x.png 2x" media="(min-width: 315px)">
                     <img src="<?php echo IMAGES; ?>icon-bariloche.png">
                 </picture>
             </div>
@@ -19,18 +24,23 @@
                 <span>Conocé más</span>
                 <picture>
                     <source srcset="<?php echo IMAGES; ?>nieve-icon.svg" type="image/svg+xml">
-                    <source srcset="<?php echo IMAGES; ?>nieve-icon.png 1x, <?php echo IMAGES; ?>nieve-icon.png 2x" media="(min-width: 315px)">
+                    <source srcset="<?php echo IMAGES; ?>nieve-icon.png 1x, <?php echo IMAGES; ?>nieve-icon@2x.png 2x" media="(min-width: 315px)">
                     <img src="<?php echo IMAGES; ?>nieve-icon.png">
                 </picture>
             </a>
         </article>
 
         <article class="destino bariloche">
-            <div class="imagen-fondo"></div>
+            <div class="imagen-fondo">
+                <picture>
+                    <source srcset="<?php echo UPLOADSURL; ?>box-nieve.jpg 1x, <?php echo UPLOADSURL; ?>box-nieve@2x.jpg 2x" media="(min-width: 315px)">
+                    <img src="<?php echo UPLOADSURL; ?>box-nieve.jpg">
+                </picture>
+            </div>
             <div class="icon-top-right">
                 <picture>
                     <source srcset="<?php echo IMAGES; ?>icon-bariloche.svg" type="image/svg+xml">
-                    <source srcset="<?php echo IMAGES; ?>icon-bariloche.png 1x, <?php echo IMAGES; ?>icon-bariloche.png 2x" media="(min-width: 315px)">
+                    <source srcset="<?php echo IMAGES; ?>icon-bariloche.png 1x, <?php echo IMAGES; ?>icon-bariloche@2x.png 2x" media="(min-width: 315px)">
                     <img src="<?php echo IMAGES; ?>icon-bariloche.png">
                 </picture>
             </div>
@@ -42,7 +52,7 @@
                 <span>Conocé más</span>
                 <picture>
                     <source srcset="<?php echo IMAGES; ?>nieve-icon.svg" type="image/svg+xml">
-                    <source srcset="<?php echo IMAGES; ?>nieve-icon.png 1x, <?php echo IMAGES; ?>nieve-icon.png 2x" media="(min-width: 315px)">
+                    <source srcset="<?php echo IMAGES; ?>nieve-icon.png 1x, <?php echo IMAGES; ?>nieve-icon@2x.png 2x" media="(min-width: 315px)">
                     <img src="<?php echo IMAGES; ?>nieve-icon.png">
                 </picture>
             </a>
@@ -56,11 +66,16 @@
     <div style="width:100%;height:100%" class="owl-carousel">
         
         <article class="destino cancun">
-            <div class="imagen-fondo"></div>
+            <div class="imagen-fondo">
+                <picture>
+                    <source srcset="<?php echo UPLOADSURL; ?>box-playa.jpg 1x, <?php echo UPLOADSURL; ?>box-playa@2x.jpg 2x" media="(min-width: 315px)">
+                    <img src="<?php echo UPLOADSURL; ?>box-playa.jpg">
+                </picture>
+            </div>
             <div class="icon-top-right">
                 <picture>
                     <source srcset="<?php echo IMAGES; ?>icon-cancun.svg" type="image/svg+xml">
-                    <source srcset="<?php echo IMAGES; ?>icon-cancun.png 1x, <?php echo IMAGES; ?>icon-cancun.png 2x" media="(min-width: 315px)">
+                    <source srcset="<?php echo IMAGES; ?>icon-cancun.png 1x, <?php echo IMAGES; ?>icon-cancun@2x.png 2x" media="(min-width: 315px)">
                     <img src="<?php echo IMAGES; ?>icon-cancun.png">
                 </picture>
             </div>
@@ -71,18 +86,23 @@
                 <span>Conocé más</span>
                 <picture>
                     <source srcset="<?php echo IMAGES; ?>palmera-icon.svg" type="image/svg+xml">
-                    <source srcset="<?php echo IMAGES; ?>palmera-icon.png 1x, <?php echo IMAGES; ?>palmera-icon.png 2x" media="(min-width: 315px)">
+                    <source srcset="<?php echo IMAGES; ?>palmera-icon.png 1x, <?php echo IMAGES; ?>palmera-icon@2x.png 2x" media="(min-width: 315px)">
                     <img src="<?php echo IMAGES; ?>palmera-icon.png">
                 </picture>
             </a>
         </article>
 
         <article class="destino cancun">
-            <div class="imagen-fondo"></div>
+            <div class="imagen-fondo">
+                <picture>
+                    <source srcset="<?php echo UPLOADSURL; ?>box-playa.jpg 1x, <?php echo UPLOADSURL; ?>box-playa@2x.jpg 2x" media="(min-width: 315px)">
+                    <img src="<?php echo UPLOADSURL; ?>box-playa.jpg">
+                </picture>
+            </div>
             <div class="icon-top-right">
                 <picture>
                     <source srcset="<?php echo IMAGES; ?>icon-cancun.svg" type="image/svg+xml">
-                    <source srcset="<?php echo IMAGES; ?>icon-cancun.png 1x, <?php echo IMAGES; ?>icon-cancun.png 2x" media="(min-width: 315px)">
+                    <source srcset="<?php echo IMAGES; ?>icon-cancun.png 1x, <?php echo IMAGES; ?>icon-cancun@2x.png 2x" media="(min-width: 315px)">
                     <img src="<?php echo IMAGES; ?>icon-cancun.png">
                 </picture>
             </div>
@@ -93,7 +113,7 @@
                 <span>Conocé más</span>
                 <picture>
                     <source srcset="<?php echo IMAGES; ?>palmera-icon.svg" type="image/svg+xml">
-                    <source srcset="<?php echo IMAGES; ?>palmera-icon.png 1x, <?php echo IMAGES; ?>palmera-icon.png 2x" media="(min-width: 315px)">
+                    <source srcset="<?php echo IMAGES; ?>palmera-icon.png 1x, <?php echo IMAGES; ?>palmera-icon@2x.png 2x" media="(min-width: 315px)">
                     <img src="<?php echo IMAGES; ?>palmera-icon.png">
                 </picture>
             </a>
@@ -107,11 +127,16 @@
     <div style="width:100%;height:100%" class="owl-carousel">
 
         <article class="destino londres">
-            <div class="imagen-fondo"></div>
+            <div class="imagen-fondo">
+                <picture>
+                    <source srcset="<?php echo UPLOADSURL; ?>box-city.jpg 1x, <?php echo UPLOADSURL; ?>box-city@2x.jpg 2x" media="(min-width: 315px)">
+                    <img src="<?php echo UPLOADSURL; ?>box-city.jpg">
+                </picture>
+            </div>
             <div class="icon-top-right">
                 <picture>
                     <source srcset="<?php echo IMAGES; ?>icon-londres.svg" type="image/svg+xml">
-                    <source srcset="<?php echo IMAGES; ?>icon-londres.png 1x, <?php echo IMAGES; ?>icon-londres.png 2x" media="(min-width: 315px)">
+                    <source srcset="<?php echo IMAGES; ?>icon-londres.png 1x, <?php echo IMAGES; ?>icon-londres@2x.png 2x" media="(min-width: 315px)">
                     <img src="<?php echo IMAGES; ?>icon-londres.png">
                 </picture>
             </div>
@@ -129,11 +154,16 @@
         </article>
 
         <article class="destino londres">
-            <div class="imagen-fondo"></div>
+            <div class="imagen-fondo">
+                <picture>
+                    <source srcset="<?php echo UPLOADSURL; ?>box-city.jpg 1x, <?php echo UPLOADSURL; ?>box-city@2x.jpg 2x" media="(min-width: 315px)">
+                    <img src="<?php echo UPLOADSURL; ?>box-city.jpg">
+                </picture>
+            </div>
             <div class="icon-top-right">
                 <picture>
                     <source srcset="<?php echo IMAGES; ?>icon-londres.svg" type="image/svg+xml">
-                    <source srcset="<?php echo IMAGES; ?>icon-londres.png 1x, <?php echo IMAGES; ?>icon-londres.png 2x" media="(min-width: 315px)">
+                    <source srcset="<?php echo IMAGES; ?>icon-londres.png 1x, <?php echo IMAGES; ?>icon-londres@2x.png 2x" media="(min-width: 315px)">
                     <img src="<?php echo IMAGES; ?>icon-londres.png">
                 </picture>
             </div>
@@ -144,7 +174,7 @@
                 <span>Conocé más</span>
                 <picture>
                     <source srcset="<?php echo IMAGES; ?>location-icon.svg" type="image/svg+xml">
-                    <source srcset="<?php echo IMAGES; ?>location-icon.png 1x, <?php echo IMAGES; ?>location-icon.png 2x" media="(min-width: 315px)">
+                    <source srcset="<?php echo IMAGES; ?>location-icon.png 1x, <?php echo IMAGES; ?>location-icon@2x.png 2x" media="(min-width: 315px)">
                     <img src="<?php echo IMAGES; ?>location-icon.png">
                 </picture>
             </a>

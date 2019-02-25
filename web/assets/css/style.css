@@ -1027,12 +1027,6 @@ html, body {
     transform: rotate(-90deg);
   }
 }
-@media (min-width: 1600px) {
-  .icon-header .right-icons-header {
-    height: 140px;
-    top: -1000px;
-  }
-}
 .icon-header .right-icons-header ul {
   height: 100%;
   width: 100%;
@@ -1313,9 +1307,36 @@ html, body {
   -o-justify-content: space-between;
   justify-content: space-between;
 }
+@media (min-width: 992px) {
+  .destinos-wrapper .destino {
+    padding: 20px 35px 50px;
+  }
+}
 @media (min-width: 1600px) {
   .destinos-wrapper .destino {
     padding: 45px 45px 70px;
+  }
+}
+.destinos-wrapper .destino .imagen-fondo {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.destinos-wrapper .destino .imagen-fondo img {
+  width: 130%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+  -moz-transform: translate3d(-50%, -50%, 0);
+  -ms-transform: translate3d(-50%, -50%, 0);
+  transform: translate3d(-50%, -50%, 0);
+}
+@media (min-width: 1200px) {
+  .destinos-wrapper .destino .imagen-fondo img {
+    width: 110%;
   }
 }
 .destinos-wrapper .destino .icon-top-right {
@@ -1341,6 +1362,7 @@ html, body {
   line-height: 147px;
   -webkit-text-stroke: 2px #585955;
   color: transparent;
+  position: relative;
 }
 @media (min-width: 1600px) {
   .destinos-wrapper .destino .super-title {
@@ -1823,11 +1845,16 @@ html, body {
 .destinos-header {
   background-color: #EBEAEA;
   color: #585955;
-  padding: 130px 25px 50%;
+  padding: 130px 25px 35%;
+}
+@media (min-width: 992px) {
+  .destinos-header {
+    padding: 90px 40px 55px;
+  }
 }
 @media (min-width: 1200px) {
   .destinos-header {
-    padding: 205px 100px 100px;
+    padding: 135px 100px 60px;
   }
 }
 @media (min-width: 1600px) {
@@ -1922,6 +1949,14 @@ html, body {
 .destinos-page-section .icon-header .right-icons-header {
   color: #2B00FF;
 }
+@media (min-width: 1200px) {
+  .destinos-page-section .icon-header .right-icons-header {
+    top: -920px;
+  }
+}
+.destinos-page-section .icon-header .right-icons-header img {
+  display: inline-block;
+}
 .destinos-page-section .icon-vertical {
   padding-top: 75px;
   -webkit-align-items: flex-start;
@@ -1983,6 +2018,7 @@ html, body {
 .destino .destino-titulo img {
   width: 46px;
   margin-left: 10px;
+  display: inline-block;
 }
 @media (min-width: 1600px) {
   .destino .destino-titulo img {
@@ -2296,7 +2332,6 @@ html, body {
   }
 }
 .slider-header-wrapper .slider-header .item-slider .contenido.azul {
-  background-color: #FF6C6C;
   color: #2B00FF;
 }
 .slider-header-wrapper .slider-header .item-slider .contenido.azul .wrapper-buttons a {
@@ -2450,6 +2485,21 @@ html, body {
   z-index: 0;
   left: 0;
   top: 0;
+}
+@media (min-width: 992px) {
+  .slider-destinos-wrapper .imagen-header {
+    width: 120% !important;
+  }
+}
+@media (min-width: 1200px) {
+  .slider-destinos-wrapper .imagen-header {
+    width: 110% !important;
+  }
+}
+@media (min-width: 1600px) {
+  .slider-destinos-wrapper .imagen-header {
+    width: 102% !important;
+  }
 }
 .slider-destinos-wrapper .slide-progress.verde {
   background-color: #72DDD3;
@@ -2617,6 +2667,36 @@ html, body {
 
 #slide-city .slide-progress {
   background: #FF6C6C;
+}
+
+/*
+ * este slider es el de la pagina de destinos
+*/
+#destino-slider .owl-nav {
+  -webkit-transition: all 500ms;
+  -moz-transition: all 500ms;
+  -ms-transition: all 500ms;
+  transition: all 500ms;
+  display: flex;
+  display: -o-flex;
+  display: -ms-flex;
+  display: -moz-flex;
+  display: -webkit-flex;
+  position: absolute;
+  bottom: initial;
+  top: -150px;
+}
+@media (max-width: 992px) {
+  #destino-slider .owl-nav {
+    width: 100%;
+    justify-content: flex-end;
+    left: 0;
+  }
+}
+@media (max-width: 992px) {
+  #destino-slider .owl-nav .owl-prev {
+    display: none;
+  }
 }
 
 /*--------------------------------------------------------------

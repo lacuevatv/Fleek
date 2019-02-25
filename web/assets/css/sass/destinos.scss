@@ -1,10 +1,13 @@
 .destinos-header {
     background-color: #EBEAEA;
     color: $color-negro;
-    padding: 130px 25px 50%;
+    padding: 130px 25px 35%;
 
+    @media (min-width: $md) {
+        padding: 90px $paddingLeftRight 55px;
+    }
     @media (min-width: $lg) {
-        padding: 205px $paddingLeftRightLG 100px;
+        padding: 135px $paddingLeftRightLG 60px;
     }
     @media (min-width: $xlg) {
         padding: 205px $paddingLeftRightXLG 110px;
@@ -102,6 +105,18 @@
     .icon-header {
         .right-icons-header {
             color: $color-azul;
+            
+            @media (min-width: $lg) {
+                top: -920px;
+            }
+
+            @media (min-width: $xlg) {
+                //top: -1000px;
+            }
+
+            img {
+                display: inline-block;
+            }
         }
     }
     .icon-vertical {
@@ -160,6 +175,7 @@
         img {
             width: 46px;
             margin-left: 10px;
+            display: inline-block;
             @media (min-width: $xlg) {
                 width: 87px;
                 margin-left: 25px;

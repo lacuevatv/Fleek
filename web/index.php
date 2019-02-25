@@ -15,7 +15,7 @@ switch ( PAGEACTUAL ) {
     case 'cancun' :
     case 'londres' :
     case 'san-martin-andes' :
-    case 'habana' :
+    case 'la-habana' :
     case 'dublin' :
         getPage( 'destino' );
     break;

@@ -3,7 +3,7 @@ $sliders = null;
 $bariloche = array(
 //slider 1
     array(
-        'titulo' => 'Bariloche',
+        'titulo' => 'Fleek',
         'imagen' => 'slider1.jpg',
         'imagenRetina' => 'slider1@2x.jpg',
         'imagenMobil' => 'slider1-mobile.jpg',
@@ -12,14 +12,31 @@ $bariloche = array(
     ),
 //slider 2
     array(
-        'titulo' => 'Bariloche',
-        'imagen' => 'slider1-V2.jpg',
-        'imagenRetina' => 'slider1-V2@2x.jpg',
-        'imagenMobil' => 'slider1-mobile-V2.jpg',
-        'imagenMobilRetina' => 'slider1-mobile-V2@2x.jpg',
+        'titulo' => 'Playa',
+        'imagen' => 'slider2.jpg',
+        'imagenRetina' => '',
+        'imagenMobil' => 'slider2-mobile.jpg',
+        'imagenMobilRetina' => '',
         'texto' => '',
     ),
 //slider 3
+    array(
+        'titulo' => 'Nieve',
+        'imagen' => 'slider3.jpg',
+        'imagenRetina' => '',
+        'imagenMobil' => 'slider3-mobile.jpg',
+        'imagenMobilRetina' => '',
+        'texto' => '',
+    ),
+//slider 4
+    array(
+        'titulo' => 'City',
+        'imagen' => 'slider4.jpg',
+        'imagenRetina' => '',
+        'imagenMobil' => 'slider4-mobile.jpg',
+        'imagenMobilRetina' => '',
+        'texto' => '',
+    ),
 );
 
 if ($data == 'bariloche') {

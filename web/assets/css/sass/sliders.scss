@@ -157,7 +157,6 @@
             }//.contenido
 
             .contenido.azul {
-                background-color: $color-rosa;
                 color: $color-azul;
 
                 .wrapper-buttons {
@@ -315,6 +314,18 @@
     z-index: 0;
     left: 0;
     top: 0;
+
+    .imagen-header {
+        @media (min-width: $md) {
+            width: 120%!important;
+        }
+        @media (min-width: $lg) {
+            width: 110%!important;
+        }
+        @media (min-width: $xlg) {
+            width: 102%!important;
+        }
+    }
 
     .slide-progress.verde {
         background-color: $color-verde;
@@ -485,5 +496,33 @@
 #slide-city {
     .slide-progress {
         background: $color-rosa;
+    }
+}
+
+/*
+ * este slider es el de la pagina de destinos
+*/
+#destino-slider {
+    .owl-nav {
+        @include transition(all $transitionSpeed);
+        display: flex;
+        display: -o-flex;
+        display: -ms-flex;
+        display: -moz-flex;
+        display: -webkit-flex;
+        position: absolute;
+        bottom: initial;
+        top: -150px;
+        @media (max-width: $md) {
+            width: 100%;
+            justify-content: flex-end;
+            left: 0;
+        }
+
+        .owl-prev {
+            @media (max-width: $md) {
+                display: none;
+            }
+        }
     }
 }

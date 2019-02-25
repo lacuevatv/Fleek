@@ -30,10 +30,10 @@ $sliders = array(
 //slider 2
     array(
         'titulo' => 'Playa',
-        'imagen' => 'slider1-V2.jpg',
-        'imagenRetina' => 'slider1-V2@2x.jpg',
-        'imagenMobil' => 'slider1-mobile-V2.jpg',
-        'imagenMobilRetina' => 'slider1-mobile-V2@2x.jpg',
+        'imagen' => 'slider2.jpg',
+        'imagenRetina' => '',
+        'imagenMobil' => 'slider2-mobile.jpg',
+        'imagenMobilRetina' => '',
         'texto' => '<p>La Habana // Cancún.</p><p><small>Vos elegís, Vos Decidís.</small></p>',
         'color' => 'blanco',
         'botones' => array(
@@ -57,9 +57,9 @@ $sliders = array(
 //slider 3
     array(
         'titulo' => 'Nieve',
-        'imagen' => '',
+        'imagen' => 'slider3.jpg',
         'imagenRetina' => '',
-        'imagenMobil' => '',
+        'imagenMobil' => 'slider3-mobile.jpg',
         'imagenMobilRetina' => '',
         'texto' => '<p>Bariloche // San Martín de los Andes.</p><p><small>Vos elegís, Vos Decidís.</small></p>',
         'color' => 'blanco',
@@ -84,9 +84,9 @@ $sliders = array(
     //slider 4
     array(
         'titulo' => 'City',
-        'imagen' => '',
+        'imagen' => 'slider4.jpg',
         'imagenRetina' => '',
-        'imagenMobil' => '',
+        'imagenMobil' => 'slider4-mobile.jpg',
         'imagenMobilRetina' => '',
         'texto' => '<p>Londres // Dublin.</p><p><small>Vos elegís, Vos Decidís.</small></p>',
         'color' => 'azul',
@@ -104,7 +104,6 @@ $sliders = array(
                 'icon' => 'icon-persona-azul.png',
                 'icon2x' => 'icon-persona-azul@2x.png',
                 'iconSVG' => 'icon-persona-azul.svg',
-                
             ),
         ),
     ),
@@ -124,23 +123,24 @@ foreach ( $sliders as $slider ) { ?>
         <?php if ( $slider['imagen'] != '') : ?>
         <div class="imagen-fondo">
 
-        <picture>
+            <picture>
 
-            <?php if ( $slider['imagenMobil'] != '') : ?>
-                <source srcset="<?php echo UPLOADSURL . $slider['imagen']; ?> 1x, <?php echo UPLOADSURL . $slider['imagenRetina']; ?> 2x" media="(min-width: 992px)">
+                <?php if ( $slider['imagenMobil'] != '') : ?>
+                    <source srcset="<?php echo UPLOADSURL . $slider['imagen']; ?> 1x, <?php  if ( $slider['imagenRetina'] != '' ) { echo UPLOADSURL . $slider['imagenRetina']; } ?> 2x" media="(min-width: 992px)">
 
-                <source srcset="<?php echo UPLOADSURL . $slider['imagenMobil']; ?> 1x, <?php echo UPLOADSURL . $slider['imagenMobilRetina']; ?> 2x" media="(min-width: 315px)">
+                    <source srcset="<?php echo UPLOADSURL . $slider['imagenMobil']; ?> 1x, <?php if ( $slider['imagenMobilRetina'] != '' ) { echo UPLOADSURL . $slider['imagenMobilRetina']; } ?> 2x" media="(min-width: 315px)">
 
-            <?php else : ?>
+                <?php else : ?>
 
-                <source srcset="<?php echo UPLOADSURL . $slider['imagen']; ?> 1x, <?php echo UPLOADSURL . $slider['imagenRetina']; ?> 2x" media="(min-width: 315px)">
+                    <source srcset="<?php echo UPLOADSURL . $slider['imagen']; ?> 1x, <?php if ( $slider['imagenRetina'] != '' ) { echo UPLOADSURL . $slider['imagenRetina']; } ?> 2x" media="(min-width: 315px)">
 
-            <?php endif; ?>
-
-            <img src="<?php echo UPLOADSURL . $slider['imagen']; ?>">
-        </picture>
+                <?php endif; ?>
+    
+                <img src="<?php echo UPLOADSURL . $slider['imagen']; ?>">
+            </picture>
 
         </div>
+
         <?php endif; ?>
 
         <div class="contenido <?php echo $slider['color']; ?>">

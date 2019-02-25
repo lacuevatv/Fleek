@@ -394,7 +394,8 @@ $(window).on('load', function(){
         getInstagram();
 
     } else {
-        loadAjaxTemplate('.slider-destinos-wrapper', initSliderDestinos);
+        //loadAjaxTemplate('.slider-destinos-wrapper', initSliderDestinos);
+        initSliderDestinos();
     }
     
     /*var templatesAjax = $('.load-ajax-template');
@@ -543,8 +544,8 @@ function initSliderDestinos() {
 
     $("#destino-slider").owlCarousel({
         items: 1,
-        animateOut: 'fadeOut',
         loop: true,
+        autoHeight: true,
         /*autoplay: true,
         autoplayTimeout:6000,
         onInitialized: startProgressBar,
@@ -555,35 +556,23 @@ function initSliderDestinos() {
         dots:true,
     });
 
+    positionNav();
 
-    //inicia la progress bar de los sliders  
-    function startProgressBar() {
-        // apply keyframe animation
-        //var persentajeWidth = '90%';
-        var persentajeWidth = innerWidth - $(sliderBar).offset().left +20;
-        $(window).resize(function(){
-            persentajeWidth = innerWidth - $(sliderBar).offset().left +20;
-        });
-        if ( windowWidth < 960 ) {
-            persentajeWidth = '100%'
-        }
+    function positionNav() {
+        var hHeader = $('.destinos-header').css('height');
+        var hnav = $('.owl-nav').css('height');
+        var hdots = $('.owl-dots').css('height');
+        var h = parseInt(hHeader)-parseInt(hnav);
+        var h2 = parseInt(hHeader)-parseInt(hdots);
+        $('.owl-nav').css('top', h+'px');
 
-        $(sliderBar).css({
-        width: persentajeWidth,
-        transition: "width 6000ms"
-        });
+        $('.owl-dots').css('top', h2+'px');
     }
     
-    //vuelve a 0 la progras bar
-    function resetProgressBar() {
-        $(sliderBar).css({
-        width: 0,
-        transition: "width 0s"
-        });
-    }
+    $(window).resize(function(){
+        positionNav();
+    });
 
-    //var elemento = $('.slider-header-wrapper')
-    //getSetHeightSize(wrapper, elemento);
     loadAjaxTemplate('.icon-header');
 }
 
