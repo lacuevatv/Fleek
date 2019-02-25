@@ -149,7 +149,7 @@
             width: 800px;
             z-index: 111;
             position: absolute;
-            top: -950px;
+            top: -1000px;
             right: 0;
             transform-origin: bottom right;
             @include transform(rotate(-90deg));
@@ -405,7 +405,7 @@
         overflow: hidden;
         width: 100%;
         height: 100%;
-        padding: 35px 35px 50px;
+        padding: 20px 35px 25px;
         display: flex;
         display: -o-flex;
         display: -ms-flex;
@@ -423,6 +423,10 @@
         justify-content: space-between;
 
         @media (min-width: $md) {
+            padding: 20px 35px 40px;
+        }
+
+        @media (min-width: $lg) {
             padding: 20px 35px 50px;
         }
 
@@ -438,7 +442,7 @@
             left: 0;
 
             img {
-                width: 130%;
+                width: 120%;
                 position: absolute;
                 top: 50%;
                 left: 50%;
@@ -446,6 +450,10 @@
 
                 @media (min-width: $lg) {
                     width: 110%;
+                }
+
+                @media (min-width: $xlg) {
+                    width: 100%;
                 }
             }
             
@@ -486,7 +494,11 @@
             position: relative;
             font-size: 18px;
             margin-top: 15px;
-            margin-bottom: 60px;
+            margin-bottom: 50px;
+
+            @media (min-width: $lg) {
+                margin-bottom: 60px;
+            }
 
             @media (min-width: $xlg) {
                 font-size: 24px;

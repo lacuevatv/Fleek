@@ -1018,7 +1018,7 @@ html, body {
     width: 800px;
     z-index: 111;
     position: absolute;
-    top: -950px;
+    top: -1000px;
     right: 0;
     transform-origin: bottom right;
     -webkit-transform: rotate(-90deg);
@@ -1290,7 +1290,7 @@ html, body {
   overflow: hidden;
   width: 100%;
   height: 100%;
-  padding: 35px 35px 50px;
+  padding: 20px 35px 25px;
   display: flex;
   display: -o-flex;
   display: -ms-flex;
@@ -1309,6 +1309,11 @@ html, body {
 }
 @media (min-width: 992px) {
   .destinos-wrapper .destino {
+    padding: 20px 35px 40px;
+  }
+}
+@media (min-width: 1200px) {
+  .destinos-wrapper .destino {
     padding: 20px 35px 50px;
   }
 }
@@ -1325,7 +1330,7 @@ html, body {
   left: 0;
 }
 .destinos-wrapper .destino .imagen-fondo img {
-  width: 130%;
+  width: 120%;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1337,6 +1342,11 @@ html, body {
 @media (min-width: 1200px) {
   .destinos-wrapper .destino .imagen-fondo img {
     width: 110%;
+  }
+}
+@media (min-width: 1600px) {
+  .destinos-wrapper .destino .imagen-fondo img {
+    width: 100%;
   }
 }
 .destinos-wrapper .destino .icon-top-right {
@@ -1374,7 +1384,12 @@ html, body {
   position: relative;
   font-size: 18px;
   margin-top: 15px;
-  margin-bottom: 60px;
+  margin-bottom: 50px;
+}
+@media (min-width: 1200px) {
+  .destinos-wrapper .destino .title-destino {
+    margin-bottom: 60px;
+  }
 }
 @media (min-width: 1600px) {
   .destinos-wrapper .destino .title-destino {

@@ -109,7 +109,7 @@
             <h5 class="super-title">HAB</h5>
             <h3 class="title-destino">La Habana</h3>
             <div class="stars"></div>
-            <a class="icon-btn-right" href="<?php echo MAINSURL; ?>/habana">
+            <a class="icon-btn-right" href="<?php echo MAINSURL; ?>/la-habana">
                 <span>Conocé más</span>
                 <picture>
                     <source srcset="<?php echo IMAGES; ?>palmera-icon.svg" type="image/svg+xml">
