@@ -98,7 +98,7 @@ getTemplate( 'header' ); ?>
             <p class="texto-azul-pc">Hacé la reserva para tu grupo en forma online.</p>
 
             <div class="wrapper-button">
-                <a class="icon-btn-right" href="#">
+                <a class="icon-btn-right open-form" href="#compra-online">
                     <span>Comprá online</span>
                     <picture>
                         <source srcset="<?php echo IMAGES; ?>icon-plane.svg" type="image/svg+xml">
@@ -108,8 +108,10 @@ getTemplate( 'header' ); ?>
                 </a>
             </div>
 
-            <p class="only-pc">Si preferís la asistencia de un asesor <a class="texto-azul-pc" href="#">envianos tus datos acá.</a>
+            <p class="only-pc">Si preferís la asistencia de un asesor <a class="texto-azul-pc open-form" href="#reunion">envianos tus datos acá.</a>
         </div>
+        
+        
     </section>
 
 <!-- SECTION YO VIAJO/VIAJE -->

@@ -23,17 +23,6 @@ function scrollToID ( id ) {
     }, 'slow');
 }
 
-//on resize
-/*window.onresize = function(){
-    windowWidth = window.innerWidth;
-    console.log(windowWidth);
-
-    //vuelve a dimensionar slider superior
-    var wrapper = $('.home-header');
-    var contenido = $(wrapper).find('.contenido')[0];
-    getSetHeightSize(wrapper, contenido);
-};*/
-
 /*--------------------------------------------------------------
 1.0 BASE 
 * navigation, scroll to
@@ -53,7 +42,7 @@ $(document).ready(function(){
         },500)
         
     });
-
+    
     /*
      * SCROLL TOP
     */
@@ -83,6 +72,22 @@ $(document).ready(function(){
 
     });
 
+    //Buttons sliderheader inicio
+    $(document).on('click','.btn-slider-header', function( e ){
+        e.preventDefault();
+        var scroll = $(this).attr('data-scroll');
+    
+        //var href = '#'+$(this).attr('href');
+        var href = $(this).attr('href').split('#');
+        href = '#'+href[1];
+
+        scrollToID(href);
+        
+        //abre formulario
+        openform(href.substring(1));
+
+    });
+
     /*
      * TOGGLE
     */
@@ -105,7 +110,26 @@ $(document).ready(function(){
                 'opacity':'0',
             }, 300);
         }
-     }
+    }
+
+
+    /*
+     * FORMULARIO
+    */
+    //cerrar formulario
+    $(document).on('click', '.close-form', function(){
+        $('.external-wrapper').fadeOut();
+    });
+
+    
+    $('.open-form').click(function(e){
+        e.preventDefault();
+        
+        var href = $(this).attr('href');
+        href = href.substring(1);
+        openform(href)
+        
+    });
 
 });//.ready()
 
@@ -181,17 +205,17 @@ function initFormularios(){
     //quita acentos y ñ y lo pasa a minúsculas
     function cleanAcentos( cadena ) {
 
-    // Lo queremos devolver limpio en minusculas
-    cadena = cadena.toLowerCase();
+        // Lo queremos devolver limpio en minusculas
+        cadena = cadena.toLowerCase();
 
-    // Quitamos acentos y "ñ". Fijate en que va sin comillas el primer parametro
-    cadena = cadena.replace(/á/gi,"a");
-    cadena = cadena.replace(/é/gi,"e");
-    cadena = cadena.replace(/í/gi,"i");
-    cadena = cadena.replace(/ó/gi,"o");
-    cadena = cadena.replace(/ú/gi,"u");
-    cadena = cadena.replace(/ñ/gi,"n");
-    return cadena;
+        // Quitamos acentos y "ñ". Fijate en que va sin comillas el primer parametro
+        cadena = cadena.replace(/á/gi,"a");
+        cadena = cadena.replace(/é/gi,"e");
+        cadena = cadena.replace(/í/gi,"i");
+        cadena = cadena.replace(/ó/gi,"o");
+        cadena = cadena.replace(/ú/gi,"u");
+        cadena = cadena.replace(/ñ/gi,"n");
+        return cadena;
     }
 
 
@@ -346,6 +370,205 @@ function initFormularios(){
     });//submit formulario default
 
 }//initformulario
+
+//esta funcion abre el formulario y lo busca por ajax de acuerdo a cual fue elegido
+function openform(href) {
+    //primero prepara el contenedor
+    var section = $('#compraonline');
+    var wrapper = $(section).find('.external-wrapper');
+
+    if (wrapper.length > 0) {
+
+        $(wrapper).fadeIn();
+
+        var contenedor = $(wrapper).find('.formulario');
+
+    } else {
+        var html = '<div class="external-wrapper"><div class="contenedor-formulario"><div class="formulario-wrapper"><button class="close-form"><span class="tog1"></span><span class="tog2"></span></button><div class="formulario"><span class="loader">Cargando...</span></div></div></div></div>';
+
+        $(section).append( $(html) );
+
+        var wrapper = $(section).find('.external-wrapper');
+        
+        $(wrapper).fadeIn();
+
+        var contenedor = $(wrapper).find('.formulario');
+    }
+    
+    //listo el contenedor busca el formulario de acuerdo a cual sea
+    $.ajax( {
+        type: 'POST',
+        url: ajaxFileUrl,
+        data: {
+            function: 'get-form',
+            formulario: href,
+        },
+        //funcion antes de enviar
+        beforeSend: function() {
+            console.log('Buscando formulario');
+        },
+        success: function ( response ) {
+            //console.log(response);
+            $('.loader').remove(); 
+            $(contenedor).empty().append(response);
+            initFormQuestion( $(contenedor).find('form') );
+        },
+        error: function ( ) {
+            console.log('error');
+        },
+    });//cierre ajax
+}
+
+function initFormQuestion(formulario) {
+    var formType = $(formulario).attr('data-form-type');
+    var hasIndex = $(formulario).attr('has-index');
+
+    if (formType == 'questions' ) {
+
+        //oculta todas las preguntas y muestra solo la primera
+        var questions = $(formulario).find('.form-group-question');
+
+        $(questions[0]).addClass('activate');
+        $(questions[0]).find('input').focus();
+
+    }//if formtype
+
+    //click boton siguiente pregunta del input
+    $('.next-question-btn').click(function(){
+        var question = $(this).closest('.form-group-question');
+
+        moveQuestions('next');
+    });
+
+    //presionar enter
+    $(document).keypress(function( e ) {
+        if ( e.which == 13 ) {
+           e.preventDefault();
+           
+           moveQuestions('next');
+        }
+    });
+
+    $('#previous-question').click(function(){
+        moveQuestions('prev');
+    });
+
+    $('#next-question').click(function(){
+        moveQuestions('next');
+    });
+
+    /*
+    * adelanta o atraza la pregunta
+    */
+    function moveQuestions(direction) {
+        var question = $('.form-group-question.activate');
+        var input = $(question).find('input');
+        var indiceActual = $(question).attr('data-index');
+        var siguiente = $(question).next();
+        var anterior = $(question).prev();
+        
+        //sino es la ultima cambia la pregunta
+        switch (direction) {
+            case 'next':
+
+                //primero valida para ver que todo este bien
+                console.log('validar');
+
+                //si es la ultima tiene que enviar el formulario
+                if ( siguiente.length == 0 ) {
+                    sendFormQuestions(formulario);
+                }
+
+                $(question).removeClass('activate');
+                $(siguiente).addClass('activate')
+                $(siguiente).find('input').focus();
+
+                 //prepara el indice
+                if (hasIndex ) {
+                    $('.input-activate').text($('.form-group-question.activate').attr('data-index'));
+                }
+
+                if ( indiceActual >= 1 ) {
+                    $('#previous-question').fadeIn();
+                }
+
+            break;
+
+            case 'prev':
+
+                $(question).removeClass('activate');
+                $(anterior).addClass('activate')
+                $(anterior).find('input').focus();
+
+                if ( hasIndex ) {
+                    $('.input-activate').text($('.form-group-question.activate').attr('data-index'));
+                }
+
+                if ( indiceActual <= 2 ) {
+                    $('#previous-question').fadeOut();
+                }
+
+            break;
+            
+        }//switch
+
+    }//moveQuestions
+
+    /*
+     * envia el formulario
+    */
+    function sendFormQuestions(formulario) {
+        var contenedor = $(formulario).closest('div');
+        var inputs = formulario.find('input');
+        var select = formulario.find('select');
+        var textarea = formulario.find('textarea');
+
+        //busca los valores
+        var valores = [];
+
+        inputs.each(function(){
+            input = { name: $(this).attr('name'), valor: $(this).val(), }
+            valores.push(input);
+        });
+
+        select.each(function(){
+            input = { name: $(this).attr('name'), valor: $(this).val(), }
+            valores.push(input);
+        });
+
+        textarea.each(function(){
+            input = { name: $(this).attr('name'), valor: $(this).val(), }
+            valores.push(input);
+        });
+
+        //envia el formulario
+        $.ajax({
+            type: 'POST',
+            url: ajaxFileUrl,
+            data: {
+                function: $(formulario).attr('name'),
+                valores: valores,
+            },
+            //funcion antes de enviar
+            beforeSend: function() {
+            },
+            success: function ( response ) {
+                console.log(response);
+                var respuesta = JSON.parse(response);
+                $(contenedor).empty().append(respuesta.mensaje);
+
+                setTimeout(function(){
+                    
+                    $('.external-wrapper').fadeOut();
+                    
+                },2000);
+            },
+            error: function ( ) {
+                console.log('error');
+            },
+        });//cierre ajax
+    }
+}//initFormQuestions()
 
 /*--------------------------------------------------------------
 3.0 POPUP PROMO

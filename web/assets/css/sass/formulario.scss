@@ -1,7 +1,113 @@
 /*
  * FORMULARIO
 */
+.external-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999999;
+    padding: 0;
+    background-color: transparent;
+    display: none;
 
+    .contenedor-formulario {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        display: -o-flex;
+        display: -ms-flex;
+        display: -moz-flex;
+        display: -webkit-flex;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        -o-align-items: center;
+        align-items: center;
+        -webkit-justify-content: center;
+        -moz-justify-content: center;
+        -ms-justify-content: center;
+        -o-justify-content: center;
+        justify-content: center;
+        padding: 0;
+
+        .formulario-wrapper {
+            position: relative;
+            height: 100%;
+            width: 100%;
+            display: block;
+            padding: 40px 20px;
+            background-color: $color-blanco;
+
+            @media (min-width: $md) {
+                padding: 60px 20px;
+            }
+            @media (min-width: $lg) {
+                padding: 60px $paddingLeftRightLG;
+            }
+
+            @media (min-width: $xlg) {
+                padding: 100px $paddingLeftRightXLG;
+            }
+
+            .close-form {
+                position: absolute;
+                right: 40px;
+                top: 20px;
+                width: 40px;
+                height: 40px;
+                cursor: pointer;
+                display: block;
+                @include transition(all $transitionSpeed);
+    
+                @media (min-width: $md) {
+                    right: 40px;
+                    top: 40px;
+                }
+                
+                @media (min-width: $xlg) {
+                    right: 100px;
+                    top: 40px;
+                }
+    
+                &:focus {
+                    border: none;
+                    outline: none;
+                }
+    
+                &:hover {
+                    zoom: 1;
+                    filter: alpha(opacity=50);
+                    opacity: 0.5;
+                }
+    
+                .tog1 {
+                    display: inline-block;
+                    width: 30px;
+                    height: 4px;
+                    background-color: $color-azul;
+                    position: absolute;
+                    left: 10%;
+                    top: 40%;
+                    @include transform(rotate(45deg));
+                }
+    
+                .tog2 {
+                    display: inline-block;
+                    width: 30px;
+                    height: 4px;
+                    background-color: $color-azul;
+                    position: absolute;
+                    left: 10%;
+                    top: 40%;
+                    @include transform(rotate(-45deg));
+                }
+            }//.close-form
+        }//.formulario-wrapper
+    }//.contenedor-formulario
+}//.formulario-wrapper
 
 
 form {
@@ -95,7 +201,7 @@ form {
     position: relative;
     height: 40px;
     margin-bottom: .5em;
-    border: 1px solid $color-gris-medio;
+    border: 1px solid $color-negro;
     @media (min-width: $xs) {
         height: 50px;
     }
@@ -117,7 +223,7 @@ form {
         cursor: pointer;
         text-transform: uppercase;
         font-weight: 500;
-        color: $color-gris-texto;
+        color: $color-negro;
         @include transition(all $transitionSpeedx2);
         @media (min-width: $md) {
             top: 8px;
@@ -177,7 +283,7 @@ form {
 
     //input con contenido escrito
     .input-on {
-        color: $color-gris-medio!important;
+        color: $color-negro!important;
     }
 
     input[type=number] {
@@ -219,7 +325,7 @@ form {
         top: 2px;
         right: 2px;
         font-size: 60%;
-        color: $color-rojo-opaco;
+        color: $color-rosa;
         width: 55%;
         text-transform: lowercase;
         line-height: 110%;
@@ -246,7 +352,7 @@ form {
     width: 100%;
     display: inline-block;
     font-weight: 500;
-    background-color: $color-rojo-brillante;
+    background-color: $color-rosa;
     color: $color-blanco;
     padding: .5em 1em;
     height: 30px;
@@ -305,7 +411,7 @@ form {
     }//after
 
     &:hover {
-        background-color: $color-celeste;
+        background-color: $color-azul;
         color: $color-negro;
         @include transition(all $transitionSpeed ease-out);
         zoom: 1;
@@ -320,3 +426,158 @@ form {
 
     }//hover
 }
+
+//formulario questions
+.wrapper-questions {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    display: block;
+    margin: 50px 0 20px;
+
+    @media (min-width: $md) {
+        height: 210px;
+    }
+
+    @media (min-width: $xlg) {
+        height: 250px;
+    }
+
+    .form-group-question {
+        border: none;
+        position: absolute;
+        width: 100%;
+        max-width: 770px;
+        height: 100%;
+        top: 0;
+        left: 0;
+        display: none;
+
+        .form-group {
+            border: none;
+            border-bottom: 1px solid #585955;
+            label {
+                display: none;
+            }
+
+            input {
+                color: #585955;
+                font-size: 36px;
+                line-height: 66px;
+                height: 120%;
+            }
+    
+            .next-question-btn {
+                cursor: pointer;
+                width: 20px;
+                height: 20px;
+                position: absolute;
+                right: 0;
+                top: 50%;
+                @include transform(translateY(-50%));
+                background-image: url('../images/arrow-griz.png');
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: center;
+
+                @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi) {
+                    background-image: url('../images/arrow-griz@2x.png');
+                    background-size: contain;
+                }
+
+                &:hover {
+                    zoom: 1;
+                    filter: alpha(opacity=50);
+                    opacity: 0.5;
+                }
+            }//.next-question-btn
+        }//.form-group
+        
+        .question {
+            color: $color-azul;
+            font-size: 26px;
+            line-height: 36px;
+            margin-bottom: 10px;
+
+            @media (min-width: $md) {
+                font-size: 36px;
+                line-height: 66px;
+                margin-bottom: 20px;
+            }
+        }//.question
+
+        .aclaracion {
+            font-size: 14px;
+            color: #585955;
+            margin-top: 30px;
+        }//.aclaracion
+        
+    }//.form-group-question
+
+    .form-group-question.activate {
+        display: block;
+    }
+}//.wrapper-questions
+
+.msj-respuesta {
+    font-size: 36px;
+    line-height: 66px;
+    text-align: center;
+    padding: 40px 0;
+    color: $color-azul;
+}
+
+.indice-formulario {
+    display: flex;
+    display: -o-flex;
+    display: -ms-flex;
+    display: -moz-flex;
+    display: -webkit-flex;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    align-items: center;
+    font-size: 14px;
+    line-height: 16px;
+    color: $color-azul;
+
+    .input-activate {
+        position: relative;
+    }
+    
+    .input-total {
+        margin: 0 5px;
+        position: relative;
+        padding-left: 40px;
+        &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 50%;
+            @include transform(translateY(-50%));
+            left: 0;
+            width: 30px;
+            height: 1px;
+            background-color: $color-azul;
+        }
+    }
+
+    button {
+        color: $color-azul;
+        font-size: 14px;
+        line-height: 16px;
+        cursor: pointer;
+        display: block;
+        
+        &:hover {
+            zoom: 1;
+            filter: alpha(opacity=50);
+            opacity: 0.5;
+        }
+    }
+
+    #previous-question {
+        display: none;
+    }
+}//.indice-formulario

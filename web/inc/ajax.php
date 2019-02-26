@@ -12,15 +12,28 @@ if( isAjax() ) :
 	$function = isset($_POST['function']) ? $_POST['function'] : '';
 
 	switch ( $function ) {
-		case 'formulario-default':
+
+		case 'get-form':
+
+			$form = isset($_POST['formulario']) ? $_POST['formulario'] : '';
 			
+			getTemplate( 'formulario', $form );
+
+		break;
+
+		case 'compra-online':
+			
+			$respuesta = array('mensaje' => '<p class="msj-respuesta">Su mensaje ha sido enviado<br>Un asesor se comunicara a la brevedad.</p>');
+
 			// Valores enviados desde el formulario
-			print_r($_POST);
+			$respuesta['error'] = $_POST;
 			//FUNCION QUE ENVIA FORMULARIO CON PHPMAILER			
 			//sendEmailPhpMailer( $emailReplyTo, $nombreReplyTo, $emailTo, $nombreTo, $asunto, $contenido);
 
 			//guardar en base de datos
 			//saveNewContact ( $nombre, $telefono, $email, $mensaje, $fecha_viaje, 'contacto' );
+			
+			echo json_encode($respuesta);
 		break;
 
 		case 'load-template':

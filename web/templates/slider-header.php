@@ -12,14 +12,14 @@ $sliders = array(
         'botones' => array(
             array(
                 'texto' => 'Comprá ahora',
-                'link' => '#',
+                'link' => MAINSURL . '/#compraonline',
                 'icon' => 'icon-plane.png',
                 'icon2x' => 'icon-plane@2x.png',
                 'iconSVG' => 'icon-plane.svg',
             ),
             array(
                 'texto' => 'Pedí tu reunión',
-                'link' => '#',
+                'link' => MAINSURL . '/#compraonline',
                 'icon' => 'icon-person.png',
                 'icon2x' => 'icon-person@2x.png',
                 'iconSVG' => 'icon-person.svg',
@@ -39,14 +39,14 @@ $sliders = array(
         'botones' => array(
             array(
                 'texto' => 'Comprá ahora',
-                'link' => '#',
+                'link' => MAINSURL . '/#compraonline',
                 'icon' => 'icon-plane.png',
                 'icon2x' => 'icon-plane@2x.png',
                 'iconSVG' => 'icon-plane.svg',
             ),
             array(
                 'texto' => 'Pedí tu reunión',
-                'link' => '#',
+                'link' => MAINSURL . '/#compraonline',
                 'icon' => 'icon-person.png',
                 'icon2x' => 'icon-person@2x.png',
                 'iconSVG' => 'icon-person.svg',
@@ -66,14 +66,14 @@ $sliders = array(
         'botones' => array(
             array(
                 'texto' => 'Comprá ahora',
-                'link' => '#',
+                'link' => MAINSURL . '/#compraonline',
                 'icon' => 'icon-plane.png',
                 'icon2x' => 'icon-plane@2x.png',
                 'iconSVG' => 'icon-plane.svg',
             ),
             array(
                 'texto' => 'Pedí tu reunión',
-                'link' => '#',
+                'link' => MAINSURL . '/#compraonline',
                 'icon' => 'icon-person.png',
                 'icon2x' => 'icon-person@2x.png',
                 'iconSVG' => 'icon-person.svg',
@@ -93,14 +93,14 @@ $sliders = array(
         'botones' => array(
             array(
                 'texto' => 'Comprá ahora',
-                'link' => '#',
+                'link' => MAINSURL . '/#compraonline',
                 'icon' => 'icon-plane-azul.png',
                 'icon2x' => 'icon-plane-azul@2x.png',
                 'iconSVG' => 'icon-plane-azul.svg',
             ),
             array(
                 'texto' => 'Pedí tu reunión',
-                'link' => '#',
+                'link' => MAINSURL . '/#compraonline',
                 'icon' => 'icon-persona-azul.png',
                 'icon2x' => 'icon-persona-azul@2x.png',
                 'iconSVG' => 'icon-persona-azul.svg',
@@ -156,7 +156,7 @@ foreach ( $sliders as $slider ) { ?>
                 
                 <?php foreach (  $slider['botones'] as $boton ) { ?>
 
-                    <a class="icon-btn-right" href="<?php echo $boton['link']; ?>">
+                    <a class="icon-btn-right btn-slider-header" href="<?php echo $boton['link']; ?>">
                         <span><?php echo $boton['texto']; ?></span>
 
                         <?php if ( $boton['icon'] != '' ) : ?>

@@ -10,7 +10,7 @@ require_once 'inc/functions.php';
 //define la pageactual que se usa en toda la navegación
 define('PAGEACTUAL', pageActual( cleanUri() ) );
 
-switch ( PAGEACTUAL ) {    
+switch ( PAGEACTUAL ) {  
     case 'bariloche' :
     case 'cancun' :
     case 'londres' :
