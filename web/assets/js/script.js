@@ -608,7 +608,8 @@ $(window).on('load', function(){
 
     if ( pageActual  == 'inicio') {
         //carga el header
-        loadAjaxTemplate('.slider-header-wrapper', initSliderHeader);
+        //loadAjaxTemplate('.slider-header-wrapper', initSliderHeader);
+        initSliderHeader();
         //destinos boxes
         loadAjaxTemplate('.destinos-wrapper', startSliderBoxes);
         //experiencias
@@ -635,6 +636,13 @@ $(window).on('load', function(){
     
 });
 
+
+/*
+ * esta funcion quita el preloader
+*/
+function preloader(speed) {
+    $('.preloader').fadeOut(speed);
+}
 
 /*
  * esta funcion hace el lazy load de las imagenes
@@ -750,7 +758,11 @@ function initSliderHeader() {
     }
 
     var elemento = $('.slider-header-wrapper')
+    
     getSetHeightSize(wrapper, elemento);
+
+    preloader(500);
+
     loadAjaxTemplate('.icon-header');
 }//init slider header
 
@@ -795,6 +807,8 @@ function initSliderDestinos() {
     $(window).resize(function(){
         positionNav();
     });
+
+    preloader(500);
 
     loadAjaxTemplate('.icon-header');
 }

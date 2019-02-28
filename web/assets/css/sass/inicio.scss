@@ -5,7 +5,7 @@
     //padding-top: 70px;
     z-index: 1;
     overflow: hidden;
-    height: 0;
+    //height: 0;
     @include transition(all $transitionSpeedx2);
     @media (min-width: $lg) {
         //padding-top: 100px;
@@ -378,11 +378,6 @@
         -ms-align-items: center;
         -o-align-items: center;
         align-items: center;
-        -webkit-justify-content: space-between;
-        -moz-justify-content: space-between;
-        -ms-justify-content: space-between;
-        -o-justify-content: space-between;
-        justify-content: space-between;
     }
 
     li {

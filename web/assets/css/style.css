@@ -861,7 +861,6 @@ html, body {
   color: #fff;
   z-index: 1;
   overflow: hidden;
-  height: 0;
   -webkit-transition: all 2000ms;
   -moz-transition: all 2000ms;
   -ms-transition: all 2000ms;
@@ -1271,11 +1270,6 @@ html, body {
     -ms-align-items: center;
     -o-align-items: center;
     align-items: center;
-    -webkit-justify-content: space-between;
-    -moz-justify-content: space-between;
-    -ms-justify-content: space-between;
-    -o-justify-content: space-between;
-    justify-content: space-between;
   }
 }
 .destinos-wrapper li {

@@ -9,7 +9,7 @@ getTemplate( 'header' ); ?>
     <header class="home-header">
 
         <div class="slider-header-wrapper" data-template="slider-header">
-            <?php //getTemplate('slider-header'); ?>
+            <?php getTemplate('slider-header'); ?>
         </div>
 
         <div class="legales-header">

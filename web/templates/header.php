@@ -23,7 +23,9 @@
 
 <body data-page="<?php echo PAGEACTUAL; ?>">	
 <div class="main-wrapper">
-
+	<div class="preloader" style="display: flex; display: -ms-flex;display: -webkit-flex;-webkit-align-items: center;-ms-align-items: center;align-items: center;-webkit-justify-content: center;-ms-justify-content: center;justify-content: center;position: fixed;z-index: 99999999999999999;top: 0;left: 0;width: 100%;height: 100%;background-color: #fff;">
+		<img style="width: 125px;" src="<?php echo IMAGES; ?>preloading.gif" alt="Fleek Preloader">
+	</div>
 	<header class="main-header">
 		<nav class="navbar">
 			<a href="<?php echo MAINSURL; ?>" class="brand-name">
