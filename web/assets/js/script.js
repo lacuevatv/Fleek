@@ -81,7 +81,7 @@ $(document).ready(function(){
         var href = $(this).attr('href').split('#');
         href = '#'+href[1];
 
-        scrollToID(href);
+        scrollToID('#compraonline');
         
         //abre formulario
         openform(href.substring(1));

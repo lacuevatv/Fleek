@@ -19,7 +19,7 @@ $sliders = array(
             ),
             array(
                 'texto' => 'Pedí tu reunión',
-                'link' => MAINSURL . '/#compraonline',
+                'link' => MAINSURL . '/#reunion',
                 'icon' => 'icon-person.png',
                 'icon2x' => 'icon-person@2x.png',
                 'iconSVG' => 'icon-person.svg',
@@ -46,7 +46,7 @@ $sliders = array(
             ),
             array(
                 'texto' => 'Pedí tu reunión',
-                'link' => MAINSURL . '/#compraonline',
+                'link' => MAINSURL . '/#reunion',
                 'icon' => 'icon-person.png',
                 'icon2x' => 'icon-person@2x.png',
                 'iconSVG' => 'icon-person.svg',
@@ -73,7 +73,7 @@ $sliders = array(
             ),
             array(
                 'texto' => 'Pedí tu reunión',
-                'link' => MAINSURL . '/#compraonline',
+                'link' => MAINSURL . '/#reunion',
                 'icon' => 'icon-person.png',
                 'icon2x' => 'icon-person@2x.png',
                 'iconSVG' => 'icon-person.svg',
