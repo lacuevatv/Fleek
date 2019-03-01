@@ -13,7 +13,7 @@ $form1 = array(
         array(
             'question' => '¿Cuál es tu nombre y Apellido?',
             'label' => 'Nombre y Apellido',
-            'inputName' => 'name',
+            'inputName' => 'nombre',
             'inputType' => 'text',
             'error-msj' => 'Es necesario que complete este campo',
             'clases' => '',

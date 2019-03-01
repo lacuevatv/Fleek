@@ -417,7 +417,7 @@ function openform(href, paquete) {
             console.log('Buscando formulario');
         },
         success: function ( response ) {
-            console.log(response);
+            //console.log(response);
             $('.loader').remove(); 
             $(contenedor).empty().append(response);
             initFormQuestion( $(contenedor).find('form') );
@@ -531,7 +531,7 @@ function initFormQuestion(formulario) {
         var inputs = formulario.find('input');
         var select = formulario.find('select');
         var textarea = formulario.find('textarea');
-
+        var waiter = '<p class="msj-respuesta">Procesando la informacion...</p>';
         //busca los valores
         var valores = [];
 
@@ -561,6 +561,7 @@ function initFormQuestion(formulario) {
             },
             //funcion antes de enviar
             beforeSend: function() {
+                $(contenedor).empty().append( $(waiter) );
             },
             success: function ( response ) {
                 console.log(response);
@@ -898,6 +899,7 @@ function startSliderBoxes() {
         loop: true,
         autoplay: true,
         autoplayTimeout:4000,
+        animateOut: 'fadeOut',
         onInitialized: startProgressBar,
         onTranslate: resetProgressBar1,
         onTranslated: startProgressBar,
@@ -910,6 +912,7 @@ function startSliderBoxes() {
         items: 1,
         loop: true,
         autoplay: true,
+        animateOut: 'fadeOut',
         autoplayTimeout:5000,
         onInitialized: startProgressBar,
         onTranslate: resetProgressBar2,
@@ -923,6 +926,7 @@ function startSliderBoxes() {
         items: 1,
         loop: true,
         autoplay: true,
+        animateOut: 'fadeOut',
         autoplayTimeout:6000,
         onInitialized: startProgressBar,
         onTranslate: resetProgressBar3,
