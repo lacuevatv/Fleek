@@ -44,6 +44,6 @@ define('POSTPERPAG', '1');
 
 //EMAILS Y MENSAJES
 define ( 'EMAILDEFAULT', 'info@lacueva.tv' );
-define ( 'ASUNTODEFAULT', 'Muchas gracias por contestarnos' );
-define('MENSAJEEXITO', 'Su email fue enviado con éxito, muchas gracias.');//este mensaje se imprime en el html
-define('MENSAJEERROR', 'Hubo un pequeño error, intente otra vez.');
+define ( 'ASUNTODEFAULT', 'Nuevo mensaje' );
+define('MENSAJEEXITO', '<p class="msj-respuesta">Su mensaje ha sido enviado<br>Un asesor se comunicara a la brevedad.</p>');//este mensaje se imprime en el html
+define('MENSAJEERROR', '<p>Hubo un pequeño error, intente otra vez.</p>');

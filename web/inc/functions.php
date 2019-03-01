@@ -448,3 +448,20 @@ function saveNewContact ( $nombre = '', $telefono = '', $email = '', $mensaje = 
 	//cierre base de datos
 	mysqli_close($connection);
 }
+
+/*
+esta funcion arma el contenido del formulario
+*/
+function makeMsj($data, $extra = '') {
+	$valores = $data['valores'];
+	$contenido = $extra . '<p>';
+	foreach ($valores as $valor) {
+		$contenido .= $valor['name'];
+		$contenido .= ': ';
+		$contenido .= $valor['valor'];
+		$contenido .= '<br>';
+	}
+
+	$contenido .= '</p>';
+	return $contenido;
+}

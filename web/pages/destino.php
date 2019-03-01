@@ -7,7 +7,8 @@
 $barilocheData = array(
     'header' => array(
         'letras' => 'BRC',
-        'link' => '#',
+        'link' => '#compra-online',
+        'paquete' => 'bariloche',
         'menu' => 'Fleek&reg; | Nieve | Bariloche',
         'imagen' => array(
             'imagen' => 'slider-bari.jpg',
@@ -48,7 +49,8 @@ $barilocheData = array(
 $sanMartinData = array(
     'header' => array(
         'letras' => 'SMA',
-        'link' => '#',
+        'link' => '#compra-online',
+        'paquete' => 'san-martin-andes',
         'menu' => 'Fleek&reg; | Nieve | San Martín de los Andes',
         'imagen' => array(
             'imagen' => 'slider-bari.jpg',
@@ -89,7 +91,8 @@ $sanMartinData = array(
 $cancunData = array(
     'header' => array(
         'letras' => 'CUN',
-        'link' => '#',
+        'link' => '#compra-online',
+        'paquete' => 'cancun',
         'menu' => 'Fleek&reg; | Playa | Cancún',
         'imagen' => array(
             'imagen' => 'slider-cancun.jpg',
@@ -130,7 +133,8 @@ $cancunData = array(
 $habanaData = array(
     'header' => array(
         'letras' => 'HAB',
-        'link' => '#',
+        'link' => '#compra-online',
+        'paquete' => 'la-habana',
         'menu' => 'Fleek&reg; | Playa | La Habana',
         'imagen' => array(
             'imagen' => 'slider-cancun.jpg',
@@ -171,7 +175,8 @@ $habanaData = array(
 $londresData = array(
     'header' => array(
         'letras' => 'LON',
-        'link' => '#',
+        'link' => '#compra-online',
+        'paquete' => 'londres',
         'menu' => 'Fleek&reg; | City | Londres',
         'imagen' => array(
             'imagen' => 'slider-londres.jpg',
@@ -212,7 +217,8 @@ $londresData = array(
 $dublinData = array(
     'header' => array(
         'letras' => 'DUB',
-        'link' => '#',
+        'link' => '#compra-online',
+        'paquete' => 'dublin',
         'menu' => 'Fleek&reg; | City | Dublin',
         'imagen' => array(
             'imagen' => 'slider-londres.jpg',
@@ -296,7 +302,7 @@ getTemplate( 'header' ); ?>
 
     endif;
     ?>
-
+    <section id="compraonline"></section>
 </div><!-- // INNVER WRAPPER -->
 
 <?php getTemplate( 'footer' );

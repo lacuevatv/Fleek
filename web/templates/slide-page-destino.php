@@ -37,7 +37,7 @@ foreach ($data as $itemData ) { ?>
                 <?php echo $itemData['titulo']; ?>
             </h1>
 
-            <a class="icon-btn-right icon-header-destino<?php echo ' '.$itemData['color']; ?>" href="<?php echo MAINSURL . '/' . $itemData['header']['link']; ?>">
+            <a class="icon-btn-right icon-header-destino open-form<?php echo ' '.$itemData['color']; ?>" href="<?php echo MAINSURL . '/' . $itemData['header']['link']; ?>" data-paquete="<?php echo $itemData['header']['paquete']; ?>">
                 <span>Comprá ahora</span>
                 <picture>
                     <source srcset="<?php echo IMAGES; ?>icon-plane.svg" type="image/svg+xml">

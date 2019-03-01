@@ -37,8 +37,42 @@ $form1 = array(
     ),
 );
 
+$page = $data['page'];
+switch ($page) {
+    case 'inicio':
+        $page = '';
+    break;
+    case 'bariloche':
+        $page = 'Bariloche';
+    break;
+    case 'cancun':
+        $page = 'Cancún';
+    break;
+    case 'londres':
+        $page = 'Londres';
+    break;
+    case 'san-martin-andes':
+        $page = 'San Martín de los Andes';
+    break;
+    case 'la-habana':
+        $page = 'La Habana';
+    break;
+    case 'dublin':
+        $page = 'Dublin';
+    break;
+    case 'nieve':
+        $page = 'Nieve';
+    break;
+    case 'playa':
+        $page = 'Playa';
+    break;
+    case 'city':
+        $page = 'City';
+    break;
+}
+
 $counterIndex = 0;
-if ($data == 'compra-online') {
+if ($data['formulario'] == 'compra-online') {
     $formulario = $form1;
 } else {
     $formulario = $form1;
@@ -46,7 +80,7 @@ if ($data == 'compra-online') {
 
 ?>
 <form method="<?php echo $formulario['method']; ?>" name="<?php echo $formulario['formName']; ?>" id="<?php echo $formulario['formId']; ?>" action="<?php echo $formulario['action']; ?>" data-form-type="<?php echo $formulario['formType']; ?>" has-index="<?php echo $formulario['indice']; ?>">
-    
+    <input type="hidden" name="paquete" value="<?php echo $page; ?>">
     <?php if ( $formulario['loader'] ) : ?>
         <div class="loader"></div>
     <?php endif; ?>

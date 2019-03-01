@@ -14,26 +14,52 @@ if( isAjax() ) :
 	switch ( $function ) {
 
 		case 'get-form':
-
-			$form = isset($_POST['formulario']) ? $_POST['formulario'] : '';
+			$form = array();
+			$form['formulario'] = isset($_POST['formulario']) ? $_POST['formulario'] : '';
+			$form['page'] = isset($_POST['page']) ? $_POST['page'] : '';
 			
 			getTemplate( 'formulario', $form );
 
 		break;
 
-		case 'compra-online':
+		case 'send-form':
 			
-			$respuesta = array('mensaje' => '<p class="msj-respuesta">Su mensaje ha sido enviado<br>Un asesor se comunicara a la brevedad.</p>');
+			$respuesta = array('mensaje' => MENSAJEEXITO);
+			$formulario = $_POST['formulario'];
 
+			$contenido = makeMsj($_POST);
 			// Valores enviados desde el formulario
-			$respuesta['error'] = $_POST;
+			
+			$emailReplyTo = isset($_POST['valores']['email']) ? $_POST['valores']['email'] : '';
+			$nombreReplyTo = isset($_POST['valores']['name']) ? $_POST['valores']['name'] : '';;
+			$emailTo = EMAILDEFAULT;
+			$nombreTo = 'Fleek';
+			$asunto = ASUNTODEFAULT;
+
+			if ( $_POST['valores']['paquete'] != '' ) {
+				$asunto .= ' - ' . $_POST['valores']['paquete'];
+			}
+
+			if ( $formulario != '' ) {
+				$asunto .= ' - ' . $formulario;
+			}
+
 			//FUNCION QUE ENVIA FORMULARIO CON PHPMAILER			
-			//sendEmailPhpMailer( $emailReplyTo, $nombreReplyTo, $emailTo, $nombreTo, $asunto, $contenido);
+			$status = sendEmailPhpMailer( $emailReplyTo, $nombreReplyTo, $emailTo, $nombreTo, $asunto, $contenido);
 
 			//guardar en base de datos
 			//saveNewContact ( $nombre, $telefono, $email, $mensaje, $fecha_viaje, 'contacto' );
 			
+			if ( $status == 'ok') {
+				$respuesta['status'] = $status;
+			} else {
+				$respuesta['error'] = $status;
+				$respuesta['status'] = 'error';
+				$respuesta['mensaje'] = MENSAJEERROR;
+			}
+			
 			echo json_encode($respuesta);
+			
 		break;
 
 		case 'load-template':

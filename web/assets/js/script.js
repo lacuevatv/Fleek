@@ -83,8 +83,10 @@ $(document).ready(function(){
 
         scrollToID('#compraonline');
         
+        var paquete = $(this).attr('data-paquete');
+        
         //abre formulario
-        openform(href.substring(1));
+        openform(href.substring(1), paquete);
 
     });
 
@@ -122,12 +124,14 @@ $(document).ready(function(){
     });
 
     
-    $('.open-form').click(function(e){
+    $(document).on('click', '.open-form', function(e){
         e.preventDefault();
         
         var href = $(this).attr('href');
         href = href.substring(1);
-        openform(href)
+
+        var paquete = $(this).attr('data-paquete');
+        openform(href, paquete)
         
     });
 
@@ -372,7 +376,7 @@ function initFormularios(){
 }//initformulario
 
 //esta funcion abre el formulario y lo busca por ajax de acuerdo a cual fue elegido
-function openform(href) {
+function openform(href, paquete) {
     //primero prepara el contenedor
     var section = $('#compraonline');
     var wrapper = $(section).find('.external-wrapper');
@@ -395,6 +399,10 @@ function openform(href) {
         var contenedor = $(wrapper).find('.formulario');
     }
     
+    if (paquete == '') {
+        paquete = $('body').attr('data-page');
+    }
+    
     //listo el contenedor busca el formulario de acuerdo a cual sea
     $.ajax( {
         type: 'POST',
@@ -402,13 +410,14 @@ function openform(href) {
         data: {
             function: 'get-form',
             formulario: href,
+            page: paquete,
         },
         //funcion antes de enviar
         beforeSend: function() {
             console.log('Buscando formulario');
         },
         success: function ( response ) {
-            //console.log(response);
+            console.log(response);
             $('.loader').remove(); 
             $(contenedor).empty().append(response);
             initFormQuestion( $(contenedor).find('form') );
@@ -546,7 +555,8 @@ function initFormQuestion(formulario) {
             type: 'POST',
             url: ajaxFileUrl,
             data: {
-                function: $(formulario).attr('name'),
+                function: 'send-form',
+                formulario: $(formulario).attr('name'),
                 valores: valores,
             },
             //funcion antes de enviar
