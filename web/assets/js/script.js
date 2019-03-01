@@ -478,13 +478,19 @@ function initFormQuestion(formulario) {
         var indiceActual = $(question).attr('data-index');
         var siguiente = $(question).next();
         var anterior = $(question).prev();
-        
+        //borra todos los mensajes
+        $('.msj-error-input').fadeOut();
+
         //sino es la ultima cambia la pregunta
         switch (direction) {
             case 'next':
 
                 //primero valida para ver que todo este bien
-                console.log('validar');
+                if ( $(input).val() == '' ) {
+                    var msj = $(question).find('.msj-error-input');
+                    $(msj).fadeIn();
+                    return true;   
+                }
 
                 //si es la ultima tiene que enviar el formulario
                 if ( siguiente.length == 0 ) {

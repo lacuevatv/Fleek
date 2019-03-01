@@ -3112,12 +3112,17 @@ form .msj-form {
   position: absolute;
   top: 2px;
   right: 2px;
-  font-size: 60%;
+  font-size: 80%;
   color: #FF6C6C;
   width: 55%;
   text-transform: lowercase;
   line-height: 110%;
   display: none;
+}
+@media (min-width: 1200px) {
+  .form-group .msj-error-input {
+    font-size: 100%;
+  }
 }
 .form-group .msj-error-input-background {
   top: -13px;
