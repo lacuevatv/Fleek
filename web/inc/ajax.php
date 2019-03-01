@@ -30,14 +30,15 @@ if( isAjax() ) :
 			$contenido = makeMsj($_POST);
 			// Valores enviados desde el formulario
 			
+			$paquete = isset($_POST['valores']['paquete']) ? $_POST['valores']['paquete'] : '';
 			$emailReplyTo = isset($_POST['valores']['email']) ? $_POST['valores']['email'] : '';
 			$nombreReplyTo = isset($_POST['valores']['name']) ? $_POST['valores']['name'] : '';;
 			$emailTo = EMAILDEFAULT;
 			$nombreTo = 'Fleek';
 			$asunto = ASUNTODEFAULT;
-
-			if ( $_POST['valores']['paquete'] != '' ) {
-				$asunto .= ' - ' . $_POST['valores']['paquete'];
+			
+			if ( $paquete != '' ) {
+				$asunto .= ' - ' . $paquete;
 			}
 
 			if ( $formulario != '' ) {

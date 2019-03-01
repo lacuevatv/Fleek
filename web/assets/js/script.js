@@ -32,7 +32,7 @@ $(document).ready(function(){
     
     $(window).resize(function(){
         windowWidth = window.innerWidth;
-        //console.log(windowWidth);
+        //console.log('rezise');
     
         //vuelve a dimensionar slider superior
         var wrapper = $('.home-header');
@@ -120,7 +120,8 @@ $(document).ready(function(){
     */
     //cerrar formulario
     $(document).on('click', '.close-form', function(){
-        $('.external-wrapper').fadeOut();
+        //$('.external-wrapper').fadeOut();
+        $('.external-wrapper').css({'width':'0', 'height':'0'});
     });
 
     
@@ -379,23 +380,22 @@ function initFormularios(){
 function openform(href, paquete) {
     //primero prepara el contenedor
     var section = $('#compraonline');
+    //var sectionH = $(section).css('height');
+    var sectionH = window.innerHeight;
+    
     var wrapper = $(section).find('.external-wrapper');
 
     if (wrapper.length > 0) {
 
-        $(wrapper).fadeIn();
-
         var contenedor = $(wrapper).find('.formulario');
 
     } else {
-        var html = '<div class="external-wrapper"><div class="contenedor-formulario"><div class="formulario-wrapper"><button class="close-form"><span class="tog1"></span><span class="tog2"></span></button><div class="formulario"><span class="loader">Cargando...</span></div></div></div></div>';
+        var html = '<div class="external-wrapper"><div class="contenedor-formulario"><div class="formulario-wrapper"><picture><source srcset="'+baseUrl+'/assets/images/logo-header.svg" type="image/svg+xml"><source srcset="'+baseUrl+'/assets/images/logo-header.png 1x, '+baseUrl+'/assets/images/logo-header@2x.png 2x" media="(min-width: 315px)"><img src="'+baseUrl+'/assets/images/logo-header.png" alt="Fleek Logo"></picture><button class="close-form"><span class="tog1"></span><span class="tog2"></span></button><div class="formulario"><span class="loader">Cargando...</span></div></div></div></div>';
 
         $(section).append( $(html) );
 
         var wrapper = $(section).find('.external-wrapper');
         
-        $(wrapper).fadeIn();
-
         var contenedor = $(wrapper).find('.formulario');
     }
     
@@ -421,6 +421,9 @@ function openform(href, paquete) {
             $('.loader').remove(); 
             $(contenedor).empty().append(response);
             initFormQuestion( $(contenedor).find('form') );
+            //$(wrapper).fadeIn();
+            
+            $(wrapper).css({'width':'1920px', 'height':sectionH});
         },
         error: function ( ) {
             console.log('error');
@@ -570,7 +573,8 @@ function initFormQuestion(formulario) {
 
                 setTimeout(function(){
                     
-                    $('.external-wrapper').fadeOut();
+                    //$('.external-wrapper').fadeOut();
+                    $('.external-wrapper').css({'width':'0', 'height':'0'});
                     
                 },2000);
             },
@@ -899,7 +903,8 @@ function startSliderBoxes() {
         loop: true,
         autoplay: true,
         autoplayTimeout:4000,
-        animateOut: 'fadeOut',
+        animateIn:  'slideInRight',
+        animateOut: 'slideOutLeft',
         onInitialized: startProgressBar,
         onTranslate: resetProgressBar1,
         onTranslated: startProgressBar,
@@ -912,7 +917,8 @@ function startSliderBoxes() {
         items: 1,
         loop: true,
         autoplay: true,
-        animateOut: 'fadeOut',
+        animateIn:  'slideInRight',
+        animateOut: 'slideOutLeft',
         autoplayTimeout:5000,
         onInitialized: startProgressBar,
         onTranslate: resetProgressBar2,
@@ -926,7 +932,8 @@ function startSliderBoxes() {
         items: 1,
         loop: true,
         autoplay: true,
-        animateOut: 'fadeOut',
+        animateIn:  'slideInRight',
+        animateOut: 'slideOutLeft',
         autoplayTimeout:6000,
         onInitialized: startProgressBar,
         onTranslate: resetProgressBar3,

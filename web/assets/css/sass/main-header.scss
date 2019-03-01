@@ -110,25 +110,25 @@
 
         .tog1 {
             display: inline-block;
-            width: 30px;
-            height: 4px;
+            width: 24px;
+            height: 3px;
             background-color: $color-azul;
             position: absolute;
             left: 50%;
-            top: 40%;
+            top: 43%;
             @include transition(all $transitionSpeed);
             @include transform(translate3D(-50%,-50%,0));
             @include border-radius(5px);
             @media (min-width: $lg) {
-                top: 41%;
-                width: 40px;
+                top: 43%;
+                width: 24px;
             }
         }
         
         .tog2 {
             display: inline-block;
-            width: 30px;
-            height: 4px;
+            width: 24px;
+            height: 3px;
             background-color: $color-azul;
             position: absolute;
             left: 50%;
@@ -137,24 +137,24 @@
             @include transform(translate3D(-50%,-50%,0));
             @include border-radius(5px);
             @media (min-width: $lg) {
-                width: 40px;
+                width: 24px;
             }
         }
         
         .tog3 {
             display: inline-block;
-            width: 30px;
-            height: 4px;
+            width: 24px;
+            height: 3px;
             background-color: $color-azul;
             position: absolute;
             left: 50%;
-            top: 60%;
+            top: 58%;
             @include transform(translate3D(-50%,-50%,0));
             @include transition(all $transitionSpeed);
             @include border-radius(5px);
             @media (min-width: $lg) {
-                top: 59%;
-                width: 40px;
+                top: 57%;
+                width: 24px;
             }
         }
 
@@ -168,14 +168,14 @@
         }
         .tog1 {
             @include transform(rotate(45deg));
-            left: 30%;
+            left: 40%;
             top: initial;
             background-color: $color-blanco;
         }
         .tog3 {
             @include transform(rotate(-45deg));
             background-color: $color-blanco;
-            left: 30%;
+            left: 40%;
             top: initial;
         }
     }//.toggle-open

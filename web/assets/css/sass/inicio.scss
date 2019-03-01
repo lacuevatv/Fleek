@@ -231,22 +231,25 @@
         display: -ms-flex;
         display: -moz-flex;
         display: -webkit-flex;
-        -webkit-align-items: center;
-        -moz-align-items: center;
-        -ms-align-items: center;
-        -o-align-items: center;
-        align-items: center;
+        -webkit-align-items: flex-start;
+        -moz-align-items: flex-start;
+        -ms-align-items: flex-start;
+        -o-align-items: flex-start;
+        align-items: flex-start;
         -webkit-justify-content: center;
         -moz-justify-content: center;
         -ms-justify-content: center;
         -o-justify-content: center;
         justify-content: center;
+        padding-top: 70px;
 
         @media (min-width: $lg) {
             max-width: $paddingLeftRightLG;
+            padding-top: 220px;
         }
         @media (min-width: $xlg) {
             max-width: $paddingLeftRightXLG;
+            padding-top: 300px;
         }
 
         img {
@@ -292,7 +295,7 @@
             padding: 220px 5% 140px 8%;
         }
         @media (min-width: $xlg) {
-            padding: 300px 5% 150px 8%;
+            padding: 300px 7% 150px 8%;
         }
 
         h2 {
@@ -304,13 +307,13 @@
             
             @media (min-width: $lg) {
                 font-size: 100px;
-                line-height: 198px;
+                line-height: 100px;
                 margin-bottom: 40px;    
             }
         }
 
         p {
-            margin-bottom: 20px;
+            margin-bottom: 30px;
         }
 
         a {
@@ -388,7 +391,7 @@
             //height: 540px;
         }
         @media (min-width: $md) {
-            width: 33.33%;
+            width: calc(100% / 3); //33.33%;
             //height: 365px;
         }
         @media (min-width: $xlg) {
@@ -634,7 +637,11 @@
             text-transform: uppercase;
             line-height: 55px;
             margin-top: 40px;
-
+            margin-bottom: 60px;
+            width: 100%;
+            @media (min-width: $lg) {
+                max-width: 75%;
+            }
             @media (min-width: $xlg) {
                 margin-bottom: 80px;
                 font-size: 100px;
@@ -659,6 +666,24 @@
         @media (min-width: $md) {
             width: 50%;
             height: auto;
+        }
+
+        .owl-video-wrapper .owl-video-frame {
+            display: flex!important;
+            display: -o-flex;
+            display: -ms-flex;
+            display: -moz-flex;
+            display: -webkit-flex;
+            -webkit-align-items: center;
+            -moz-align-items: center;
+            -ms-align-items: center;
+            -o-align-items: center;
+            align-items: center!important;
+            -webkit-justify-content: center;
+            -moz-justify-content: center;
+            -ms-justify-content: center;
+            -o-justify-content: center;
+            justify-content: center;
         }
     }//.experiencia-contenido
 
