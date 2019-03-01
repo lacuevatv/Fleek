@@ -2829,8 +2829,8 @@ html, body {
 }
 .external-wrapper .contenedor-formulario .formulario-wrapper .close-form {
   position: absolute;
-  right: 10px;
-  top: 20px;
+  right: 20px;
+  top: 35px;
   width: 40px;
   height: 40px;
   cursor: pointer;
@@ -2842,14 +2842,19 @@ html, body {
 }
 @media (min-width: 992px) {
   .external-wrapper .contenedor-formulario .formulario-wrapper .close-form {
-    right: 40px;
-    top: 40px;
+    right: 20px;
+    top: 60px;
+  }
+}
+@media (min-width: 1200px) {
+  .external-wrapper .contenedor-formulario .formulario-wrapper .close-form {
+    right: 100px;
   }
 }
 @media (min-width: 1600px) {
   .external-wrapper .contenedor-formulario .formulario-wrapper .close-form {
-    right: 100px;
-    top: 60px;
+    right: 140px;
+    top: 100px;
   }
 }
 .external-wrapper .contenedor-formulario .formulario-wrapper .close-form:focus {
@@ -3238,7 +3243,7 @@ form .msj-form {
   width: 100%;
   height: 250px;
   display: block;
-  margin: 50px 0 20px;
+  margin: 10% 0 10%;
 }
 @media (min-width: 992px) {
   .wrapper-questions {
