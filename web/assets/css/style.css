@@ -1424,6 +1424,7 @@ html, body {
   -ms-justify-content: space-between;
   -o-justify-content: space-between;
   justify-content: space-between;
+  margin-left: -1px !important;
 }
 @media (min-width: 992px) {
   .destinos-wrapper .destino {

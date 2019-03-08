@@ -420,6 +420,7 @@
         -ms-justify-content: space-between;
         -o-justify-content: space-between;
         justify-content: space-between;
+        margin-left: -1px!important;
 
         @media (min-width: $md) {
             padding: 20px 35px 40px;
