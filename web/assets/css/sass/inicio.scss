@@ -295,7 +295,7 @@
             padding: 220px 5% 140px 8%;
         }
         @media (min-width: $xlg) {
-            padding: 300px 7% 150px 8%;
+            padding: 250px 7% 150px 8%;
         }
 
         h2 {
@@ -314,6 +314,10 @@
 
         p {
             margin-bottom: 30px;
+
+            strong {
+                font-weight: 700;
+            }
         }
 
         a {

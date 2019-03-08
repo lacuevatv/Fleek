@@ -1097,7 +1097,7 @@ function initParallax (pagina) {
             case 'inicio':
                 //imagen nosotros
                 var imagenNos = $('.nosotros-wrapper .imagen-nosotros img')
-                var moverImagenNos = ( (barra / 10) * 1.1 ) / 1.99;
+                var moverImagenNos = ( (barra / 10) * 1.01 ) / 2.1;
                 $(imagenNos).css('top', moverImagenNos + '%');
 
                 //imagenes header

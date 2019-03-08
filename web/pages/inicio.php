@@ -41,10 +41,16 @@ getTemplate( 'header' ); ?>
                 </h2>
             
                 <p>
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                    Un espacio donde podés encontrar un mundo perfecto especialmente diseñado para vos, con los viajes de egresados más cancheros y exclusivos a los mejores destinos del planeta.
                 </p>
                 <p>
-                    It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                    Fleek es una marca Auckland que identifica a un equipo de trabajo especializado e independiente dentro de la organización. Profesionales que te conocen, concentrados en desarrollar contenidos de vanguardia y en cuidar cada detalle para brindarte una experiencia verdaderamente distinta. 
+                </p>
+                <p>
+                    Servicios de nivel premium en todo, actividades exclusivas sorprendentes, una organización más inteligente, los máximos niveles de seguridad y la atención personal más cuidada para que, vayas a donde vayas, te sientas como en casa.
+                </p>
+                <p>
+                    Nieve, Playa o City, en Fleek vos siempre podés elegir a dónde ir.
                 </p>
 
                 <a class="btn" href="#">

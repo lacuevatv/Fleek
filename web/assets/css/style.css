@@ -1356,7 +1356,7 @@ html, body {
 }
 @media (min-width: 1600px) {
   .nosotros-wrapper .contenido {
-    padding: 300px 7% 150px 8%;
+    padding: 250px 7% 150px 8%;
   }
 }
 .nosotros-wrapper .contenido h2 {
@@ -1375,6 +1375,9 @@ html, body {
 }
 .nosotros-wrapper .contenido p {
   margin-bottom: 30px;
+}
+.nosotros-wrapper .contenido p strong {
+  font-weight: 700;
 }
 .nosotros-wrapper .contenido a {
   color: #FF6C6C;

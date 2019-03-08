@@ -32,18 +32,18 @@ define('METAKEYS', '');
 //LINKS REDES SOCIALES:
 define('LINK_FACEBOOK', 'https://www.facebook.com/');
 define('INSTAGRAM', 'wearefleek');
-define('LINK_INSTAGRAM', 'https://www.instagram.com/');
+define('LINK_INSTAGRAM', 'https://www.instagram.com/' . INSTAGRAM);
 define('LINK_TWITTER', 'https://twitter.com/');
 define('LINK_FLICKR', '#');
 define('LINK_YOUTUBE', 'https://www.youtube.com/channel/');
-define('WHATSAPP', '341.528.9819');
+define('WHATSAPP', '341.5289819');
 define('WHATSAPPLINK', 'https://wa.me/543415289819');
-define ( 'EMAIL', 'fleek@aucklandturismo.com' );
+define ( 'EMAIL', 'in@wearefleek.travel' );
 //indica al paginador cuantos se muestran por pagina para calcular el offset además de que el loop muestra solo esos
 define('POSTPERPAG', '1');
 
 //EMAILS Y MENSAJES
-define ( 'EMAILDEFAULT', 'info@lacueva.tv' );
+define ( 'EMAILDEFAULT', 'in@wearefleek.travel' );
 define ( 'ASUNTODEFAULT', 'Nuevo mensaje' );
 define('MENSAJEEXITO', '<p class="msj-respuesta">Su mensaje ha sido enviado<br>Un asesor se comunicara a la brevedad.</p>');//este mensaje se imprime en el html
 define('MENSAJEERROR', '<p>Hubo un pequeño error, intente otra vez.</p>');

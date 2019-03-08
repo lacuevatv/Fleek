@@ -50,7 +50,9 @@
 					</address>
 					<p>
 						Tel./Fax. [54 341] 528.9819/20<br>
-						Email. rosario@wearefleek.travel
+						Wap. 341.3402306<br>
+						rosario@aucklandturismo.com<br>
+						Skype. Auckland.Rosario
 					</p>
 				</li>
 
@@ -60,8 +62,10 @@
 						Dir. Pellegrini 225 - [CP 2900]
 					</address>
 					<p>
-						Tel. [0336] 4426454<br>
-						Email. sannicolas@wearefleek.travel
+						Tel. [54 0364] 426454<br>
+						Wap. 336.4387271<br>
+						sannicolas@aucklandturismo.com<br>
+						Skype. Auckland.SanNicolas
 					</p>
 				</li>
 
@@ -71,14 +75,16 @@
 						Dir. Mitre 844 [CP 2700]
 					</address>
 					<p>
-						Tel. [54 2477] 4459613<br>
-						Email. pergamino@wearefleek.travel
+						Tel. [54 2477] 410089<br>
+						Wap. 2477.459613<br>
+						pergamino@aucklandturismo.com<br>
+						Skype. Auckland.Pergamino
 					</p>
 				</li>
 			</ul>
 		</div>
 
-		<div class="footer-wrapper align-center-dk">
+		<!--<div class="footer-wrapper align-center-dk">
 			<h3 class="title-patrocinadores">
 				Patrocinadores:
 			</h3>
@@ -105,7 +111,7 @@
 					</picture>
 				</li>
 			</ul>
-		</div>
+		</div>-->
 
 		<div class="legales-wrapper">
 			<picture>
