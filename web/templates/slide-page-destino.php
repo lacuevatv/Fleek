@@ -96,13 +96,15 @@ foreach ($data as $itemData ) { ?>
 
                 <div class="data-extra">
 
-                    <a class="icon-btn-right only-pc" href="<?php echo UPLOADSURL . '/' . $itemData['pdf']; ?>">
-                        <span>Descargar PDF</span>
-                        <picture>
-                            <source srcset="<?php echo IMAGES; ?>descargar-icon.svg" type="image/svg+xml">
-                            <source srcset="<?php echo IMAGES; ?>descargar-icon.png 1x, <?php echo IMAGES; ?>descargar-icon@2x.png 2x" media="(min-width: 315px)">
-                            <img src="<?php echo IMAGES; ?>descargar-icon.png">
-                        </picture>
+                    <a class="icon-download only-pc" data-tooltip="Tamaño: <?php echo $itemData['pdf_size']; ?>" href="<?php echo UPLOADSURL . '/' . $itemData['pdf']; ?>">
+                        <span class="icon-download__textWrapper">
+                            <span class="icon-download__text">Descargar PDF</span>
+                            <picture>
+                                <source srcset="<?php echo IMAGES; ?>descargar-icon.svg" type="image/svg+xml">
+                                <source srcset="<?php echo IMAGES; ?>descargar-icon.png 1x, <?php echo IMAGES; ?>descargar-icon@2x.png 2x" media="(min-width: 315px)">
+                                <img class="icon-download__icon" src="<?php echo IMAGES; ?>descargar-icon.png">
+                            </picture>
+                        </span>
                     </a>
 
                     
@@ -125,8 +127,8 @@ foreach ($data as $itemData ) { ?>
                         </li>
 
                     <?php } ?>
-                    </ul>
-                    
+                    </ul>                
+
                     <a class="icon-btn-right only-mobile" href="<?php echo UPLOADSURL . '/' . $itemData['pdf']; ?>">
                         <span>Descargar PDF</span>
                         <picture>

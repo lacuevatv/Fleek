@@ -12,6 +12,40 @@
     }
 }
 
+.btn-hover-pulse {
+    &:hover, &:active, &:focus {
+        -webkit-animation-name: hvr-pulse;
+        animation-name: hvr-pulse;
+        -webkit-animation-duration: 1s;
+        animation-duration: 1s;
+        -webkit-animation-timing-function: linear;
+        animation-timing-function: linear;
+        -webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
+    }
+}
+
+@-webkit-keyframes hvr-pulse {
+    25% {
+      -webkit-transform: scale(1.1);
+      transform: scale(1.1);
+    }
+    75% {
+      -webkit-transform: scale(0.9);
+      transform: scale(0.9);
+    }
+  }
+  @keyframes hvr-pulse {
+    25% {
+      -webkit-transform: scale(1.1);
+      transform: scale(1.1);
+    }
+    75% {
+      -webkit-transform: scale(0.9);
+      transform: scale(0.9);
+    }
+  }
+
 .btn-icon-left {
     @extend .btn;
     @extend .btn-hover-opacity;
@@ -36,7 +70,7 @@
 
 .icon-btn-right {
     @extend .btn;
-    @extend .btn-hover-opacity;
+    @extend .btn-hover-pulse;
     display: flex;
     display: -o-flex;
     display: -ms-flex;
@@ -76,4 +110,109 @@
             width: 19px;
         }
     }
+}
+
+$duration: 500ms;
+$button-height: 60px;
+$button-width: 200px;
+$tooltip-height: 60px;
+$tooltip-width: 140px;
+
+.Button__element {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.Button__transitionable {
+    transition: top $duration;
+}
+
+.icon-download {
+    display: inline-block;
+    position: relative;
+    //background-color: transparent;
+    //color: #fff;
+    font-size: 18px;
+    border-radius: 1000px;
+    width: $button-width;
+    height: $button-height;
+    //box-shadow: 0 2px 20px rgba(#000, 0.7), inset 0 1px rgba(#fff, 0.3);
+    text-align: center;
+    transition: background-color $duration, transform 100ms;
+
+    &__textWrapper {
+        @extend .Button__element;
+        overflow: hidden;
+      }
+      
+      &__text {
+        @extend .Button__element;
+        @extend .Button__transitionable;
+        line-height: $button-height;
+        top: 0;
+        left: 0;
+      }
+      
+      &__icon {
+        @extend .Button__element;
+        @extend .Button__transitionable;
+        top: 100%;
+        width: 22px!important;
+        left: 50%;
+        @include transform(translateX(-50%));
+        //background: url('https://cl.ly/0X3o100h2H0g/icon-download.svg') no-repeat center center;
+      }
+      
+      // Tooltip
+      &::before {
+        content: attr(data-tooltip);
+        width: $tooltip-width;
+        height: $tooltip-height;
+        background-color: $color-verde;
+        font-size: 1rem;
+        border-radius: .25em;
+        line-height: $tooltip-height;
+        bottom: 90px;
+        left: calc(50% - 70px);
+      }
+      
+      &::after {
+        content: '';
+        width: 0;
+        height: 0;
+        border: 10px solid transparent;
+        border-top-color: $color-verde;
+        left: calc(50% - 10px);
+        bottom: 70px;
+      }
+      
+      &::before,
+      &::after {
+        position: absolute;
+        opacity: 0;
+        transition: all $duration;
+        visibility: hidden;
+      }
+      
+      //- button hover
+      &:hover {
+        background-color: transparent;
+        
+        .icon-download__text { top: -100%; }
+        
+        .icon-download__icon { top: 0; }
+        
+        &::before,
+        &::after {
+          opacity: 1;
+          visibility: visible;
+        }
+        
+        &::after { bottom: 60px; }
+        
+        &::before { bottom: 80px; }
+      }
+      
+      &:active { transform: translate(2px, 2px); }
 }

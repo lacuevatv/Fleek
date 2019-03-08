@@ -9,7 +9,7 @@ $barilocheData = array(
         'letras' => 'BRC',
         'link' => '#compra-online',
         'paquete' => 'bariloche',
-        'menu' => 'Fleek&reg; | Nieve | Bariloche',
+        'menu' => '<a href="'.MAINSURL.'">Fleek&reg;</a> | Nieve | Bariloche',
         'imagen' => array(
             'imagen' => 'slider-bari.jpg',
             'imagenRetina' => 'slider-bari.jpg',
@@ -27,6 +27,7 @@ $barilocheData = array(
         array( 'titulo' => 'Noches de alojamiento', 'lista' => array( '08 Noches totales', '06 Noches en Bariloche', '02 Noches en Villa la Angostura' ) ),
     ),
     'pdf' => '#',
+    'pdf_size' => '50MB',
     'extra' => array(
         array('titulo' => 'Días de nieve', 
             'icon' => array('svg' => 'nieve-icon.svg', '1X' => 'nieve-icon.png', '2X' => 'nieve-icon@2x.png'),
@@ -51,7 +52,7 @@ $sanMartinData = array(
         'letras' => 'SMA',
         'link' => '#compra-online',
         'paquete' => 'san-martin-andes',
-        'menu' => 'Fleek&reg; | Nieve | San Martín de los Andes',
+        'menu' => '<a href="'.MAINSURL.'">Fleek&reg;</a> | Nieve | San Martín de los Andes',
         'imagen' => array(
             'imagen' => 'slider-bari.jpg',
             'imagenRetina' => 'slider-bari.jpg',
@@ -69,6 +70,7 @@ $sanMartinData = array(
         array( 'titulo' => 'Noches de alojamiento', 'lista' => array( '08 Noches totales', '06 Noches en Bariloche', '02 Noches en Villa la Angostura' ) ),
     ),
     'pdf' => '#',
+    'pdf_size' => '50MB',
     'extra' => array(
         array('titulo' => 'Días de nieve', 
             'icon' => array('svg' => 'nieve-icon.svg', '1X' => 'nieve-icon.png', '2X' => 'nieve-icon@2x.png'),
@@ -93,7 +95,7 @@ $cancunData = array(
         'letras' => 'CUN',
         'link' => '#compra-online',
         'paquete' => 'cancun',
-        'menu' => 'Fleek&reg; | Playa | Cancún',
+        'menu' => '<a href="'.MAINSURL.'">Fleek&reg;</a> | Playa | Cancún',
         'imagen' => array(
             'imagen' => 'slider-cancun.jpg',
             'imagenRetina' => 'slider-cancun.jpg',
@@ -111,6 +113,7 @@ $cancunData = array(
         array( 'titulo' => 'Noches de alojamiento', 'lista' => array( '08 Noches totales', '06 Noches en Bariloche', '02 Noches en Villa la Angostura' ) ),
     ),
     'pdf' => '#',
+    'pdf_size' => '50MB',
     'extra' => array(
         array('titulo' => 'Días de nieve', 
             'icon' => array('svg' => 'nieve-icon.svg', '1X' => 'nieve-icon.png', '2X' => 'nieve-icon@2x.png'),
@@ -135,7 +138,7 @@ $habanaData = array(
         'letras' => 'HAB',
         'link' => '#compra-online',
         'paquete' => 'la-habana',
-        'menu' => 'Fleek&reg; | Playa | La Habana',
+        'menu' => '<a href="'.MAINSURL.'">Fleek&reg;</a> | Playa | La Habana',
         'imagen' => array(
             'imagen' => 'slider-cancun.jpg',
             'imagenRetina' => 'slider-cancun.jpg',
@@ -153,6 +156,7 @@ $habanaData = array(
         array( 'titulo' => 'Noches de alojamiento', 'lista' => array( '08 Noches totales', '06 Noches en Bariloche', '02 Noches en Villa la Angostura' ) ),
     ),
     'pdf' => '#',
+    'pdf_size' => '50MB',
     'extra' => array(
         array('titulo' => 'Días de nieve', 
             'icon' => array('svg' => 'nieve-icon.svg', '1X' => 'nieve-icon.png', '2X' => 'nieve-icon@2x.png'),
@@ -177,7 +181,7 @@ $londresData = array(
         'letras' => 'LON',
         'link' => '#compra-online',
         'paquete' => 'londres',
-        'menu' => 'Fleek&reg; | City | Londres',
+        'menu' => '<a href="'.MAINSURL.'">Fleek&reg;</a> | City | Londres',
         'imagen' => array(
             'imagen' => 'slider-londres.jpg',
             'imagenRetina' => 'slider-londres.jpg',
@@ -195,6 +199,7 @@ $londresData = array(
         array( 'titulo' => 'Noches de alojamiento', 'lista' => array( '08 Noches totales', '06 Noches en Bariloche', '02 Noches en Villa la Angostura' ) ),
     ),
     'pdf' => '#',
+    'pdf_size' => '50MB',
     'extra' => array(
         array('titulo' => 'Días de nieve', 
             'icon' => array('svg' => 'nieve-icon.svg', '1X' => 'nieve-icon.png', '2X' => 'nieve-icon@2x.png'),
@@ -219,7 +224,7 @@ $dublinData = array(
         'letras' => 'DUB',
         'link' => '#compra-online',
         'paquete' => 'dublin',
-        'menu' => 'Fleek&reg; | City | Dublin',
+        'menu' => '<a href="'.MAINSURL.'">Fleek&reg;</a> | City | Dublin',
         'imagen' => array(
             'imagen' => 'slider-londres.jpg',
             'imagenRetina' => 'slider-londres.jpg',
@@ -237,6 +242,7 @@ $dublinData = array(
         array( 'titulo' => 'Noches de alojamiento', 'lista' => array( '08 Noches totales', '06 Noches en Bariloche', '02 Noches en Villa la Angostura' ) ),
     ),
     'pdf' => '#',
+    'pdf_size' => '50MB',
     'extra' => array(
         array('titulo' => 'Días de nieve', 
             'icon' => array('svg' => 'nieve-icon.svg', '1X' => 'nieve-icon.png', '2X' => 'nieve-icon@2x.png'),

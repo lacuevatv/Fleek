@@ -326,12 +326,43 @@ html, body {
   transition: all 500ms;
 }
 
-.btn-hover-opacity:hover, .owl-nav .owl-prev:hover, .owl-nav .owl-next:hover, .viajo ul li a:hover, .viaje-wrapper ul li a:hover, .viajo-wrapper ul li a:hover, .icon-btn-right:hover, .btn-icon-left-notransition:hover, .btn-icon-left:hover {
+.btn-hover-opacity:hover, .owl-nav .owl-prev:hover, .owl-nav .owl-next:hover, .viajo ul li a:hover, .viaje-wrapper ul li a:hover, .viajo-wrapper ul li a:hover, .btn-icon-left-notransition:hover, .btn-icon-left:hover {
   zoom: 1;
   filter: alpha(opacity=50);
   opacity: 0.5;
 }
 
+.btn-hover-pulse:hover, .icon-btn-right:hover, .btn-hover-pulse:active, .icon-btn-right:active, .btn-hover-pulse:focus, .icon-btn-right:focus {
+  -webkit-animation-name: hvr-pulse;
+  animation-name: hvr-pulse;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes hvr-pulse {
+  25% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+  75% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+}
+@keyframes hvr-pulse {
+  25% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+  75% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+}
 .btn-icon-left img {
   padding-right: 10px;
   vertical-align: middle;
@@ -391,6 +422,92 @@ html, body {
   .icon-btn-right img {
     width: 19px;
   }
+}
+
+.Button__element, .icon-download__icon, .icon-download__text, .icon-download__textWrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.Button__transitionable, .icon-download__icon, .icon-download__text {
+  transition: top 500ms;
+}
+
+.icon-download {
+  display: inline-block;
+  position: relative;
+  font-size: 18px;
+  border-radius: 1000px;
+  width: 200px;
+  height: 60px;
+  text-align: center;
+  transition: background-color 500ms, transform 100ms;
+}
+.icon-download__textWrapper {
+  overflow: hidden;
+}
+.icon-download__text {
+  line-height: 60px;
+  top: 0;
+  left: 0;
+}
+.icon-download__icon {
+  top: 100%;
+  width: 22px !important;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+.icon-download::before {
+  content: attr(data-tooltip);
+  width: 140px;
+  height: 60px;
+  background-color: #72DDD3;
+  font-size: 1rem;
+  border-radius: 0.25em;
+  line-height: 60px;
+  bottom: 90px;
+  left: calc(50% - 70px);
+}
+.icon-download::after {
+  content: "";
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-top-color: #72DDD3;
+  left: calc(50% - 10px);
+  bottom: 70px;
+}
+.icon-download::before, .icon-download::after {
+  position: absolute;
+  opacity: 0;
+  transition: all 500ms;
+  visibility: hidden;
+}
+.icon-download:hover {
+  background-color: transparent;
+}
+.icon-download:hover .icon-download__text {
+  top: -100%;
+}
+.icon-download:hover .icon-download__icon {
+  top: 0;
+}
+.icon-download:hover::before, .icon-download:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
+.icon-download:hover::after {
+  bottom: 60px;
+}
+.icon-download:hover::before {
+  bottom: 80px;
+}
+.icon-download:active {
+  transform: translate(2px, 2px);
 }
 
 /*--------------------------------------------------------------
@@ -1320,7 +1437,7 @@ html, body {
 }
 @media (min-width: 1600px) {
   .destinos-wrapper .destino {
-    padding: 45px 45px 70px;
+    padding: 55px 45px 70px;
   }
 }
 .destinos-wrapper .destino .imagen-fondo {
@@ -1510,7 +1627,7 @@ html, body {
 @media (min-width: 1600px) {
   .wrapper-slider-testimonios .experiencia-data {
     padding: 80px 140px 70px;
-    height: 500px;
+    height: 540px;
   }
 }
 .wrapper-slider-testimonios .experiencia-data .title-experiencia {
@@ -1614,7 +1731,7 @@ html, body {
 }
 @media (min-width: 1600px) {
   .section-compra .texto-destacado {
-    padding: 80px 0 40px;
+    padding: 90px 0 50px;
     font-size: 240px;
     line-height: 200px;
   }
@@ -1736,6 +1853,11 @@ html, body {
 .viajo h3, .viaje-wrapper h3, .viajo-wrapper h3 {
   font-size: 24px;
   line-height: 48px;
+}
+@media (min-width: 1200px) {
+  .viajo h3, .viaje-wrapper h3, .viajo-wrapper h3 {
+    font-size: 36px;
+  }
 }
 .viajo ul, .viaje-wrapper ul, .viajo-wrapper ul {
   display: flex;
