@@ -14,6 +14,7 @@
         padding: 200px $paddingLeftRightXLG 65px;
     }
 }
+
 .footer-wrapper {
     margin-top: 60px;
     @media (min-width: $md) {
@@ -25,6 +26,11 @@
     }
 }//.footer-wrapper
 
+.footer-logo {
+    p {
+        margin-top: 10px;
+    }
+}
 
 
 .contacto {
