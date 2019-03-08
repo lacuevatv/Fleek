@@ -31,7 +31,7 @@ define('METAKEYS', '');
 
 //LINKS REDES SOCIALES:
 define('LINK_FACEBOOK', 'https://www.facebook.com/');
-define('INSTAGRAM', 'wearefleek');
+define('INSTAGRAM', 'wearefleek.travel');
 define('LINK_INSTAGRAM', 'https://www.instagram.com/' . INSTAGRAM);
 define('LINK_TWITTER', 'https://twitter.com/');
 define('LINK_FLICKR', '#');
