@@ -139,5 +139,10 @@
 					</li>
 				</ul>
 			</div>
+			<div class="legales-header">
+				<p>
+					Fleek es un marca de productos para jóvenes de la empresa Auckland Turismo S.R.L.
+				</p>
+			</div>
 		</nav>
 	</header>

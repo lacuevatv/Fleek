@@ -55,10 +55,23 @@
                 padding: 100px $paddingLeftRightXLG;
             }
 
+            .logo-formulario {
+                position: absolute;
+                top: 23px;
+                left: 22px;
+                width: 90px;
+
+                @media (min-width: $lg) {
+                    top: 35px;
+                    left: 40px;
+                    width: 122px;
+                }
+            }
+
             .close-form {
                 position: absolute;
-                right: 20px;
-                top: 35px;
+                right: 14px;
+                top: 19px;
                 width: 40px;
                 height: 40px;
                 cursor: pointer;
@@ -66,15 +79,16 @@
                 @include transition(all $transitionSpeed);
     
                 @media (min-width: $md) {
-                    right: 20px;
-                    top: 60px;
+                    right: 14px;
+                    top: 19px;
                 }
                 @media (min-width: $lg) {
-                    right: 100px;
+                    right: 43px;
+                    top: 32px;
                 }
                 @media (min-width: $xlg) {
-                    right: 140px;
-                    top: 100px;
+                    right: 41px;
+                    top: 32px;
                 }
     
                 &:focus {
@@ -329,16 +343,12 @@ form {
         position: absolute;
         top: 2px;
         right: 2px;
-        font-size: 80%;
+        font-size: 14px;
         color: $color-rosa;
         width: 55%;
         text-transform: lowercase;
         line-height: 110%;
         display:none;
-
-        @media (min-width: $lg) {
-            font-size: 100%;
-        }
     }
 
     .msj-error-input-background {

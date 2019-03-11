@@ -390,7 +390,7 @@ function openform(href, paquete) {
         var contenedor = $(wrapper).find('.formulario');
 
     } else {
-        var html = '<div class="external-wrapper"><div class="contenedor-formulario"><div class="formulario-wrapper"><picture><source srcset="'+baseUrl+'/assets/images/logo-header.svg" type="image/svg+xml"><source srcset="'+baseUrl+'/assets/images/logo-header.png 1x, '+baseUrl+'/assets/images/logo-header@2x.png 2x" media="(min-width: 315px)"><img src="'+baseUrl+'/assets/images/logo-header.png" alt="Fleek Logo"></picture><button class="close-form"><span class="tog1"></span><span class="tog2"></span></button><div class="formulario"><span class="loader">Cargando...</span></div></div></div></div>';
+        var html = '<div class="external-wrapper"><div class="contenedor-formulario"><div class="formulario-wrapper"><a href="'+baseUrl+'"><picture><source srcset="'+baseUrl+'/assets/images/logo-header.svg" type="image/svg+xml"><source srcset="'+baseUrl+'/assets/images/logo-header.png 1x, '+baseUrl+'/assets/images/logo-header@2x.png 2x" media="(min-width: 315px)"><img class="logo-formulario" src="'+baseUrl+'/assets/images/logo-header.png" alt="Fleek Logo"></picture></a><button class="close-form"><span class="tog1"></span><span class="tog2"></span></button><div class="formulario"><span class="loader">Cargando...</span></div></div></div></div>';
 
         $(section).append( $(html) );
 

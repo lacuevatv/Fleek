@@ -1032,6 +1032,70 @@ html, body {
     font-size: 14px;
   }
 }
+.navbar .legales-header {
+  color: #fff;
+  display: none;
+  z-index: 2;
+  margin-top: 10px;
+  padding-bottom: 10px;
+  position: absolute;
+  bottom: 0;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+@media (min-width: 768px) {
+  .navbar .legales-header {
+    bottom: 10px;
+  }
+}
+@media (min-width: 992px) {
+  .navbar .legales-header {
+    display: flex;
+    display: -o-flex;
+    display: -ms-flex;
+    display: -moz-flex;
+    display: -webkit-flex;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    align-items: center;
+    margin: 0;
+    bottom: initial;
+    top: 0;
+    right: 150px;
+    height: 70px;
+    padding-bottom: 0;
+  }
+}
+@media (min-width: 1200px) {
+  .navbar .legales-header {
+    height: 100px;
+  }
+}
+.navbar .legales-header p {
+  font-size: 8px;
+  font-family: "Helvetica Neue", "Helvetica Neue Roman", sans-serif;
+  font-weight: 500;
+  text-align: center;
+  line-height: 10px;
+}
+@media (min-width: 370px) {
+  .navbar .legales-header p {
+    font-size: 9px;
+  }
+}
+@media (min-width: 400px) {
+  .navbar .legales-header p {
+    font-size: 10px;
+    line-height: 12px;
+  }
+}
+@media (min-width: 1200px) {
+  .navbar .legales-header p {
+    text-align: right;
+  }
+}
 
 /*--------------------------------------------------------------
 8.0 INICIOS
@@ -1079,6 +1143,7 @@ html, body {
     right: 150px;
     height: 70px;
     padding-bottom: 0;
+    display: none;
   }
 }
 @media (min-width: 1200px) {
@@ -3015,10 +3080,23 @@ html, body {
     padding: 100px 140px;
   }
 }
+.external-wrapper .contenedor-formulario .formulario-wrapper .logo-formulario {
+  position: absolute;
+  top: 23px;
+  left: 22px;
+  width: 90px;
+}
+@media (min-width: 1200px) {
+  .external-wrapper .contenedor-formulario .formulario-wrapper .logo-formulario {
+    top: 35px;
+    left: 40px;
+    width: 122px;
+  }
+}
 .external-wrapper .contenedor-formulario .formulario-wrapper .close-form {
   position: absolute;
-  right: 20px;
-  top: 35px;
+  right: 14px;
+  top: 19px;
   width: 40px;
   height: 40px;
   cursor: pointer;
@@ -3030,19 +3108,20 @@ html, body {
 }
 @media (min-width: 992px) {
   .external-wrapper .contenedor-formulario .formulario-wrapper .close-form {
-    right: 20px;
-    top: 60px;
+    right: 14px;
+    top: 19px;
   }
 }
 @media (min-width: 1200px) {
   .external-wrapper .contenedor-formulario .formulario-wrapper .close-form {
-    right: 100px;
+    right: 43px;
+    top: 32px;
   }
 }
 @media (min-width: 1600px) {
   .external-wrapper .contenedor-formulario .formulario-wrapper .close-form {
-    right: 140px;
-    top: 100px;
+    right: 41px;
+    top: 32px;
   }
 }
 .external-wrapper .contenedor-formulario .formulario-wrapper .close-form:focus {
@@ -3305,17 +3384,12 @@ form .msj-form {
   position: absolute;
   top: 2px;
   right: 2px;
-  font-size: 80%;
+  font-size: 14px;
   color: #FF6C6C;
   width: 55%;
   text-transform: lowercase;
   line-height: 110%;
   display: none;
-}
-@media (min-width: 1200px) {
-  .form-group .msj-error-input {
-    font-size: 100%;
-  }
 }
 .form-group .msj-error-input-background {
   top: -13px;
