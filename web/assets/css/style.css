@@ -755,11 +755,22 @@ html, body {
   height: 70px;
   width: 100%;
   border-bottom: 1px solid #fff;
+  -webkit-transition: all 500ms;
+  -moz-transition: all 500ms;
+  -ms-transition: all 500ms;
+  transition: all 500ms;
 }
 @media (min-width: 1200px) {
   .main-header {
     height: 100px;
   }
+}
+
+.main-header-down {
+  -webkit-transform: translateY(-120px);
+  -moz-transform: translateY(-120px);
+  -ms-transform: translateY(-120px);
+  transform: translateY(-120px);
 }
 
 .navbar {
@@ -842,7 +853,7 @@ html, body {
   position: relative;
   top: 0;
   right: 0;
-  z-index: 11;
+  z-index: 111;
   cursor: pointer;
   display: block;
   border: none;
@@ -971,6 +982,7 @@ html, body {
 }
 .navbar .main-menu-wrapper {
   position: fixed;
+  z-index: 11;
   background-color: #2B00FF;
   color: #fff;
   font-size: 16px;

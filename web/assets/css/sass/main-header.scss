@@ -10,11 +10,16 @@
     height: 70px;
     width: 100%;
     border-bottom:1px solid $color-blanco;
+    @include transition(all $transitionSpeed);
 
     @media (min-width: $lg) {
         height: 100px;
     }
 }//.main-header
+
+.main-header-down {
+    @include transform(translateY(-120px));
+}
 
 .navbar {
     height: 100%;
@@ -89,7 +94,7 @@
         position: relative;
         top: 0;
         right: 0;
-        z-index: 11;
+        z-index: 111;
         cursor: pointer;
         display: block;
         border: none;
@@ -186,6 +191,7 @@
     */
     .main-menu-wrapper {
         position: fixed;
+        z-index: 11;
         background-color:$color-azul;
         color: $color-blanco;
         font-size: 16px;

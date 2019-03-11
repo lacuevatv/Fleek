@@ -115,6 +115,40 @@ $(document).ready(function(){
     }
 
 
+    //scroll up /down navbar
+    var position = $(window).scrollTop(); 
+
+    $(window).scroll(function() {
+        var scroll = $(window).scrollTop();
+        var menu = $('.main-menu-wrapper');
+
+        if ( scroll > 250 ) {
+            if(scroll > position) {
+            
+                $('.main-header').addClass('main-header-down');
+                
+                if ( $(menu).css('right') == '0px' ) {
+                    menu.animate({
+                        'right': '-300%',
+                        'opacity':'0',
+                    }, 300);
+
+                    $('.toggle').toggleClass('toggle-open');
+                    $('.brand-name').toggleClass('brand-name-open');
+                }
+
+            } else {
+                
+                $('.main-header').removeClass('main-header-down'); 
+
+            }
+        }
+        
+        position = scroll;
+        
+    });
+
+
     /*
      * FORMULARIO
     */
