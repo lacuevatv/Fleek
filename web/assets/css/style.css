@@ -1506,7 +1506,7 @@ html, body {
 }
 @media (min-width: 992px) {
   .nosotros-wrapper .imagen-nosotros img {
-    width: 952px;
+    width: 100%;
     right: initial;
     top: 50%;
     left: 50%;

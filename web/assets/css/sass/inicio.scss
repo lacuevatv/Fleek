@@ -360,7 +360,7 @@
             @include transform(translateY(-50%));
 
             @media (min-width: $md) {
-                width: 952px;
+                width: 100%;
                 right: initial;
                 top: 50%;
                 left: 50%;

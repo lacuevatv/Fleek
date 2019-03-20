@@ -401,11 +401,14 @@ function sendEmailPhpMailer( $emailReplyTo, $nombreReplyTo, $emailTo, $nombreTo,
 	$mail = new PHPMailer;
 	//Tell PHPMailer to use SMTP
 	$mail->isSMTP();
-	$mail->Host = 'smtp.gmail.com';
+	/*$mail->Host = 'smtp.wearefleek.travel';
 	$mail->Port = 587;
-	$mail->Username = 'coco.kmkz@gmail.com';
-	$mail->Password = 'EmiliaIsabela';
-	$mail->SMTPAuth = true;
+	$mail->Username = 'in@wearefleek.travel';
+	$mail->Password = 'weArfLek12';
+	$mail->SMTPAuth = true;*/
+
+	$mail->Host = 'localhost';
+	$mail->Port = 25;
 
 	//Enable SMTP debugging
 	// 0 = off (for production use)
@@ -415,7 +418,7 @@ function sendEmailPhpMailer( $emailReplyTo, $nombreReplyTo, $emailTo, $nombreTo,
 	$mail->CharSet = 'UTF-8';
 	//Set who the message is to be sent from
 	//$mail->setFrom(EMAILDEFAULT, SITETITLE);
-	$mail->setFrom('coco.kmkz@gmail.com', SITETITLE);
+	$mail->setFrom('in@wearefleek.travel', SITETITLE);
 	//Set an alternative reply-to address
 	$mail->addReplyTo($emailReplyTo, $nombreReplyTo);
 	//Set who the message is to be sent to

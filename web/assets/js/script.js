@@ -520,7 +520,7 @@ function initFormQuestion(formulario) {
             case 'next':
 
                 //primero valida para ver que todo este bien
-                if ( $(input).val() == '' ) {
+                if (  ! validate ( $(input).val() ) ) {
                     var msj = $(question).find('.msj-error-input');
                     $(msj).fadeIn();
                     return true;   
@@ -565,6 +565,17 @@ function initFormQuestion(formulario) {
         }//switch
 
     }//moveQuestions
+
+    //valida los datos
+    function validate (datos) {
+        var validar = true;
+
+        if (datos == '') {
+            validar = false;
+        }
+
+        return validar;
+    }
 
     /*
      * envia el formulario
@@ -1159,7 +1170,7 @@ function initParallax (pagina) {
 function getInstagram() {
 
     if (window.innerWidth > 960 ) {
-        var scripttoLoad = '<script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script><iframe src="http://lightwidget.com/widgets/df651fe55e745e528cbe5b117997d50c.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe>';
+        var scripttoLoad = '';
         
         var wrapper = $('.wrapper-feed');
 
