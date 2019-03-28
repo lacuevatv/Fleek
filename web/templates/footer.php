@@ -106,7 +106,7 @@
 							<source srcset="<?php echo IMAGES; ?>skype.png 1x, <?php echo IMAGES; ?>skype@2x.png 2x" media="(min-width: 315px)">
 							<img src="<?php echo IMAGES; ?>skype.png" alt="Icon Skype">
 						</picture>
-						Skype. Auckland.SanNicolas
+						Auckland.SanNicolas
 					</p>
 				</li>
 
