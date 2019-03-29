@@ -2,4 +2,4 @@ bd/*
 web/assets/css/.sass-cache/*
 web/contenido/*
 web/phpmyadmin/*
-
+.DS_Store
