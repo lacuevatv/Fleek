@@ -1133,7 +1133,7 @@ function initParallax (pagina) {
     }
     
     $(window).scroll(function(){
-      
+        
         //valor de barra que necesitan todos
         var barra = ($(window).scrollTop());
         //console.log(barra);
