@@ -88,7 +88,7 @@ getTemplate( 'header' ); ?>
                 Reservá tu lugar ahora
             </span>
             <span class="only-pc">
-                Comprá<br>tu viaje
+                Comprá<br>tu viaje acá
             </span>
         </div>
         <div class="compra-wrapper">
@@ -97,11 +97,11 @@ getTemplate( 'header' ); ?>
                     Comprá tu viaje ahora.
                 </span>
                 <span class="only-pc">
-                    Comprá tu viaje con un solo click.
+                Hacé la reserva para tu grupo de forma online, con solo un click
                 </span>
             </h2>
             
-            <p class="texto-azul-pc">Hacé la reserva para tu grupo en forma online.</p>
+            <!--<p class="texto-azul-pc">Hacé la reserva para tu grupo en forma online.</p>-->
 
             <div class="wrapper-button">
                 <a class="icon-btn-right open-form" href="#compra-online">

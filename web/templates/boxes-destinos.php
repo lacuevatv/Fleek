@@ -20,7 +20,8 @@
             <h5 class="super-title">BRC</h5>
             <h3 class="title-destino">Bariloche</h3>
             <div class="stars"></div>
-            <a class="icon-btn-right" href="<?php echo MAINSURL; ?>/bariloche">
+            <!--<a class="icon-btn-right" href="<?php echo MAINSURL; ?>/bariloche">-->
+            <a class="icon-btn-right" href="#">
                 <span>Conocé más</span>
                 <picture>
                     <source srcset="<?php echo IMAGES; ?>nieve-icon.svg" type="image/svg+xml">
@@ -48,7 +49,9 @@
             <h5 class="super-title">SMA</h5>
             <h3 class="title-destino">San Martín de los Andes</h3>
             <div class="stars"></div>
-            <a class="icon-btn-right" href="<?php echo MAINSURL; ?>/san-martin-andes">
+            <!--<a class="icon-btn-right" href="<?php echo MAINSURL; ?>/san-martin-andes">-->
+            <a class="icon-btn-right" href="#">
+            
                 <span>Conocé más</span>
                 <picture>
                     <source srcset="<?php echo IMAGES; ?>nieve-icon.svg" type="image/svg+xml">
@@ -82,7 +85,8 @@
             <h5 class="super-title">CUN</h5>
             <h3 class="title-destino">Cancún</h3>
             <div class="stars"></div>
-            <a class="icon-btn-right" href="<?php echo MAINSURL; ?>/cancun">
+            <!--<a class="icon-btn-right" href="<?php echo MAINSURL; ?>/cancun">-->
+            <a class="icon-btn-right" href="#">
                 <span>Conocé más</span>
                 <picture>
                     <source srcset="<?php echo IMAGES; ?>palmera-icon.svg" type="image/svg+xml">
@@ -109,7 +113,8 @@
             <h5 class="super-title">HAB</h5>
             <h3 class="title-destino">La Habana</h3>
             <div class="stars"></div>
-            <a class="icon-btn-right" href="<?php echo MAINSURL; ?>/la-habana">
+            <!--<a class="icon-btn-right" href="<?php echo MAINSURL; ?>/la-habana">-->
+            <a class="icon-btn-right" href="#">
                 <span>Conocé más</span>
                 <picture>
                     <source srcset="<?php echo IMAGES; ?>palmera-icon.svg" type="image/svg+xml">
@@ -143,7 +148,8 @@
             <h5 class="super-title">LON</h5>
             <h3 class="title-destino">Londres</h3>
             <div class="stars"></div>
-            <a class="icon-btn-right" href="<?php echo MAINSURL; ?>/londres">
+            <!--<a class="icon-btn-right" href="<?php echo MAINSURL; ?>/londres">-->
+            <a class="icon-btn-right" href="#">
                 <span>Conocé más</span>
                 <picture>
                     <source srcset="<?php echo IMAGES; ?>location-icon.svg" type="image/svg+xml">
@@ -170,7 +176,8 @@
             <h5 class="super-title">DUB</h5>
             <h3 class="title-destino">Dublín</h3>
             <div class="stars"></div>
-            <a class="icon-btn-right" href="<?php echo MAINSURL; ?>/dublin">
+            <!--<a class="icon-btn-right" href="<?php echo MAINSURL; ?>/dublin">-->
+            <a class="icon-btn-right" href="#">
                 <span>Conocé más</span>
                 <picture>
                     <source srcset="<?php echo IMAGES; ?>location-icon.svg" type="image/svg+xml">

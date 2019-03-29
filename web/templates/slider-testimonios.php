@@ -1,19 +1,53 @@
 <?php 
 $experiencias = array(
     array(
-        'titulo'=> 'El mejor viaje de mi vida.',
-        'nombre'=> 'Nombre Apellido',
+        'titulo'=> 'Un Sneak Peak de este tremendo viaje',
+        'nombre'=> 'Powered by Fleek',
         'imagen'=> '',
         'imagen2x'=> '',
-        //'video'=> 'https://vimeo.com/1865983',
-        'video'=> 'https://vimeo.com/1562621',
+        'video'=> 'https://vimeo.com/327318879/23fd6b0b60',
     ),
     array(
-        'titulo'=> 'El Otro viaje de mi vida.',
-        'nombre'=> 'Nombre Apellido',
+        'titulo'=> 'Lo mejor en transportación',
+        'nombre'=> 'Powered by Fleek',
         'imagen'=> '',
         'imagen2x'=> '',
-        'video'=> 'https://vimeo.com/1865983',
+        'video'=> 'https://vimeo.com/327321195/3bf0349140',
+    ),
+    array(
+        'titulo'=> 'La fiesta viaja con Fleek',
+        'nombre'=> 'Powered by Fleek',
+        'imagen'=> '',
+        'imagen2x'=> '',
+        'video'=> 'https://vimeo.com/327322440/abb59eca4b',
+    ),
+    array(
+        'titulo'=> 'Eventos exclusivos by Fleek',
+        'nombre'=> 'Powered by Fleek',
+        'imagen'=> '',
+        'imagen2x'=> '',
+        'video'=> 'https://vimeo.com/327325473/3731e99eb4',
+    ),
+    array(
+        'titulo'=> 'Viví las mejores actividades',
+        'nombre'=> 'Powered by Fleek',
+        'imagen'=> '',
+        'imagen2x'=> '',
+        'video'=> 'https://vimeo.com/327329447/56be3e48e1',
+    ),
+    array(
+        'titulo'=> 'Disfrutá nuestra Hotelería Premium',
+        'nombre'=> 'Powered by Fleek',
+        'imagen'=> '',
+        'imagen2x'=> '',
+        'video'=> 'https://vimeo.com/327332063/2295bdf0c7',
+    ),
+    array(
+        'titulo'=> 'Viví la montaña como nadie ',
+        'nombre'=> 'Powered by Fleek',
+        'imagen'=> '',
+        'imagen2x'=> '',
+        'video'=> 'https://vimeo.com/327335565 ',
     ),
 );
 ?>
