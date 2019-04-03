@@ -1170,7 +1170,7 @@ function initParallax (pagina) {
 function getInstagram() {
 
     if (window.innerWidth > 960 ) {
-        var scripttoLoad = '';
+        var scripttoLoad = '<!-- LightWidget WIDGET --><script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script><iframe src="//lightwidget.com/widgets/521379429fe652a18b6a1ca246917907.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe>';
         
         var wrapper = $('.wrapper-feed');
 
