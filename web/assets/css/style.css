@@ -2511,13 +2511,13 @@ html, body {
   }
 }
 .slider-header-wrapper .slider-header .item-slider .imagen-fondo {
-  position: absolute;
+  position: fixed;
   z-index: 1;
   width: 100%;
   height: 100%;
 }
 .slider-header-wrapper .slider-header .item-slider .imagen-fondo img {
-  position: absolute;
+  position: fixed;
   top: 50%;
   -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
@@ -2525,6 +2525,7 @@ html, body {
   transform: translateY(-50%);
   width: 100%;
   height: auto;
+  backface-visibility: hidden;
 }
 .slider-header-wrapper .slider-header .item-slider .contenido {
   padding-top: 50%;
