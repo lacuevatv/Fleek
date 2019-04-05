@@ -36,8 +36,8 @@ define('LINK_INSTAGRAM', 'https://www.instagram.com/' . INSTAGRAM);
 define('LINK_TWITTER', 'https://twitter.com/');
 define('LINK_FLICKR', '#');
 define('LINK_YOUTUBE', 'https://www.youtube.com/channel/');
-define('WHATSAPP', '341.5289819');
-define('WHATSAPPLINK', 'https://wa.me/543415289819');
+define('WHATSAPP', '341.3808202');
+define('WHATSAPPLINK', 'https://wa.me/543413808202');
 define ( 'EMAIL', 'in@wearefleek.travel' );
 //indica al paginador cuantos se muestran por pagina para calcular el offset además de que el loop muestra solo esos
 define('POSTPERPAG', '1');
