@@ -625,11 +625,11 @@
         @media (min-width: $md) {
             padding: 50px $paddingLeftRight 50px;
             width: 50%;
-            height: 350px;
+            height: 290px;
         }
         @media (min-width: $lg) {
             padding: 50px $paddingLeftRightLG 100px;
-            height: 350px;
+            height: 360px;
         }
         @media (min-width: $xlg) {
             padding: 80px $paddingLeftRightXLG 70px;
@@ -645,8 +645,10 @@
             margin-top: 40px;
             margin-bottom: 60px;
             width: 100%;
+            
             @media (min-width: $lg) {
-                max-width: 75%;
+                margin-top: 30px;
+                margin-bottom: 40px;
             }
             @media (min-width: $xlg) {
                 max-width: 100%;
@@ -668,10 +670,10 @@
     .experiencia-contenido {
         height: 205px;
         @media (min-width: $xs) {
-            height: 265px;
+            height: 405px;
         }
         @media (min-width: $sm) {
-            height: 540px;
+            height: 440px;
         }
         @media (min-width: $md) {
             width: 50%;
@@ -733,7 +735,7 @@
         @media (min-width: $md) {
             width: 50%;
             padding: 60px 0 50px;
-            font-size: 160px;
+            font-size: 150px;
             line-height: 140px;
         }
         @media (min-width: $xlg) {

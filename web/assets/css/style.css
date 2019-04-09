@@ -1773,13 +1773,13 @@ html, body {
   .wrapper-slider-testimonios .experiencia-data {
     padding: 50px 40px 50px;
     width: 50%;
-    height: 350px;
+    height: 290px;
   }
 }
 @media (min-width: 1200px) {
   .wrapper-slider-testimonios .experiencia-data {
     padding: 50px 100px 100px;
-    height: 350px;
+    height: 360px;
   }
 }
 @media (min-width: 1600px) {
@@ -1798,9 +1798,17 @@ html, body {
   margin-bottom: 60px;
   width: 100%;
 }
+@media (min-width: 992px) {
+  .wrapper-slider-testimonios .experiencia-data .title-experiencia {
+    margin-top: 30px;
+    margin-bottom: 40px;
+  }
+}
 @media (min-width: 1200px) {
   .wrapper-slider-testimonios .experiencia-data .title-experiencia {
     max-width: 75%;
+    margin-top: 30px;
+    margin-bottom: 40px;
   }
 }
 @media (min-width: 1600px) {
@@ -1822,12 +1830,12 @@ html, body {
 }
 @media (min-width: 576px) {
   .wrapper-slider-testimonios .experiencia-contenido {
-    height: 265px;
+    height: 405px;
   }
 }
 @media (min-width: 768px) {
   .wrapper-slider-testimonios .experiencia-contenido {
-    height: 540px;
+    height: 440px;
   }
 }
 @media (min-width: 992px) {
@@ -1889,7 +1897,7 @@ html, body {
   .section-compra .texto-destacado {
     width: 50%;
     padding: 60px 0 50px;
-    font-size: 160px;
+    font-size: 150px;
     line-height: 140px;
   }
 }
