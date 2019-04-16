@@ -143,7 +143,7 @@ getTemplate( 'header' ); ?>
                     </a>
                 </li>
                 <li>
-                    <a href="#" target="_blank">
+                    <a href="http://auckland.cloudapp.net/Account/Login" target="_blank">
                         Ficha Médica
                     </a>
                 </li>
